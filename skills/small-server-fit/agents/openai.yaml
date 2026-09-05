@@ -1,0 +1,4 @@
+interface:
+  display_name: "Small Server Fit"
+  short_description: "Plan runtimes and capacity before buying or deploying"
+  default_prompt: "Use $small-server-fit to assess whether this project fits my candidate ECS and show which measurements are still missing."

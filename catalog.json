@@ -1,0 +1,256 @@
+[
+  {
+    "name": "social-signal-and-tact",
+    "category": "Social & Communication",
+    "tagline": "Human tact for upward communication",
+    "summary": "Turn awkward or AI-sounding messages into short, specific, relationship-aware communication.",
+    "tags": [
+      "social-tact",
+      "wechat",
+      "leadership",
+      "communication",
+      "writing"
+    ],
+    "path": "skills/social-signal-and-tact"
+  },
+  {
+    "name": "csdn-technical-writing",
+    "category": "Creator & Writing",
+    "tagline": "Long-form Chinese technical writing without AI micro-paragraphs",
+    "summary": "Enforce a beginner-first CSDN article structure, heading hierarchy, paragraph density, code explanation, and series splitting.",
+    "tags": [
+      "csdn",
+      "technical-writing",
+      "chinese",
+      "tutorial",
+      "developer-content"
+    ],
+    "path": "skills/csdn-technical-writing"
+  },
+  {
+    "name": "student-money-four-buckets",
+    "category": "Young Life",
+    "tagline": "A four-layer student budget that still leaves room for fun",
+    "summary": "Allocate common student living money across essentials, uncertainty, future reserve, and deliberate non-essential enjoyment.",
+    "tags": [
+      "student-budget",
+      "personal-finance",
+      "money",
+      "college"
+    ],
+    "path": "skills/student-money-four-buckets"
+  },
+  {
+    "name": "voice-dump-to-todo",
+    "category": "Voice Native",
+    "tagline": "Messy speech in, executable to-do out",
+    "summary": "Repair high-confidence ASR errors from context, extract actions/decisions/waiting items, and render a standalone interactive desktop to-do.",
+    "tags": [
+      "voice",
+      "asr",
+      "todo",
+      "productivity",
+      "local-html"
+    ],
+    "path": "skills/voice-dump-to-todo"
+  },
+  {
+    "name": "fitness-recovery-coach",
+    "category": "Young Life",
+    "tagline": "Training plans that respect recovery instead of forcing the calendar",
+    "summary": "Plan strength, hypertrophy, body-composition, recovery, and habit adjustments while preserving medical-safety boundaries.",
+    "tags": [
+      "fitness",
+      "recovery",
+      "training",
+      "habits"
+    ],
+    "path": "skills/fitness-recovery-coach"
+  },
+  {
+    "name": "cross-domain-translator",
+    "category": "Judgment & Translation",
+    "tagline": "Translate problem structure across domains, not just terminology",
+    "summary": "Rebuild actors, objects, states, events, constraints, evidence, metrics, and failure modes before transferring a problem into another field.",
+    "tags": [
+      "cross-domain",
+      "systems-thinking",
+      "ai",
+      "product",
+      "research"
+    ],
+    "path": "skills/cross-domain-translator"
+  },
+  {
+    "name": "voice-with-temperature",
+    "category": "Creator & Writing",
+    "tagline": "Make writing clearer without washing the human out of it",
+    "summary": "Protect lived detail, uncertainty, rhythm, warmth, and individual judgment while removing generic AI polish.",
+    "tags": [
+      "human-writing",
+      "anti-ai-slop",
+      "voice",
+      "editing",
+      "chinese-writing"
+    ],
+    "path": "skills/voice-with-temperature"
+  },
+  {
+    "name": "aliyun-fullstack-deploy",
+    "category": "Engineering",
+    "tagline": "Canary-first deployment with proof and rollback",
+    "summary": "Audit, package, canary, atomically promote, verify, and roll back full-stack apps on authorized Alibaba Cloud ECS or comparable Linux VPS hosts.",
+    "tags": [
+      "aliyun",
+      "ecs",
+      "linux-vps",
+      "nginx",
+      "systemd",
+      "deployment"
+    ],
+    "path": "skills/aliyun-fullstack-deploy"
+  },
+  {
+    "name": "small-server-fit",
+    "category": "Engineering",
+    "tagline": "Know whether the app fits before buying or deploying",
+    "summary": "Compare measured application build and runtime needs with a low-cost server budget without inventing missing capacity evidence.",
+    "tags": [
+      "capacity-planning",
+      "vps",
+      "ecs",
+      "python",
+      "nodejs",
+      "java"
+    ],
+    "path": "skills/small-server-fit"
+  },
+  {
+    "name": "deployment-proof",
+    "category": "Build in Public",
+    "tagline": "Turn invisible deployment work into credible public evidence",
+    "summary": "Convert redacted operational evidence into a GitHub case study, resume bullets, interview story, and honest launch material.",
+    "tags": [
+      "deployment",
+      "case-study",
+      "portfolio",
+      "resume",
+      "redaction",
+      "build-in-public"
+    ],
+    "path": "skills/deployment-proof"
+  },
+  {
+    "name": "trend-to-microbet",
+    "category": "AI Native Bets",
+    "tagline": "See a trend. Place a small bet. Demand evidence.",
+    "summary": "Verify a fast-moving trend, score personal leverage, and design a 48-hour to 7-day evidence-producing experiment with a stop rule.",
+    "tags": [
+      "trend",
+      "microbet",
+      "ai-native",
+      "experiments",
+      "startup"
+    ],
+    "path": "skills/trend-to-microbet"
+  },
+  {
+    "name": "vibe-to-spec",
+    "category": "Voice Native",
+    "tagline": "Voice chaos to coding-agent contract",
+    "summary": "Resolve recurring ASR errors from active context and turn half-formed spoken ideas into scope, flows, data, constraints, acceptance tests, and an implementation order.",
+    "tags": [
+      "vibe-coding",
+      "voice",
+      "asr",
+      "codex",
+      "claude-code",
+      "spec"
+    ],
+    "path": "skills/vibe-to-spec"
+  },
+  {
+    "name": "skill-from-scars",
+    "category": "AI Native Bets",
+    "tagline": "Turn repeated pain into reusable Agent Skills",
+    "summary": "Mine debugging logs, transcripts and retrospectives for repeated failure patterns, then create a compact Skill plus an eval and proof plan.",
+    "tags": [
+      "agent-skills",
+      "skill-creator",
+      "open-source",
+      "evals",
+      "workflow"
+    ],
+    "path": "skills/skill-from-scars"
+  },
+  {
+    "name": "build-in-public-launcher",
+    "category": "AI Native Bets",
+    "tagline": "Launch for evidence, not applause",
+    "summary": "Package a Skill, plugin or micro-tool so strangers can run it, then recruit relevant testers and measure utility, repeat use, issues and downstream adoption.",
+    "tags": [
+      "build-in-public",
+      "github",
+      "open-source",
+      "launch",
+      "distribution"
+    ],
+    "path": "skills/build-in-public-launcher"
+  },
+  {
+    "name": "personal-boardroom",
+    "category": "Judgment & Translation",
+    "tagline": "One decision, several explicit lenses, one ranked answer",
+    "summary": "Stress-test a difficult choice through operator, builder, user, investor, future-self and risk perspectives, then synthesize by evidence and reversibility.",
+    "tags": [
+      "decision-making",
+      "career",
+      "startup",
+      "strategy",
+      "judgment"
+    ],
+    "path": "skills/personal-boardroom"
+  },
+  {
+    "name": "anti-slop-personal-brand",
+    "category": "AI Native Bets",
+    "tagline": "Make the first screen current, real and earned",
+    "summary": "Audit a resume, GitHub, website or bio for generic AI slop, stale student-project signals, weak proof and fragmented identity.",
+    "tags": [
+      "personal-brand",
+      "github-profile",
+      "resume",
+      "portfolio",
+      "anti-slop"
+    ],
+    "path": "skills/anti-slop-personal-brand"
+  },
+  {
+    "name": "deep-talk-to-podcast",
+    "category": "Creator & Writing",
+    "tagline": "Turn a meaningful deep talk into a privacy-aware AI podcast",
+    "summary": "Recover turning points and disagreement from long conversations, redact sensitive details, write a listenable script, and select a current AI-audio production route.",
+    "tags": [
+      "podcast",
+      "audio",
+      "conversation",
+      "ai-audio",
+      "creator"
+    ],
+    "path": "skills/deep-talk-to-podcast"
+  },
+  {
+    "name": "one-week-founder-mode",
+    "category": "AI Native Bets",
+    "tagline": "One main bet, two microbets, a kill list",
+    "summary": "Compress an overloaded startup/research/job-search week into one outcome that changes the next decision, with evidence due by week end.",
+    "tags": [
+      "founder",
+      "weekly-planning",
+      "execution",
+      "startup",
+      "focus"
+    ],
+    "path": "skills/one-week-founder-mode"
+  }
+]

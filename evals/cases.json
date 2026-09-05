@@ -1,0 +1,184 @@
+[
+  {
+    "skill": "social-signal-and-tact",
+    "prompt": "Help me message my professor: I want to say his suggestion was insightful, show that I understood it, and ask whether I can try my own implementation. Keep it like WeChat, not an email.",
+    "checks": [
+      "specific truthful praise",
+      "short natural chat tone",
+      "request is easy to answer",
+      "no fabricated familiarity"
+    ]
+  },
+  {
+    "skill": "csdn-technical-writing",
+    "prompt": "Write a beginner CSDN article explaining RAG, with code.",
+    "checks": [
+      "overall title is plain text",
+      "uses H1/H2 section hierarchy",
+      "medium/long natural paragraphs",
+      "definition→plain explanation→mechanism→scenario→mistake→code"
+    ]
+  },
+  {
+    "skill": "student-money-four-buckets",
+    "prompt": "I receive 2500 RMB a month, dorm is already paid, and I overspend on food delivery and entertainment. Make a student budget.",
+    "checks": [
+      "four layers",
+      "keeps deliberate fun budget",
+      "does not recommend leveraged/speculative investing",
+      "gives overspending control rule"
+    ]
+  },
+  {
+    "skill": "voice-dump-to-todo",
+    "prompt": "Voice dump: tomorrow finish the poster, actually the poster can wait until Friday; first send the revised doc to Chen, then wait for feedback, oh and remember to think about whether to join that competition.",
+    "checks": [
+      "later correction overrides earlier",
+      "separates action/waiting/decision",
+      "does not make reflection urgent",
+      "clear definition of done"
+    ]
+  },
+  {
+    "skill": "fitness-recovery-coach",
+    "prompt": "I slept 4 hours, legs are very sore after yesterday, but today is supposed to be heavy squats. What should I do?",
+    "checks": [
+      "adjusts session for recovery",
+      "does not shame",
+      "tracks fatigue/pain",
+      "flags medical red flags appropriately"
+    ]
+  },
+  {
+    "skill": "cross-domain-translator",
+    "prompt": "Translate a carbon-project verification workflow into an AI/software system problem.",
+    "checks": [
+      "maps actors/objects/states/events",
+      "preserves evidence/metrics",
+      "marks invalid analogies",
+      "proposes smallest bridge artifact"
+    ]
+  },
+  {
+    "skill": "voice-with-temperature",
+    "prompt": "Rewrite my reflection so it is clearer but still feels lived-in and not like LinkedIn inspiration copy.",
+    "checks": [
+      "protects concrete detail",
+      "keeps uncertainty",
+      "removes slogans",
+      "preserves paragraph rhythm"
+    ]
+  },
+  {
+    "skill": "aliyun-fullstack-deploy",
+    "prompt": "Deploy a new site to my small VPS that already hosts two sites under Nginx.",
+    "checks": [
+      "read-only preflight first",
+      "backs up before edits",
+      "runs an isolated canary before promotion",
+      "validates nginx before reload",
+      "checks old routes and rollback after deploy"
+    ]
+  },
+  {
+    "skill": "trend-to-microbet",
+    "prompt": "Everyone is talking about a new AI agent platform. Should I spend two weeks learning it?",
+    "checks": [
+      "verifies or marks trend unverified",
+      "uses existing leverage",
+      "designs 48h–7d test",
+      "defines effort cap and stop rule"
+    ]
+  },
+  {
+    "skill": "vibe-to-spec",
+    "prompt": "Voice transcript: build that 成舟台 style chat page we discussed, no, I mean the internal AI workbench; keep the left nav and add topic switching, but do not touch export.",
+    "context": "Fictional eval context: the active project glossary includes 澄舟台 as a recurring project term.",
+    "checks": [
+      "resolves 成舟台→澄舟台 only with contextual confidence",
+      "distinguishes goal from implementation detail",
+      "keeps export out of scope",
+      "creates acceptance criteria"
+    ]
+  },
+  {
+    "skill": "skill-from-scars",
+    "prompt": "I have three deployment retrospectives where I repeatedly broke Nginx routes before learning to inspect effective config and old routes. Is this worth a Skill?",
+    "checks": [
+      "scores recurrence/generalizability",
+      "extracts hard gates",
+      "creates eval",
+      "does not publish generic advice only"
+    ]
+  },
+  {
+    "skill": "build-in-public-launcher",
+    "prompt": "My open-source Skill repo is finished but only I have used it. Help me launch.",
+    "checks": [
+      "smoke-test stranger path",
+      "defines utility metric separately from stars",
+      "recruits relevant testers",
+      "does not invent traction"
+    ]
+  },
+  {
+    "skill": "personal-boardroom",
+    "prompt": "I can take a high-brand internship with a 10% chance or a smaller-company AI role with a 40% chance. Help me decide.",
+    "checks": [
+      "separates facts from estimates",
+      "uses distinct lenses",
+      "weights reversibility/evidence",
+      "gives ranked recommendation and reconsider trigger"
+    ]
+  },
+  {
+    "skill": "anti-slop-personal-brand",
+    "prompt": "My homepage has 12 project cards, a long tech stack, and generic “AI innovator” hero text. Audit it.",
+    "checks": [
+      "deletes/demotes before decorating",
+      "promotes recent proof",
+      "rewrites positioning specifically",
+      "does not add unsupported trend keywords"
+    ]
+  },
+  {
+    "skill": "deep-talk-to-podcast",
+    "prompt": "Turn a 90-minute private friend conversation into a two-host AI podcast I can share with the friend and maybe later publish.",
+    "checks": [
+      "privacy level first",
+      "keeps turning points/disagreement",
+      "creates audio route",
+      "does not fabricate exact quotes"
+    ]
+  },
+  {
+    "skill": "one-week-founder-mode",
+    "prompt": "This week I have 22 startup, research, job-search and content tasks. Everything feels urgent.",
+    "checks": [
+      "forces one main bet",
+      "max two microbets",
+      "creates kill list",
+      "Sunday evidence review is outcome-based"
+    ]
+  },
+  {
+    "skill": "small-server-fit",
+    "prompt": "Will my React and Python app with a serialized ML model fit a 2 vCPU / 2 GiB ECS, and which server image should I buy?",
+    "checks": [
+      "separates image compatibility from measured capacity",
+      "checks model and runtime versions",
+      "distinguishes build peak from runtime peak",
+      "does not recommend purchase from missing measurements"
+    ]
+  },
+  {
+    "skill": "deployment-proof",
+    "prompt": "Turn my deployment logs into a GitHub case study and resume bullets. It used to take days, but I did not time the new workflow.",
+    "checks": [
+      "redacts infrastructure identifiers and secrets",
+      "labels timing as user-reported",
+      "does not invent a speedup percentage",
+      "connects every success claim to verification evidence"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+artifacts/
+dist/
+release/
+*.log
+.DS_Store

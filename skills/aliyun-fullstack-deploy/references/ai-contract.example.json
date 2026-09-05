@@ -1,0 +1,28 @@
+{
+  "capabilities": [
+    "backend_client",
+    "route_registration",
+    "frontend_entry",
+    "offline_fallback"
+  ],
+  "required_files": [
+    "backend/app/ai/client.py",
+    "backend/app/ai/fallback.py",
+    "frontend/src/api.ts",
+    ".env.production.example"
+  ],
+  "text_markers": [
+    {
+      "path": "backend/app/api/router.py",
+      "contains": "ai"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "contains": "assistant"
+    }
+  ],
+  "environment_variables": [
+    "AI_ENABLED",
+    "AI_API_KEY"
+  ]
+}

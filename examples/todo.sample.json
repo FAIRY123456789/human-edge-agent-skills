@@ -1,0 +1,1 @@
+{"title":"Sample Todo","tasks":[{"title":"Finish README","details":"Check install commands and privacy statement","priority":"P1","due":"today","status":"todo","depends_on":[],"uncertainty":""},{"title":"Ask reviewer","details":"Send the repository to one external tester","priority":"P2","due":"","status":"todo","depends_on":[],"uncertainty":""}]}

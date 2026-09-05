@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deployment Proof"
+  short_description: "Turn shipping work into safe, credible portfolio evidence"
+  default_prompt: "Use $deployment-proof to create a redacted GitHub case study and evidence-backed resume bullets from these deployment artifacts."

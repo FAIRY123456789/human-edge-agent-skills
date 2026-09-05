@@ -1,0 +1,42 @@
+name: Validate Agent Skills
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install validator dependency
+        run: python -m pip install --disable-pip-version-check pyyaml
+      - name: Validate Skill metadata and catalog
+        run: python scripts/validate_skills.py
+      - name: Compile Python helpers
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for path in Path("skills").rglob("*.py"):
+              compile(path.read_text(encoding="utf-8"), str(path), "exec")
+          compile(Path("scripts/smoke_test.py").read_text(encoding="utf-8"), "scripts/smoke_test.py", "exec")
+          print("Python syntax OK")
+          PY
+      - name: Check shell syntax
+        run: find skills -type f -name '*.sh' -print0 | xargs -0 bash -n
+      - name: Run read-only deployment preflight
+        env:
+          APP_NAME: smoke-app
+          APP_ROOT: /tmp/smoke-app
+          WWW_ROOT: /tmp/smoke-www
+          SERVICE_NAME: smoke-app.service
+          ENV_FILE: /tmp/smoke-app.env
+        run: bash skills/aliyun-fullstack-deploy/scripts/preflight_remote.sh > /tmp/preflight.txt
+      - name: Run functional smoke tests
+        run: python scripts/smoke_test.py

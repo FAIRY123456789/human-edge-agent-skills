@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aliyun Full-Stack Deploy"
+  short_description: "Canary-first ECS deployment with proof and rollback"
+  default_prompt: "Use $aliyun-fullstack-deploy to preflight this app and my authorized ECS, then show the deployment contract before any remote mutation."
