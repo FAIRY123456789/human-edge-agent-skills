@@ -30,6 +30,8 @@ Publisher Terms require accurate, non-misleading descriptions; appropriate priva
 
 The authenticated publish form was not submitted. If its live fields differ from the manifest fields below, preserve the same factual wording and do not add unverified compatibility, usage, customer, benchmark, or adoption claims.
 
+The repository marketplace manifest contains category and keywords metadata supported by Cursor's plugin reference. They are not presented below as Publisher form fields because the public, unauthenticated live page did not expose a reliable form to confirm those fields.
+
 ## Submission 1: voice-to-work
 
 | Field | Copyable value |
@@ -41,12 +43,11 @@ The authenticated publish form was not submitted. If its live fields differ from
 | Repository | https://github.com/FAIRY123456789/human-edge-agent-skills |
 | Plugin source path | plugins/voice-to-work |
 | Included Skills | voice-dump-to-todo; vibe-to-spec |
-| Category | Productivity |
-| Keywords | voice-input; productivity; specifications |
 | License | MIT |
 | Author | Joy T |
 | Data handling | Local instruction package; publisher collects no data and operates no service. Host processing follows host terms. Optional render_todo.py reads user JSON and writes user-selected local HTML only. |
 | Network and permissions | No publisher endpoint, telemetry, network calls, MCP, hooks, commands, agents, rules, secrets, environment variables, or automatic permissions. |
+| Validation evidence | NVIDIA Tier 1 PASS; Agent Plugins schema PASS; package self-containment and canonical drift PASS; Gitleaks no leaks; syntax, JSON, links, and smoke tests PASS. |
 | Reviewer note | Repairs only high-confidence ASR errors and leaves ambiguous names visible. It does not upload or transcribe audio. |
 
 Long description:
@@ -64,12 +65,11 @@ Voice to Work packages two focused Agent Skills. voice-dump-to-todo turns messy 
 | Repository | https://github.com/FAIRY123456789/human-edge-agent-skills |
 | Plugin source path | plugins/skill-from-scars |
 | Included Skills | skill-from-scars |
-| Category | Developer Tools |
-| Keywords | agent-skills; retrospectives; knowledge-capture |
 | License | MIT |
 | Author | Joy T |
 | Data handling | Local instruction package; publisher collects no data and operates no service. Users must redact sensitive retrospectives. Optional scaffold_skill.py reads user JSON and writes a user-selected local Skill folder only. |
 | Network and permissions | No publisher endpoint, telemetry, network calls, MCP, hooks, commands, agents, rules, secrets, environment variables, or automatic permissions. |
+| Validation evidence | NVIDIA Tier 1 PASS; Agent Plugins schema PASS; package self-containment and canonical drift PASS; Gitleaks no leaks; syntax, JSON, links, and smoke tests PASS. |
 | Reviewer note | Applies a worthiness gate before scaffolding and explicitly rejects invented users, benchmarks, compatibility claims, and evidence. |
 
 Long description:
@@ -87,12 +87,11 @@ Skill from Scars helps turn repeated operational pain into a narrowly scoped, te
 | Repository | https://github.com/FAIRY123456789/human-edge-agent-skills |
 | Plugin source path | plugins/build-in-public-launcher |
 | Included Skills | build-in-public-launcher |
-| Category | Productivity |
-| Keywords | product-launch; open-source; validation |
 | License | MIT |
 | Author | Joy T |
 | Data handling | Local instruction package; publisher collects no data and operates no service. Users must remove private repository, customer, credential, and confidential metric data before drafting public material. |
 | Network and permissions | No scripts, publisher endpoint, telemetry, network calls, publishing, account actions, MCP, hooks, commands, agents, rules, secrets, environment variables, or automatic permissions. |
+| Validation evidence | NVIDIA Tier 1 PASS; Agent Plugins schema PASS; package self-containment and canonical drift PASS; Gitleaks no leaks; syntax, JSON, links, and smoke tests PASS. |
 | Reviewer note | Generates launch preparation only. It does not publish and forbids invented installs, stars, users, testimonials, revenue, benchmarks, or marketplace acceptance. |
 
 Long description:
@@ -110,12 +109,11 @@ Build in Public Launcher converts verified project evidence into honest launch a
 | Repository | https://github.com/FAIRY123456789/human-edge-agent-skills |
 | Plugin source path | plugins/voice-with-temperature |
 | Included Skills | voice-with-temperature |
-| Category | Productivity |
-| Keywords | writing; editing; voice |
 | License | MIT |
 | Author | Joy T |
 | Data handling | Local instruction package; publisher collects no data and operates no service. Users should obtain consent and remove private details before editing personal or third-party stories. |
 | Network and permissions | No scripts, publisher endpoint, telemetry, network calls, audio processing, voice cloning, MCP, hooks, commands, agents, rules, secrets, environment variables, or automatic permissions. |
+| Validation evidence | NVIDIA Tier 1 PASS; Agent Plugins schema PASS; package self-containment and canonical drift PASS; Gitleaks no leaks; syntax, JSON, links, and smoke tests PASS. |
 | Reviewer note | “Voice” means writing voice. The plugin does not process speech, generate audio, clone voices, or impersonate people. |
 
 Long description:
