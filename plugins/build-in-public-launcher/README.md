@@ -39,6 +39,8 @@ python scripts/validate_plugin_packages.py
 
 Do not invent users, testimonials, stars, installs, revenue, benchmarks, or marketplace acceptance. Review private repository details before using them in public copy. Publishing and account actions remain explicit user decisions outside this plugin.
 
+See [PRIVACY.md](PRIVACY.md) for the plugin's data-handling disclosure.
+
 ## Source and license
 
 The canonical source is [`skills/build-in-public-launcher`](https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/skills/build-in-public-launcher). The packaged copy is generated and hash-checked; edit the canonical Skill, then run the sync command from the repository root.

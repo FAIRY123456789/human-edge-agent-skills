@@ -2,7 +2,7 @@
 
 日期：2026-09-08（Asia/Shanghai）
 
-状态：**封装与提交准备完成；未向任何 Marketplace 发布或提交。**
+状态：**静态封装与发布政策预检完成；Cursor 运行时尚未测试；未向任何 Marketplace 发布或提交。**
 
 ## 结论
 
@@ -45,10 +45,13 @@
         ├── skills/...              # complete copied Skill folder(s)
         ├── assets/human-edge.svg
         ├── README.md
+        ├── PRIVACY.md
         └── LICENSE
 ```
 
 每个插件都是自包含目录。没有符号链接，也没有依赖仓库外部的 Skill 文件；每份 `references/`、`scripts/` 与 Skill 自带资源均随副本复制。插件没有加入 hooks、agents、commands、MCP servers、rules 或平台特定行为。
+
+每个插件还提供从 README 可直接访问的 `PRIVACY.md`，明确说明发布者不运营数据服务、不收集遥测或用户内容，并按插件实际能力披露本地脚本、网络行为和权限边界。
 
 ## Manifest strategy
 
@@ -113,7 +116,9 @@ Schema snapshots downloaded for validation remain under ignored `.tmp/` and are 
 - Re-run official validators immediately before submission because schemas and directory policies can change.
 - Perform human prompt-level checks for trigger clarity and output usefulness. Tier 1 static passing is not a claim of marketplace acceptance or real-world adoption.
 
-The repository is at the **official Plugin packaging stage**, but not yet at the **submission-ready runtime verification gate**. No Marketplace action was taken.
+The repository is at the **official Plugin packaging stage**, but not yet at the **submission-ready runtime verification gate**. Cursor 的精确状态为 **BLOCKED ONLY BY CURSOR RUNTIME TEST**。No Marketplace action was taken.
+
+Cursor 的人工测试步骤与最终可复制字段分别记录在 [`CURSOR_RUNTIME_TEST_GUIDE.md`](CURSOR_RUNTIME_TEST_GUIDE.md) 和 [`CURSOR_MARKETPLACE_SUBMISSION_FINAL.md`](CURSOR_MARKETPLACE_SUBMISSION_FINAL.md)。
 
 ## Official references
 

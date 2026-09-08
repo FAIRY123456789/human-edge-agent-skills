@@ -173,9 +173,12 @@ def validate_self_containment(config: dict) -> None:
         ]
         if forbidden_dirs:
             raise ValueError(f"plugins/{name}: unexpected platform-specific components")
-        for required in ("README.md", "LICENSE", "plugin.json", "assets/human-edge.svg"):
+        for required in ("README.md", "PRIVACY.md", "LICENSE", "plugin.json", "assets/human-edge.svg"):
             if not (plugin_dir / required).is_file():
                 raise ValueError(f"plugins/{name}: missing {required}")
+        readme = (plugin_dir / "README.md").read_text(encoding="utf-8")
+        if "[PRIVACY.md](PRIVACY.md)" not in readme:
+            raise ValueError(f"plugins/{name}: README must link PRIVACY.md")
         print(f"PASS self-contained package: plugins/{name}")
 
 

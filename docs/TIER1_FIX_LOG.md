@@ -54,6 +54,13 @@ Quality 变化摘要：
 - Bash `-n`：6 个脚本通过（使用 Git for Windows Bash）。
 - 四个旗舰 Quality：94.5、92.2、93.5、92.2，全部达到 >= 90。
 
+## Stage 3 marketplace-policy regression
+
+- 为四个插件增加独立 `PRIVACY.md`，披露真实的数据收集、网络、脚本和权限边界；每个 README 直接链接该文件。
+- 插件校验器现在要求 `PRIVACY.md` 存在并由 README 链接。此改动没有 suppress Schema、PII、License 或 Security，也没有修改 canonical Skill 内容。
+- 2026-09-08 14:37:27 至 14:39:39 再次运行完整 NVIDIA Tier 1：18/18 PASS、平均 Quality 87.7、4 个 Quality >= 90、0 incomplete、0 CRITICAL、0 HIGH。
+- 首次回归尝试因 Windows GBK 无法解码外部扫描器 UTF-8 输出而退出 1；设置 `PYTHONUTF8=1` 与 `PYTHONIOENCODING=utf-8` 后，同一检查集合正常完成。中断尝试没有生成 JSON 报告。
+
 ## Tool provenance
 
 - SkillEvaluator 0.2.1：从 NVIDIA 官方仓库源码包安装；SHA-256 `97C981595485BF5A928DB1C72890F7BE4D7C8194804131E7249E9517E1CBB5A2`。

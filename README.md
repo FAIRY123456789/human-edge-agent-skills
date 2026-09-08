@@ -117,6 +117,8 @@ Seed behavior evals live in [`evals/cases.json`](evals/cases.json).
 
 The NVIDIA SkillEvaluator Tier 1 audit is recorded in [`docs/NVIDIA_TIER1_REPORT.md`](docs/NVIDIA_TIER1_REPORT.md), with the [candidate classification](docs/OFFICIAL_PLUGIN_CANDIDATES.md) and [fix log](docs/TIER1_FIX_LOG.md). Raw JSON is retained under `eval-results/`.
 
+Cursor packaging has completed static and marketplace-policy preflight. Runtime discovery remains untested because Cursor is not installed on the validation host; see the [runtime test guide](docs/CURSOR_RUNTIME_TEST_GUIDE.md) and [final submission worksheet](docs/CURSOR_MARKETPLACE_SUBMISSION_FINAL.md). No Marketplace submission has been made.
+
 ## Privacy and honesty
 
 - no private project names, personal chat logs, contact information, credentials, or company-confidential data;

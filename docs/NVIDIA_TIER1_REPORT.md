@@ -100,7 +100,7 @@ Windows 上 Semgrep 1.176.1 的 Python 前端在本机触发原生 IPC 与证书
 ## 原始证据
 
 - `eval-results/nvidia-tier1/`：基础检查的原始、按时间戳命名的 JSON；最新一轮为修复后结果，早期结果用于保留修复轨迹。
-- `eval-results/nvidia-tier1-full/`：按 Skill 保存完整 Tier 1 的全部时间戳 JSON 与 SkillEvaluator 生成的 `BENCHMARK.md`。早期重试包含扫描器不可用或 Windows 证书存储故障的 incomplete 记录；每个目录中时间戳最新的 JSON（2026-09-08 12:16:48 至 12:19:02）是最终证据，18/18 均为 `passed`、0 incomplete、0 CRITICAL、0 HIGH。重试记录被保留为排障证据，没有删除或覆盖。
+- `eval-results/nvidia-tier1-full/`：按 Skill 保存完整 Tier 1 的全部时间戳 JSON 与 SkillEvaluator 生成的 `BENCHMARK.md`。早期重试包含扫描器不可用或 Windows 证书存储故障的 incomplete 记录；每个目录中时间戳最新的 JSON（2026-09-08 14:37:27 至 14:39:39）是第三阶段发布政策修复后的回归证据，18/18 均为 `passed`、0 incomplete、0 CRITICAL、0 HIGH。重试记录被保留为排障证据，没有删除或覆盖。
 
 评测依据：
 

@@ -39,6 +39,8 @@ python scripts/validate_plugin_packages.py
 
 Retrospectives and logs often contain credentials, internal names, private conversations, or customer data. Redact them before use and before publishing any generated package. The Skill explicitly rejects invented benchmarks, users, compatibility claims, and evidence.
 
+See [PRIVACY.md](PRIVACY.md) for the plugin's data-handling disclosure.
+
 ## Source and license
 
 The canonical source is [`skills/skill-from-scars`](https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/skills/skill-from-scars). The packaged copy is generated and hash-checked; edit the canonical Skill, then run the sync command from the repository root.

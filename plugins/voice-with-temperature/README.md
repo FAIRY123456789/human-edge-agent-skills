@@ -39,6 +39,8 @@ python scripts/validate_plugin_packages.py
 
 The Skill should not invent memories, experiences, expertise, citations, or certainty. Review the result for factual drift and consent before publishing personal or third-party stories. It improves writing; it is not an impersonation or audio-generation tool.
 
+See [PRIVACY.md](PRIVACY.md) for the plugin's data-handling disclosure.
+
 ## Source and license
 
 The canonical source is [`skills/voice-with-temperature`](https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/skills/voice-with-temperature). The packaged copy is generated and hash-checked; edit the canonical Skill, then run the sync command from the repository root.

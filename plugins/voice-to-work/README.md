@@ -40,6 +40,8 @@ python scripts/validate_plugin_packages.py
 
 The Skills do not upload or transcribe audio. Review sensitive transcripts before sharing them with any host, remove secrets and private names when possible, and keep uncertain ASR repairs visible. Generated plans and specifications should be reviewed before execution.
 
+See [PRIVACY.md](PRIVACY.md) for the plugin's data-handling disclosure.
+
 ## Source and license
 
 The canonical sources are [`voice-dump-to-todo`](https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/skills/voice-dump-to-todo) and [`vibe-to-spec`](https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/skills/vibe-to-spec). Packaged copies are generated and hash-checked; edit the canonical Skills, then run the sync command from the repository root.
