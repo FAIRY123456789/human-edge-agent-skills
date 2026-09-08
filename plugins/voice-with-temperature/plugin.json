@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "voice-with-temperature",
+  "version": "1.0.0",
+  "description": "Edit prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.",
+  "author": {
+    "name": "Joy T",
+    "url": "https://github.com/FAIRY123456789"
+  },
+  "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-with-temperature",
+  "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "voice"]
+}

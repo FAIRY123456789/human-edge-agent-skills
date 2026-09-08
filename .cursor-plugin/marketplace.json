@@ -1,0 +1,76 @@
+{
+  "name": "human-edge-skills",
+  "owner": {
+    "name": "Joy T"
+  },
+  "metadata": {
+    "description": "Focused, portable Human Edge Agent Skill plugins.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "voice-to-work",
+      "source": "plugins/voice-to-work",
+      "description": "Turn noisy spoken task and product dumps into executable todos or implementation-ready specifications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joy T",
+        "url": "https://github.com/FAIRY123456789"
+      },
+      "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-to-work",
+      "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+      "license": "MIT",
+      "keywords": ["voice-input", "productivity", "specifications"],
+      "logo": "plugins/voice-to-work/assets/human-edge.svg",
+      "category": "Productivity"
+    },
+    {
+      "name": "skill-from-scars",
+      "source": "plugins/skill-from-scars",
+      "description": "Decide whether repeated pain deserves a reusable Agent Skill, then shape it into a testable package.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joy T",
+        "url": "https://github.com/FAIRY123456789"
+      },
+      "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/skill-from-scars",
+      "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+      "license": "MIT",
+      "keywords": ["agent-skills", "retrospectives", "knowledge-capture"],
+      "logo": "plugins/skill-from-scars/assets/human-edge.svg",
+      "category": "Developer Tools"
+    },
+    {
+      "name": "build-in-public-launcher",
+      "source": "plugins/build-in-public-launcher",
+      "description": "Turn a finished project into an evidence-first public launch without invented traction or vanity metrics.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joy T",
+        "url": "https://github.com/FAIRY123456789"
+      },
+      "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/build-in-public-launcher",
+      "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+      "license": "MIT",
+      "keywords": ["product-launch", "open-source", "validation"],
+      "logo": "plugins/build-in-public-launcher/assets/human-edge.svg",
+      "category": "Productivity"
+    },
+    {
+      "name": "voice-with-temperature",
+      "source": "plugins/voice-with-temperature",
+      "description": "Edit prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joy T",
+        "url": "https://github.com/FAIRY123456789"
+      },
+      "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-with-temperature",
+      "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+      "license": "MIT",
+      "keywords": ["writing", "editing", "voice"],
+      "logo": "plugins/voice-with-temperature/assets/human-edge.svg",
+      "category": "Productivity"
+    }
+  ]
+}

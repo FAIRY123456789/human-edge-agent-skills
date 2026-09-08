@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "voice-to-work",
+  "displayName": "Voice to Work",
+  "version": "1.0.0",
+  "description": "Turn noisy spoken task and product dumps into executable todos or implementation-ready specifications.",
+  "author": {
+    "name": "Joy T",
+    "url": "https://github.com/FAIRY123456789"
+  },
+  "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-to-work",
+  "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+  "license": "MIT",
+  "keywords": ["voice-input", "productivity", "specifications"]
+}

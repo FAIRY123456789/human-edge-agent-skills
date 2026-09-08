@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "build-in-public-launcher",
+  "displayName": "Build in Public Launcher",
+  "version": "1.0.0",
+  "description": "Turn a finished project into an evidence-first public launch without invented traction or vanity metrics.",
+  "author": {
+    "name": "Joy T",
+    "url": "https://github.com/FAIRY123456789"
+  },
+  "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/build-in-public-launcher",
+  "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+  "license": "MIT",
+  "keywords": ["product-launch", "open-source", "validation"]
+}

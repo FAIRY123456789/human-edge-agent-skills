@@ -51,7 +51,29 @@ Each Skill has one job, a trigger-rich `description`, and an independent install
 
 Both can use recurring named entities from the active conversation/project context to repair obvious ASR errors. They auto-normalize only high-confidence corrections; ambiguous names remain visible instead of being guessed.
 
-## Install one Skill from the monorepo
+## Plugins
+
+Five of the 18 canonical Skills are also packaged into four focused, self-contained plugins. The `skills/` directories remain the source of truth; packaged copies are generated and hash-checked.
+
+| Plugin | Included Skills |
+|---|---|
+| [`voice-to-work`](plugins/voice-to-work/) | `voice-dump-to-todo`, `vibe-to-spec` |
+| [`skill-from-scars`](plugins/skill-from-scars/) | `skill-from-scars` |
+| [`build-in-public-launcher`](plugins/build-in-public-launcher/) | `build-in-public-launcher` |
+| [`voice-with-temperature`](plugins/voice-with-temperature/) | `voice-with-temperature` (writing voice, not speech or audio) |
+
+Each directory has a root Agent Plugins 1.0 manifest for portable clients such as Cursor and a Claude Code manifest under `.claude-plugin/`. No plugin adds hooks, agents, commands, MCP servers, or platform-specific behavior.
+
+Claude Code can add this repository as a marketplace and install one plugin:
+
+```bash
+claude plugin marketplace add FAIRY123456789/human-edge-agent-skills
+claude plugin install voice-to-work@human-edge-skills
+```
+
+For a local clone, run `claude plugin validate .`, add the clone with `claude plugin marketplace add . --scope local`, and install with `--scope local`. Cursor's official local-development route is to copy one complete plugin directory into `~/.cursor/plugins/local/<plugin-name>`, reload the window, and confirm its Skills under Customize. These files are packaging and submission preparation; they do not claim a marketplace listing or acceptance.
+
+## Install one standalone Skill from the monorepo
 
 GitHub CLI 2.90+ supports browsing and installing a specific Agent Skill from a repository:
 
@@ -60,12 +82,6 @@ GitHub CLI:
 ```bash
 gh skill preview FAIRY123456789/human-edge-agent-skills vibe-to-spec
 gh skill install FAIRY123456789/human-edge-agent-skills vibe-to-spec --agent claude-code --scope user
-```
-
-Skills CLI / skills.sh ecosystem:
-
-```bash
-npx skills add https://github.com/FAIRY123456789/human-edge-agent-skills --skill vibe-to-spec
 ```
 
 For another compatible host, use the host supported by your current CLI or copy the individual skill directory into that agent's skills location.
@@ -93,9 +109,13 @@ The repository includes a release strategy in [`docs/MONOREPO_AND_DISCOVERY.md`]
 ```bash
 pip install pyyaml
 python scripts/validate_skills.py
+python scripts/sync_plugin_packages.py --check
+python scripts/validate_plugin_packages.py
 ```
 
 Seed behavior evals live in [`evals/cases.json`](evals/cases.json).
+
+The NVIDIA SkillEvaluator Tier 1 audit is recorded in [`docs/NVIDIA_TIER1_REPORT.md`](docs/NVIDIA_TIER1_REPORT.md), with the [candidate classification](docs/OFFICIAL_PLUGIN_CANDIDATES.md) and [fix log](docs/TIER1_FIX_LOG.md). Raw JSON is retained under `eval-results/`.
 
 ## Privacy and honesty
 

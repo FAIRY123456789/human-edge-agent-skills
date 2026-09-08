@@ -1,0 +1,816 @@
+{
+  "overall_passed": false,
+  "overall_status": "incomplete",
+  "incomplete_scans": [
+    "skillspector",
+    "gitleaks"
+  ],
+  "total_validators": 11,
+  "total_advisory_skipped": 0,
+  "total_errors": 0,
+  "total_warnings": 8,
+  "severity_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 3
+  },
+  "skills": [
+    {
+      "name": "vibe-to-spec",
+      "passed": false,
+      "issue_count": 5
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Joy T <101039451+FAIRY123456789@users.noreply.github.com>",
+      "items": [
+        {
+          "name": "vibe-to-spec",
+          "passed": false,
+          "issue_count": 5
+        }
+      ],
+      "total_items": 1,
+      "passed_count": 0,
+      "failed_count": 1,
+      "total_issues": 5
+    }
+  ],
+  "results": [
+    {
+      "validator": "Schema & Repository Governance",
+      "description": "Validate SKILL.md frontmatter and repository structure",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 11,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "manifest_exists",
+          "message": "Found skill manifest: SKILL.md",
+          "metadata": {
+            "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md"
+          }
+        },
+        {
+          "check": "frontmatter_valid",
+          "message": "Valid frontmatter for skill 'vibe-to-spec'",
+          "metadata": {
+            "description_length": 511
+          }
+        },
+        {
+          "check": "folder_hierarchy",
+          "message": "Valid general skill structure: skills/vibe-to-spec/",
+          "metadata": null
+        },
+        {
+          "check": "naming_convention",
+          "message": "Folder name 'vibe-to-spec' follows kebab-case convention",
+          "metadata": {
+            "name_length": 12
+          }
+        },
+        {
+          "check": "line_count",
+          "message": "SKILL.md within line limit (77/500)",
+          "metadata": {
+            "line_count": 77,
+            "limit": 500
+          }
+        },
+        {
+          "check": "body_heading",
+          "message": "Body contains a top-level heading",
+          "metadata": null
+        },
+        {
+          "check": "body_recommended_section",
+          "message": "Found recommended section: '## Instructions' (or '## Usage')",
+          "metadata": null
+        },
+        {
+          "check": "body_recommended_section",
+          "message": "Found recommended section: '## Examples'",
+          "metadata": null
+        },
+        {
+          "check": "optional_files",
+          "message": "Found optional supporting files: README.md, assets, references",
+          "metadata": {
+            "files_found": [
+              "README.md",
+              "assets",
+              "references"
+            ]
+          }
+        },
+        {
+          "check": "name_consistency",
+          "message": "Directory name matches frontmatter: 'vibe-to-spec'",
+          "metadata": null
+        },
+        {
+          "check": "author_format",
+          "message": "Valid author format: Joy T <101039451+FAIRY123456789@users.noreply.github.com>",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] manifest_exists: Found skill manifest: SKILL.md",
+          "[OK] frontmatter_valid: Valid frontmatter for skill 'vibe-to-spec'",
+          "[OK] folder_hierarchy: Valid general skill structure: skills/vibe-to-spec/",
+          "[OK] naming_convention: Folder name 'vibe-to-spec' follows kebab-case convention",
+          "[OK] line_count: SKILL.md within line limit (77/500)",
+          "[OK] body_heading: Body contains a top-level heading",
+          "[OK] body_recommended_section: Found recommended section: '## Instructions' (or '## Usage')",
+          "[OK] body_recommended_section: Found recommended section: '## Examples'",
+          "[OK] optional_files: Found optional supporting files: README.md, assets, references",
+          "[OK] name_consistency: Directory name matches frontmatter: 'vibe-to-spec'",
+          "[OK] author_format: Valid author format: Joy T <101039451+FAIRY123456789@users.noreply.github.com>"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Semantic Version Validation",
+      "description": "Validate optional metadata.version labels and require strict bumps",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "version_optional",
+          "message": "No semantic version label present; resource will use commit-hash history",
+          "metadata": {
+            "previous_version": null
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] version_optional: No semantic version label present; resource will use commit-hash history"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Security Scan",
+      "description": "Detect security vulnerabilities and PII/secrets",
+      "passed": false,
+      "status": "incomplete",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "skillspector not installed - skipping security scan. Install with: uv tool install git+https://github.com/NVIDIA/SkillSpector.git"
+        ],
+        "messages": []
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "PII Scan",
+      "description": "Detect PII and local identifiers",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 4,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "pii_scan_start",
+          "message": "Scanning 4 files for PII",
+          "metadata": {
+            "file_count": 4
+          }
+        },
+        {
+          "check": "pii_detection",
+          "message": "No PII detected in 4 files (emails, SSNs, phone numbers, paths)",
+          "metadata": {
+            "files_scanned": 4
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] pii_scan_start: Scanning 4 files for PII",
+          "[OK] pii_detection: No PII detected in 4 files (emails, SSNs, phone numbers, paths)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "License Compliance",
+      "description": "Validate license compliance for Skills, Rules, and Workflows",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Tier 1: Found license declaration in frontmatter (SKILL.md)",
+          "License: MIT (ALLOWED - permissive)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Code Risk Analysis",
+      "description": "Static code analysis using Bandit and packaged Semgrep rules",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "No code files found - skipping code risk analysis"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Secrets Detection",
+      "description": "Detect hardcoded secrets, API keys, and credentials using Gitleaks",
+      "passed": false,
+      "status": "incomplete",
+      "incomplete_scans": [
+        "gitleaks"
+      ],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "gitleaks not installed - secrets scanning skipped. Install with: brew install gitleaks (macOS) or go install github.com/gitleaks/gitleaks/v8@latest"
+        ],
+        "messages": []
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Code Integrity & Hygiene",
+      "description": "Validate dead links, dependencies, and static Python test-file discovery",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 4,
+        "checks_performed": 4,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dead_links_scan",
+          "message": "Checking 4 markdown files for dead links",
+          "metadata": {
+            "file_count": 4
+          }
+        },
+        {
+          "check": "dead_links",
+          "message": "All relative links valid in 4 markdown file(s)",
+          "metadata": {
+            "files_checked": 4
+          }
+        },
+        {
+          "check": "dependencies",
+          "message": "No dependency files found (requirements.txt, pyproject.toml)",
+          "metadata": null
+        },
+        {
+          "check": "test_discovery",
+          "message": "No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests.",
+          "metadata": {
+            "test_count": 0,
+            "execution_performed": false,
+            "coverage_measured": false,
+            "patterns": [
+              "test_*.py",
+              "*_test.py"
+            ]
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "No standard Python test-file candidates found; consider adding tests"
+        ],
+        "messages": [
+          "[OK] dead_links_scan: Checking 4 markdown files for dead links",
+          "[OK] dead_links: All relative links valid in 4 markdown file(s)",
+          "[OK] dependencies: No dependency files found (requirements.txt, pyproject.toml)",
+          "[OK] test_discovery: No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests."
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Unicode Smuggling Detection",
+      "description": "Detect invisible Unicode characters and ASCII smuggling",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 4,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "unicode_scan",
+          "message": "No invisible Unicode characters detected in 4 file(s)",
+          "metadata": {
+            "files_scanned": 4
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] unicode_scan: No invisible Unicode characters detected in 4 file(s)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "QUALITY",
+      "description": "Skill quality scoring across Correctness (35%), Discoverability (25%), Reliability (25%), and Efficiency (15%)",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 5,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 2,
+        "low_count": 3
+      },
+      "findings": [
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'version'",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Description very long (511 chars, recommend 50-150)",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Keep descriptions concise for progressive disclosure",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Broad description without negative triggers may cause over-triggering",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No prerequisites/requirements documented",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document dependencies, API keys, or setup needed",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_efficiency",
+          "message": "Instructions lack clear action verbs",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Use imperative: 'Use run_script with...', 'Call activate_skill...'",
+          "metadata": {
+            "dimension": "efficiency",
+            "deduction": 15
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "quality_score",
+          "message": "Score: 92.2/100 (Grade: A)",
+          "metadata": {
+            "overall_score": 92.2,
+            "grade": "A",
+            "skill_type": "resource-based"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'version' in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "[QUALITY-LOW] Description very long (511 chars, recommend 50-150) in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "[QUALITY-LOW] Broad description without negative triggers may cause over-triggering in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "[QUALITY-LOW] No prerequisites/requirements documented in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md",
+          "[QUALITY-MEDIUM] Instructions lack clear action verbs in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\vibe-to-spec\\SKILL.md"
+        ],
+        "messages": [
+          "[OK] quality_score: Score: 92.2/100 (Grade: A)"
+        ]
+      },
+      "quality": {
+        "overall_score": 92.2,
+        "grade": "A",
+        "skill_type": "resource-based",
+        "skill_name": "vibe-to-spec",
+        "dimensions": {
+          "correctness": {
+            "score": 95.0,
+            "weight": 0.35,
+            "issues_count": 1,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'version'",
+                "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+                "deduction": 5
+              }
+            ]
+          },
+          "discoverability": {
+            "score": 90.0,
+            "weight": 0.25,
+            "issues_count": 2,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Description very long (511 chars, recommend 50-150)",
+                "suggestion": "Keep descriptions concise for progressive disclosure",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "Broad description without negative triggers may cause over-triggering",
+                "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+                "deduction": 5
+              }
+            ]
+          },
+          "reliability": {
+            "score": 95.0,
+            "weight": 0.25,
+            "issues_count": 1,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "No prerequisites/requirements documented",
+                "suggestion": "Document dependencies, API keys, or setup needed",
+                "deduction": 5
+              }
+            ]
+          },
+          "efficiency": {
+            "score": 85.0,
+            "weight": 0.15,
+            "issues_count": 1,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "Instructions lack clear action verbs",
+                "suggestion": "Use imperative: 'Use run_script with...', 'Call activate_skill...'",
+                "deduction": 15
+              }
+            ]
+          }
+        },
+        "metrics": {
+          "total_tokens": 996,
+          "recommended_max_tokens": 5000,
+          "frontmatter_tokens": 177,
+          "instructions_tokens": 816,
+          "script_count": 0,
+          "has_examples": false,
+          "has_error_handling": true,
+          "has_frontmatter": true,
+          "has_instructions": true,
+          "has_scripts": false,
+          "has_lib_module": false
+        }
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "SCRIPT_LINT",
+      "description": "AST-based code quality checks for skill scripts",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "lint",
+          "message": "No scripts/ or tools/ directory found",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] lint: No scripts/ or tools/ directory found"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    }
+  ],
+  "policy": {
+    "profile": "external",
+    "audience": "external",
+    "digest": "sha256:1caeb0bf9c2e044705f32fcdbd773fea4d835d895b4e0ab20d1aaa5e28acd660",
+    "author_email_regex": null,
+    "severity_overrides": {
+      "SCHEMA.author_missing": "high",
+      "SCHEMA.author_format": "high",
+      "WORKFLOWS.author_format": "high",
+      "LICENSE.*": "critical"
+    },
+    "source": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\.tmp\\nvidia-tier1-tools\\uv-tools\\skillevaluator\\Lib\\site-packages\\skillevaluator\\config\\profiles\\external.yaml"
+  },
+  "gating": {
+    "tiers": {
+      "1": {
+        "blocking": true,
+        "validators": [
+          "Schema & Repository Governance",
+          "Semantic Version Validation",
+          "Security Scan",
+          "PII Scan",
+          "License Compliance",
+          "Code Risk Analysis",
+          "Secrets Detection",
+          "Code Integrity & Hygiene",
+          "Unicode Smuggling Detection",
+          "QUALITY",
+          "SCRIPT_LINT"
+        ]
+      }
+    }
+  },
+  "quality_summary": [
+    {
+      "overall_score": 92.2,
+      "grade": "A",
+      "skill_type": "resource-based",
+      "skill_name": "vibe-to-spec",
+      "dimensions": {
+        "correctness": {
+          "score": 95.0,
+          "weight": 0.35,
+          "issues_count": 1,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'version'",
+              "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+              "deduction": 5
+            }
+          ]
+        },
+        "discoverability": {
+          "score": 90.0,
+          "weight": 0.25,
+          "issues_count": 2,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Description very long (511 chars, recommend 50-150)",
+              "suggestion": "Keep descriptions concise for progressive disclosure",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "Broad description without negative triggers may cause over-triggering",
+              "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+              "deduction": 5
+            }
+          ]
+        },
+        "reliability": {
+          "score": 95.0,
+          "weight": 0.25,
+          "issues_count": 1,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "No prerequisites/requirements documented",
+              "suggestion": "Document dependencies, API keys, or setup needed",
+              "deduction": 5
+            }
+          ]
+        },
+        "efficiency": {
+          "score": 85.0,
+          "weight": 0.15,
+          "issues_count": 1,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "Instructions lack clear action verbs",
+              "suggestion": "Use imperative: 'Use run_script with...', 'Call activate_skill...'",
+              "deduction": 15
+            }
+          ]
+        }
+      },
+      "metrics": {
+        "total_tokens": 996,
+        "recommended_max_tokens": 5000,
+        "frontmatter_tokens": 177,
+        "instructions_tokens": 816,
+        "script_count": 0,
+        "has_examples": false,
+        "has_error_handling": true,
+        "has_frontmatter": true,
+        "has_instructions": true,
+        "has_scripts": false,
+        "has_lib_module": false
+      }
+    }
+  ],
+  "generated_at": "2026-09-08T11:47:21.969466+00:00"
+}

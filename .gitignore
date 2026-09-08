@@ -7,4 +7,5 @@ artifacts/
 dist/
 release/
 *.log
+.tmp/
 .DS_Store

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "evaluatedBaselineCommit": "449ec5c3d1978accb6e683805757e846d3378fe2",
+  "canonicalRoot": "skills",
+  "pluginRoot": "plugins",
+  "plugins": {
+    "voice-to-work": [
+      "voice-dump-to-todo",
+      "vibe-to-spec"
+    ],
+    "skill-from-scars": [
+      "skill-from-scars"
+    ],
+    "build-in-public-launcher": [
+      "build-in-public-launcher"
+    ],
+    "voice-with-temperature": [
+      "voice-with-temperature"
+    ]
+  }
+}

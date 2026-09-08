@@ -1,0 +1,766 @@
+{
+  "overall_passed": true,
+  "overall_status": "passed",
+  "incomplete_scans": [],
+  "total_validators": 6,
+  "total_advisory_skipped": 0,
+  "total_errors": 0,
+  "total_warnings": 13,
+  "severity_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 5,
+    "low": 8
+  },
+  "skills": [
+    {
+      "name": "small-server-fit",
+      "passed": true,
+      "issue_count": 13
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Joy T <101039451+FAIRY123456789@users.noreply.github.com>",
+      "items": [
+        {
+          "name": "small-server-fit",
+          "passed": true,
+          "issue_count": 13
+        }
+      ],
+      "total_items": 1,
+      "passed_count": 1,
+      "failed_count": 0,
+      "total_issues": 13
+    }
+  ],
+  "results": [
+    {
+      "validator": "Schema & Repository Governance",
+      "description": "Validate SKILL.md frontmatter and repository structure",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 9,
+        "errors": 0,
+        "warnings": 2,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 2,
+        "low_count": 0
+      },
+      "findings": [
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Instructions'",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Instructions' or '## Usage' section. Per agentskills.io the body format is unrestricted, so this is a convention nudge \u2014 it also gives the quality scorer a stable anchor for instruction-quality heuristics.",
+          "metadata": {
+            "missing_section": "## Instructions"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Examples'",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Examples' section. If examples are already inline under instructions, this can be skipped.",
+          "metadata": {
+            "missing_section": "## Examples"
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "manifest_exists",
+          "message": "Found skill manifest: SKILL.md",
+          "metadata": {
+            "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md"
+          }
+        },
+        {
+          "check": "frontmatter_valid",
+          "message": "Valid frontmatter for skill 'small-server-fit'",
+          "metadata": {
+            "description_length": 450
+          }
+        },
+        {
+          "check": "folder_hierarchy",
+          "message": "Valid general skill structure: skills/small-server-fit/",
+          "metadata": null
+        },
+        {
+          "check": "naming_convention",
+          "message": "Folder name 'small-server-fit' follows kebab-case convention",
+          "metadata": {
+            "name_length": 16
+          }
+        },
+        {
+          "check": "line_count",
+          "message": "SKILL.md within line limit (67/500)",
+          "metadata": {
+            "line_count": 67,
+            "limit": 500
+          }
+        },
+        {
+          "check": "body_heading",
+          "message": "Body contains a top-level heading",
+          "metadata": null
+        },
+        {
+          "check": "optional_files",
+          "message": "Found optional supporting files: README.md, agents, references, scripts",
+          "metadata": {
+            "files_found": [
+              "README.md",
+              "agents",
+              "references",
+              "scripts"
+            ]
+          }
+        },
+        {
+          "check": "name_consistency",
+          "message": "Directory name matches frontmatter: 'small-server-fit'",
+          "metadata": null
+        },
+        {
+          "check": "author_format",
+          "message": "Valid author format: Joy T <101039451+FAIRY123456789@users.noreply.github.com>",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Instructions' in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Examples' in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md"
+        ],
+        "messages": [
+          "[OK] manifest_exists: Found skill manifest: SKILL.md",
+          "[OK] frontmatter_valid: Valid frontmatter for skill 'small-server-fit'",
+          "[OK] folder_hierarchy: Valid general skill structure: skills/small-server-fit/",
+          "[OK] naming_convention: Folder name 'small-server-fit' follows kebab-case convention",
+          "[OK] line_count: SKILL.md within line limit (67/500)",
+          "[OK] body_heading: Body contains a top-level heading",
+          "[OK] optional_files: Found optional supporting files: README.md, agents, references, scripts",
+          "[OK] name_consistency: Directory name matches frontmatter: 'small-server-fit'",
+          "[OK] author_format: Valid author format: Joy T <101039451+FAIRY123456789@users.noreply.github.com>"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "PII Scan",
+      "description": "Detect PII and local identifiers",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 5,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "pii_scan_start",
+          "message": "Scanning 5 files for PII",
+          "metadata": {
+            "file_count": 5
+          }
+        },
+        {
+          "check": "pii_detection",
+          "message": "No PII detected in 5 files (emails, SSNs, phone numbers, paths)",
+          "metadata": {
+            "files_scanned": 5
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] pii_scan_start: Scanning 5 files for PII",
+          "[OK] pii_detection: No PII detected in 5 files (emails, SSNs, phone numbers, paths)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "License Compliance",
+      "description": "Validate license compliance for Skills, Rules, and Workflows",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Tier 1: Found license declaration in frontmatter (SKILL.md)",
+          "License: MIT (ALLOWED - permissive)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "Unicode Smuggling Detection",
+      "description": "Detect invisible Unicode characters and ASCII smuggling",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 5,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "unicode_scan",
+          "message": "No invisible Unicode characters detected in 5 file(s)",
+          "metadata": {
+            "files_scanned": 5
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] unicode_scan: No invisible Unicode characters detected in 5 file(s)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "QUALITY",
+      "description": "Skill quality scoring across Correctness (35%), Discoverability (25%), Reliability (25%), and Efficiency (15%)",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 10,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 3,
+        "low_count": 7
+      },
+      "findings": [
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "No documented scripts in table format",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "Instructions don't mention 'run_script'",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add explicit run_script() call examples",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_correctness",
+          "message": "No examples provided",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add example usage with code blocks",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'version'",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Description very long (450 chars, recommend 50-150)",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Keep descriptions concise for progressive disclosure",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "No '## Purpose' section",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add purpose section to clarify use cases",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "Scripts may lack error handling: evaluate_fit.py",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Scripts should handle errors explicitly",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No prerequisites/requirements documented",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document dependencies, API keys, or setup needed",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No limitations documented",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Limitations' section with known issues/constraints",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No troubleshooting section documented",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "quality_score",
+          "message": "Score: 82.0/100 (Grade: B)",
+          "metadata": {
+            "overall_score": 82.0,
+            "grade": "B",
+            "skill_type": "script-based"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[QUALITY-MEDIUM] No documented scripts in table format in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-MEDIUM] Instructions don't mention 'run_script' in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] No examples provided in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'version' in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] Description very long (450 chars, recommend 50-150) in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] No '## Purpose' section in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] Scripts may lack error handling: evaluate_fit.py in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] No prerequisites/requirements documented in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] No limitations documented in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md",
+          "[QUALITY-LOW] No troubleshooting section documented in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\SKILL.md"
+        ],
+        "messages": [
+          "[OK] quality_score: Score: 82.0/100 (Grade: B)"
+        ]
+      },
+      "quality": {
+        "overall_score": 82.0,
+        "grade": "B",
+        "skill_type": "script-based",
+        "skill_name": "small-server-fit",
+        "dimensions": {
+          "correctness": {
+            "score": 70.0,
+            "weight": 0.35,
+            "issues_count": 4,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "No documented scripts in table format",
+                "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+                "deduction": 10
+              },
+              {
+                "severity": "warning",
+                "message": "Instructions don't mention 'run_script'",
+                "suggestion": "Add explicit run_script() call examples",
+                "deduction": 10
+              },
+              {
+                "severity": "info",
+                "message": "No examples provided",
+                "suggestion": "Add example usage with code blocks",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'version'",
+                "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+                "deduction": 5
+              }
+            ]
+          },
+          "discoverability": {
+            "score": 90.0,
+            "weight": 0.25,
+            "issues_count": 2,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Description very long (450 chars, recommend 50-150)",
+                "suggestion": "Keep descriptions concise for progressive disclosure",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No '## Purpose' section",
+                "suggestion": "Add purpose section to clarify use cases",
+                "deduction": 5
+              }
+            ]
+          },
+          "reliability": {
+            "score": 80.0,
+            "weight": 0.25,
+            "issues_count": 4,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Scripts may lack error handling: evaluate_fit.py",
+                "suggestion": "Scripts should handle errors explicitly",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No prerequisites/requirements documented",
+                "suggestion": "Document dependencies, API keys, or setup needed",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No limitations documented",
+                "suggestion": "Add '## Limitations' section with known issues/constraints",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No troubleshooting section documented",
+                "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+                "deduction": 5
+              }
+            ]
+          },
+          "efficiency": {
+            "score": 100.0,
+            "weight": 0.15,
+            "issues_count": 0,
+            "issues": []
+          }
+        },
+        "metrics": {
+          "total_tokens": 1009,
+          "recommended_max_tokens": 5000,
+          "frontmatter_tokens": 159,
+          "instructions_tokens": 847,
+          "script_count": 1,
+          "has_examples": false,
+          "has_error_handling": true,
+          "has_frontmatter": true,
+          "has_instructions": false,
+          "has_scripts": true,
+          "has_lib_module": false
+        }
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    },
+    {
+      "validator": "SCRIPT_LINT",
+      "description": "AST-based code quality checks for skill scripts",
+      "passed": true,
+      "status": "passed",
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 1
+      },
+      "findings": [
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "evaluate_fit.py contains magic numbers",
+          "file_path": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\scripts\\evaluate_fit.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[SCRIPT_LINT-LOW] evaluate_fit.py contains magic numbers in D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\joyt-human-edge-agent-skills-v2\\joyt-human-edge-agent-skills\\skills\\small-server-fit\\scripts\\evaluate_fit.py"
+        ],
+        "messages": []
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      }
+    }
+  ],
+  "policy": {
+    "profile": "external",
+    "audience": "external",
+    "digest": "sha256:1caeb0bf9c2e044705f32fcdbd773fea4d835d895b4e0ab20d1aaa5e28acd660",
+    "author_email_regex": null,
+    "severity_overrides": {
+      "SCHEMA.author_missing": "high",
+      "SCHEMA.author_format": "high",
+      "WORKFLOWS.author_format": "high",
+      "LICENSE.*": "critical"
+    },
+    "source": "D:\\Desktop\\\u4e2a\u4ebaSkills\u7814\u53d1\\.tmp\\nvidia-tier1-tools\\uv-tools\\skillevaluator\\Lib\\site-packages\\skillevaluator\\config\\profiles\\external.yaml"
+  },
+  "gating": {
+    "tiers": {
+      "1": {
+        "blocking": true,
+        "validators": [
+          "Schema & Repository Governance",
+          "PII Scan",
+          "License Compliance",
+          "Unicode Smuggling Detection",
+          "QUALITY",
+          "SCRIPT_LINT"
+        ]
+      }
+    }
+  },
+  "quality_summary": [
+    {
+      "overall_score": 82.0,
+      "grade": "B",
+      "skill_type": "script-based",
+      "skill_name": "small-server-fit",
+      "dimensions": {
+        "correctness": {
+          "score": 70.0,
+          "weight": 0.35,
+          "issues_count": 4,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "No documented scripts in table format",
+              "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+              "deduction": 10
+            },
+            {
+              "severity": "warning",
+              "message": "Instructions don't mention 'run_script'",
+              "suggestion": "Add explicit run_script() call examples",
+              "deduction": 10
+            },
+            {
+              "severity": "info",
+              "message": "No examples provided",
+              "suggestion": "Add example usage with code blocks",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'version'",
+              "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+              "deduction": 5
+            }
+          ]
+        },
+        "discoverability": {
+          "score": 90.0,
+          "weight": 0.25,
+          "issues_count": 2,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Description very long (450 chars, recommend 50-150)",
+              "suggestion": "Keep descriptions concise for progressive disclosure",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No '## Purpose' section",
+              "suggestion": "Add purpose section to clarify use cases",
+              "deduction": 5
+            }
+          ]
+        },
+        "reliability": {
+          "score": 80.0,
+          "weight": 0.25,
+          "issues_count": 4,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Scripts may lack error handling: evaluate_fit.py",
+              "suggestion": "Scripts should handle errors explicitly",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No prerequisites/requirements documented",
+              "suggestion": "Document dependencies, API keys, or setup needed",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No limitations documented",
+              "suggestion": "Add '## Limitations' section with known issues/constraints",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No troubleshooting section documented",
+              "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+              "deduction": 5
+            }
+          ]
+        },
+        "efficiency": {
+          "score": 100.0,
+          "weight": 0.15,
+          "issues_count": 0,
+          "issues": []
+        }
+      },
+      "metrics": {
+        "total_tokens": 1009,
+        "recommended_max_tokens": 5000,
+        "frontmatter_tokens": 159,
+        "instructions_tokens": 847,
+        "script_count": 1,
+        "has_examples": false,
+        "has_error_handling": true,
+        "has_frontmatter": true,
+        "has_instructions": false,
+        "has_scripts": true,
+        "has_lib_module": false
+      }
+    }
+  ],
+  "generated_at": "2026-09-08T10:32:37.947478+00:00"
+}

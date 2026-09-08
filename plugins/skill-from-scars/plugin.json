@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skill-from-scars",
+  "version": "1.0.0",
+  "description": "Decide whether repeated pain deserves a reusable Agent Skill, then shape it into a testable package.",
+  "author": {
+    "name": "Joy T",
+    "url": "https://github.com/FAIRY123456789"
+  },
+  "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/skill-from-scars",
+  "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+  "license": "MIT",
+  "keywords": ["agent-skills", "retrospectives", "knowledge-capture"]
+}

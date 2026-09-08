@@ -113,13 +113,32 @@ def test_release_and_ai_contract(temp: Path) -> None:
     (project / "frontend/src/api.ts").write_text("export const assistant = true\n", encoding="utf-8")
     (project / ".env.production.example").write_text("AI_ENABLED=\nAI_API_KEY=\n", encoding="utf-8")
 
-    release_config = {"project_name": "smoke", "version": "test", "includes": ["frontend/dist", ".env.production.example"]}
+    release_config = {"project_name": "smoke", "version": "test", "includes": ["frontend/dist"]}
     config_path = project / "release.json"
     config_path.write_text(json.dumps(release_config), encoding="utf-8")
     built = run([sys.executable, "skills/aliyun-fullstack-deploy/scripts/build_release.py", str(project), "--config", str(config_path)])
     archive = json.loads(built.stdout)["zip"]
     inspected = run([sys.executable, "skills/aliyun-fullstack-deploy/scripts/inspect_release.py", archive])
     assert json.loads(inspected.stdout)["pass"] is True
+
+    unsafe_release_config = {
+        "project_name": "smoke-hidden-file",
+        "version": "test",
+        "includes": ["frontend/dist", ".env.production.example"],
+    }
+    unsafe_config_path = project / "unsafe-release.json"
+    unsafe_config_path.write_text(json.dumps(unsafe_release_config), encoding="utf-8")
+    unsafe_built = run(
+        [sys.executable, "skills/aliyun-fullstack-deploy/scripts/build_release.py", str(project), "--config", str(unsafe_config_path)]
+    )
+    unsafe_archive = json.loads(unsafe_built.stdout)["zip"]
+    unsafe_inspected = run(
+        [sys.executable, "skills/aliyun-fullstack-deploy/scripts/inspect_release.py", unsafe_archive],
+        {1},
+    )
+    unsafe_report = json.loads(unsafe_inspected.stdout)
+    assert "forbidden-content" in unsafe_report["failures"]
+    assert ".env.production.example" in unsafe_report["forbidden_files"]
 
     contract = {
         "capabilities": ["backend_client", "route_registration", "frontend_entry", "offline_fallback"],
