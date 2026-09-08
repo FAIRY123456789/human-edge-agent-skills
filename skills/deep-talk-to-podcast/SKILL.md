@@ -1,6 +1,13 @@
 ---
 name: deep-talk-to-podcast
 description: "Transform a long private conversation, voice transcript, mentor chat, interview, or two-person deep talk into a privacy-aware podcast package: the real turning points, a natural two-host or interview-style script, show notes, title options, short clips, and a current AI-audio platform recommendation. Use when a normal summary would lose the chemistry and reasoning, or when the user wants to turn a meaningful conversation into a listenable private or public audio artifact."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - podcast
+    - transcript
+    - privacy
 ---
 
 # Deep Talk to Podcast
@@ -15,7 +22,7 @@ Preserve the intellectual movement of the conversation, not every filler word.
    - the opening question;
    - 3–7 turning points;
    - moments of real disagreement;
-   - stories/examples that changed the conclusion;
+   - stories and examples that changed the conclusion;
    - strong lines worth paraphrasing as hooks;
    - unresolved questions.
 4. Choose a format:

@@ -1,6 +1,13 @@
 ---
 name: small-server-fit
-description: Assess whether a web application and its build/runtime plan fit a low-cost Linux VPS or Alibaba Cloud ECS before purchase, implementation, or deployment. Use when choosing an OS image, Python/Node/Java versions, build location, worker count, swap strategy, or minimum CPU/RAM/disk for a repository. Produce evidence-backed FIT, FIT WITH CHANGES, NOT FIT, or NOT MEASURED decisions; do not recommend purchasing from guessed capacity.
+description: Assess whether a web application and its build and runtime plan fit a low-cost Linux VPS or Alibaba Cloud ECS before purchase, implementation, or deployment. Use when choosing an OS image, Python, Node.js, or Java versions, build location, worker count, swap strategy, or minimum CPU, RAM, and disk for a repository. Produce evidence-backed FIT, FIT WITH CHANGES, NOT FIT, or NOT MEASURED decisions; do not recommend purchasing from guessed capacity.
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - capacity-planning
+    - linux
+    - deployment
 ---
 
 # Small Server Fit
@@ -13,7 +20,7 @@ Inspect the repository for:
 
 - frontend build tool and whether static assets can be built locally or in CI;
 - backend runtime and exact version constraints;
-- lockfiles, native extensions, browser binaries, ML/model artifacts, and serializer versions;
+- lockfiles, native extensions, browser binaries, machine-learning model artifacts, and serializer versions;
 - steady processes, intended worker count, background jobs, databases, uploads, logs, and temporary build space;
 - representative validation flow and concurrency expectation.
 
@@ -25,9 +32,9 @@ If the host does not exist yet, mark runtime measurements `NOT MEASURED` and sep
 
 Evaluate these independently:
 
-1. **OS/architecture fit:** application binaries and native packages support the image and architecture.
+1. **Operating-system and architecture fit:** application binaries and native packages support the image and architecture.
 2. **Runtime fit:** an application-specific Python, Node.js, or Java runtime can be installed without replacing a system-owned runtime.
-3. **Build fit:** peak dependency installation and build memory/disk fit, or the build can move to local/CI.
+3. **Build fit:** peak dependency installation and build memory and disk fit, or the build can move to a local machine or CI.
 4. **Runtime memory fit:** measured or bounded steady processes leave headroom for the OS, Nginx, SSH, logs, and short spikes.
 5. **Persistence fit:** state is outside immutable release directories and backups fit the disk or an external store.
 6. **Operations fit:** the service can restart, recover after reboot, expose only intended ports, and produce bounded logs.
@@ -38,8 +45,8 @@ Run `scripts/evaluate_fit.py --profile <profile.json>` when numeric evidence is 
 
 1. Build the SPA or Java artifact outside the small server.
 2. Isolate the application runtime instead of upgrading system binaries.
-3. Reduce process/worker count when the workload and state model permit it.
-4. Move databases, object storage, or heavy build jobs to a managed/external service when justified.
+3. Reduce the process or worker count when the workload and state model permit it.
+4. Move databases, object storage, or heavy build jobs to a managed or external service when justified.
 5. Add swap only as a bounded resilience measure, not as a substitute for required RAM.
 6. Increase the instance size when measured steady-state plus safety margin still does not fit.
 
@@ -50,10 +57,10 @@ Never recommend downgrading security, removing backups, disabling verification, 
 Report each dimension as `FIT`, `FIT WITH CHANGES`, `NOT FIT`, or `NOT MEASURED`. Include:
 
 - the recommended OS image and runtime isolation method;
-- local/CI versus server build split;
+- local or CI versus server build split;
 - process and worker budget;
 - RAM and disk arithmetic with source measurements;
-- model/native dependency compatibility risks;
+- model and native dependency compatibility risks;
 - the smallest safe next measurement or experiment;
 - a purchase recommendation only when evidence supports it.
 

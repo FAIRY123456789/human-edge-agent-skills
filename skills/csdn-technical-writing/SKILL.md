@@ -1,6 +1,13 @@
 ---
 name: csdn-technical-writing
-description: "Draft, rewrite, or audit Chinese CSDN-style technical articles using a specific long-form teaching structure: plain-text overall title, Markdown H1/H2 only for section levels, dense natural paragraphs instead of many micro-paragraphs, beginner-first concept progression, commented code examples, and automatic splitting when a single article becomes too long. Use for technical tutorials, AI/backend articles, engineering practice notes, and beginner-friendly series."
+description: "Draft, rewrite, or audit Chinese CSDN-style technical articles using a specific long-form teaching structure: a plain-text overall title, Markdown headings for section levels, dense natural paragraphs, beginner-first progression, commented code examples, and splitting when an article becomes too long. Use for technical tutorials, AI and backend articles, engineering practice notes, and beginner-friendly series."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - technical-writing
+    - chinese
+    - csdn
 ---
 
 # CSDN Technical Writing

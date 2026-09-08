@@ -1,6 +1,13 @@
 ---
 name: deployment-proof
-description: Convert deployment logs, validation reports, Git history, and before/after notes into a redacted GitHub case study, portfolio entry, interview story, and evidence-backed resume bullets. Use after a software deployment, migration, recovery, or automation project when the user wants to demonstrate learning ability or impact without leaking host identities, credentials, private paths, customer data, or invented metrics. Do not publish or push unless the user explicitly asks.
+description: Convert deployment logs, validation reports, Git history, and comparison notes into a redacted GitHub case study, portfolio entry, interview story, and evidence-backed resume bullets. Use after a software deployment, migration, recovery, or automation project when the user wants to demonstrate learning ability or impact without leaking host identities, credentials, private paths, customer data, or invented metrics. Do not publish or push unless the user explicitly asks.
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - deployment
+    - case-study
+    - redaction
 ---
 
 # Deployment Proof
@@ -9,7 +16,7 @@ Turn operational work into credible public evidence. Preserve what was difficult
 
 ## Build an evidence ledger first
 
-Collect only sources the user authorizes: deployment report, redacted logs, checksums, test output, Git diff/history, architecture notes, screenshots, and the original failure description. For each possible claim, record:
+Collect only sources the user authorizes: deployment report, redacted logs, checksums, test output, Git changes and history, architecture notes, screenshots, and the original failure description. For each possible claim, record:
 
 - claim;
 - evidence source and date;
@@ -22,7 +29,7 @@ Do not turn memory, confidence, or a successful health endpoint into a confirmed
 
 ## Redact before writing
 
-Remove public IPs, hostnames, SSH usernames, private application names and routes, account IDs, exact private filesystem paths, credentials, tokens, database URLs, personal/customer data, and private questions or AI prompts. Preserve reusable environment facts such as OS family, architecture, capacity class, runtime major/minor, deployment topology, and failure class when safe.
+Remove public IPs, hostnames, SSH usernames, private application names and routes, account IDs, exact private filesystem paths, credentials, tokens, database URLs, personal and customer data, and private questions or AI prompts. Preserve reusable environment facts such as OS family, architecture, capacity class, runtime major and minor version, deployment topology, and failure class when safe.
 
 Run:
 
@@ -38,7 +45,7 @@ Copy [assets/case-study-template.md](assets/case-study-template.md) into the out
 
 ```text
 Repeated manual deployment troubleshooting
--> reusable preflight/canary/promotion/rollback workflow
+-> reusable preflight, canary, promotion, and rollback workflow
 -> verified release plus a public, redacted evidence trail
 ```
 

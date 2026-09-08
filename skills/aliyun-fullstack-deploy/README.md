@@ -16,9 +16,6 @@ A generic “deploy this project” prompt often discovers runtime drift, Nginx 
 ```bash
 gh skill preview FAIRY123456789/human-edge-agent-skills aliyun-fullstack-deploy
 gh skill install FAIRY123456789/human-edge-agent-skills aliyun-fullstack-deploy
-
-# Or via the Skills CLI ecosystem
-npx skills add https://github.com/FAIRY123456789/human-edge-agent-skills --skill aliyun-fullstack-deploy
 ```
 
 ## First prompt

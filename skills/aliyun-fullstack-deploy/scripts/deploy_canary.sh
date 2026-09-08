@@ -18,7 +18,6 @@ VENV_PY="$CANARY_ROOT/.venv/bin/python"
 PID_FILE="$CANARY_ROOT/canary.pid"
 LOG_FILE="$CANARY_ROOT/canary.log"
 
-[[ "${EUID}" -eq 0 ]] || { printf 'run as root\n' >&2; exit 1; }
 [[ -d "$RELEASE_DIR" && -f "$RELEASE_DIR/backend/requirements.txt" ]] || { printf 'invalid release: %s\n' "$RELEASE_DIR" >&2; exit 1; }
 [[ -x "$PYTHON_BIN" ]] || { printf 'missing Python: %s\n' "$PYTHON_BIN" >&2; exit 1; }
 ss -ltn "sport = :$CANARY_PORT" | grep -q LISTEN && { printf 'port already in use: %s\n' "$CANARY_PORT" >&2; exit 1; }
@@ -49,10 +48,9 @@ export APP_HOST=127.0.0.1 APP_PORT="$CANARY_PORT" APP_BASE_PATH="$CANARY_BASE_PA
 cd "$CANARY_ROOT"
 exec "$CANARY_VENV_PY" -m uvicorn "$CANARY_APP_MODULE" --host 127.0.0.1 --port "$CANARY_PORT" --workers 1
 SH
-chmod 0750 "$CANARY_ROOT/start-canary.sh"
 
 CANARY_ENV_FILE="$ENV_FILE" CANARY_PORT="$CANARY_PORT" CANARY_BASE_PATH="$APP_BASE_PATH" CANARY_STORAGE="$CANARY_STORAGE" CANARY_ROOT="$CANARY_ROOT" CANARY_VENV_PY="$VENV_PY" CANARY_APP_MODULE="$APP_MODULE" \
-    nohup "$CANARY_ROOT/start-canary.sh" >"$LOG_FILE" 2>&1 &
+    nohup bash "$CANARY_ROOT/start-canary.sh" >"$LOG_FILE" 2>&1 &
 printf '%s\n' "$!" >"$PID_FILE"
 
 health="http://127.0.0.1:${CANARY_PORT}${CANARY_HEALTH_PATH}"

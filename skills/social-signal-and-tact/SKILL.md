@@ -1,6 +1,13 @@
 ---
 name: social-signal-and-tact
-description: "Turn awkward, overly formal, blunt, or AI-sounding messages to teachers, leaders, mentors, senior colleagues, partners, or acquaintances into short, natural, relationship-aware communication. Use for tactful praise, upward communication, progress updates, favors, reminders, apologies, disagreement, gift/courtesy messages, proxy greetings, or warm friend-like chat. The skill can use sandwich framing, specific credit, ask-for-advice, face-saving language, staged chat turns, and subtle emotional value while avoiding fake familiarity, fabricated shared history, pressure, gift-value signaling, or empty flattery."
+description: "Turn awkward, overly formal, blunt, or AI-sounding messages to teachers, leaders, mentors, senior colleagues, partners, or acquaintances into short, natural, relationship-aware communication. Use for tactful praise, upward communication, progress updates, favors, reminders, apologies, disagreement, gift and courtesy messages, proxy greetings, or warm friend-like chat. The skill can use sandwich framing, specific credit, ask-for-advice, face-saving language, staged chat turns, and subtle emotional value while avoiding fake familiarity, fabricated shared history, pressure, gift-value signaling, or empty flattery."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - communication
+    - tone
+    - relationships
 ---
 
 # Social Signal and Tact
@@ -22,7 +29,7 @@ For chat, read the interaction as a sequence of turns, not only as one finished 
 5. Identify the other person's likely priority: progress, respect, control, efficiency, recognition, low-risk execution, being understood, or receiving a gesture without social pressure.
 6. Choose one pattern from `references/message-patterns.md`. Use multiple techniques only when the message still feels natural.
 7. Decide whether the content belongs in one send or several chat turns. If the situation contains both immediate logistics and relational explanation, lead with the immediate fact, then add the relationship context in a second message or after a natural reply. Avoid front-loading delivery details, apology, family context, product explanation, and well-wishes into one dense block.
-8. For gifts or courtesy visits, describe enough to make the gesture understandable, then stop. State the source, timing, local/seasonal quality, or caring intention when relevant. Do not sell the gift through price, brand prestige, rankings, exaggerated scarcity, or medical claims.
+8. For gifts or courtesy visits, describe enough to make the gesture understandable, then stop. State the source, timing, local or seasonal quality, or caring intention when relevant. Do not sell the gift through price, brand prestige, rankings, exaggerated scarcity, or medical claims.
 9. Match the weight of the apology to the actual situation. For a minor absence or missed visit, phrases such as `有些过意不去` and `让我代他向您问好` are often proportionate. Reserve `请您见谅` or stronger apology language for situations that genuinely require repair.
 10. Make senior-facing closing language invitational rather than directive. Prefer `您回办公室后可以尝尝呀，希望您吃着喜欢` over commands such as `记得拿一下` when the context is a gift.
 11. Keep each send short by default. In chat, one compact paragraph often works better than a structured memo, and two well-timed messages can work better than one overloaded paragraph.

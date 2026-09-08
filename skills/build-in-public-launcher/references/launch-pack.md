@@ -15,7 +15,7 @@ A credible public release should include:
 11. Issue template or feedback path.
 12. Changelog/release notes.
 13. Primary proof metric.
-14. Clear statement of what has *not* yet been validated.
+14. Explicit disclosure of validation gaps.
 
 ## Metric distinction
 

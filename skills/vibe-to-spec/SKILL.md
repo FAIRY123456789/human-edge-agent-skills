@@ -1,11 +1,20 @@
 ---
 name: vibe-to-spec
 description: "Convert messy voice input, imperfect speech recognition, half-formed product ideas, and iterative corrections into an implementation-ready software specification for Codex, Claude Code, Copilot, Cursor, or another coding agent. Use when the user speaks faster than they structure requirements, named entities are misrecognized, context or memory can safely resolve recurring terms, and the final output needs scope, flows, data, constraints, acceptance tests, and explicit unknowns rather than a raw transcript."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - specifications
+    - voice-input
+    - software-development
 ---
 
 # Vibe to Spec
 
-The user's speech can be fuzzy. The implementation contract cannot be.
+## Purpose
+
+The user's speech can be fuzzy. The implementation contract cannot be. Recover intent without hiding consequential uncertainty or inventing remembered context.
 
 ## This skill is not `voice-dump-to-todo`
 
@@ -13,12 +22,12 @@ Use **vibe-to-spec** when the destination is a product, feature, code change, sy
 
 Use **voice-dump-to-todo** when the destination is the user's personal execution list: tasks, decisions, waiting items, deadlines, and an interactive to-do.
 
-## Workflow
+## Instructions
 
 1. Read the entire voice dump before normalizing anything. Later sentences often correct earlier ASR errors or change scope.
 2. Build an **active glossary** from:
    - exact terms repeated in the current input;
-   - named entities in the active conversation/project context;
+   - named entities in the active conversation or project context;
    - user-provided glossaries or files;
    - host-provided memory only when the product legitimately exposes it and the user would reasonably expect it to be used.
 3. Resolve suspicious ASR terms with `references/asr-context-resolution.md`.
@@ -29,9 +38,9 @@ Use **voice-dump-to-todo** when the destination is the user's personal execution
    - in-scope behaviors;
    - explicit out-of-scope items;
    - user flow;
-   - screens/components;
-   - data/entities;
-   - integrations/APIs;
+   - screens and components;
+   - data and entities;
+   - integrations and APIs;
    - constraints and non-negotiables;
    - acceptance tests;
    - open questions that genuinely block implementation.
@@ -47,9 +56,22 @@ Default deliverable:
 
 - normalized brief;
 - correction ledger for non-trivial ASR fixes;
-- `SPEC.md` content;
+- implementation specification content;
 - acceptance criteria;
-- assumptions/open blockers;
+- assumptions and open blockers;
 - suggested implementation order.
 
 Never invent a remembered project name merely because it sounds plausible.
+
+## Examples
+
+- Input: a voice transcript that first says “mobile page,” later corrects it to a responsive web dashboard, and leaves the export format uncertain.
+- Output: the corrected scope, a visible export-format assumption, user flows, data entities, acceptance tests, and `YES_WITH_ASSUMPTIONS` readiness.
+
+## Limitations
+
+Do not resolve names from memory when the host does not legitimately expose that context. Do not mark a specification ready when ambiguity changes architecture, cost, security, or data-loss risk.
+
+## Troubleshooting
+
+If corrections conflict, prefer the latest explicit correction and record the conflict. If the requested behavior cannot be tested, rewrite it as an observable outcome or leave it as an open blocker.

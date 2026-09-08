@@ -1,6 +1,13 @@
 ---
 name: personal-boardroom
-description: "Stress-test a difficult career, startup, study, money, product, or life decision through a small board of explicit decision lenses, then synthesize one evidence-weighted recommendation. Use when the user is torn between options, has several identities or goals in conflict, keeps receiving contradictory advice, or wants more than a generic pros/cons list."
+description: "Stress-test a difficult career, startup, study, money, product, or life decision through a small board of explicit decision lenses, then synthesize one evidence-weighted recommendation. Use when the user is torn between options, has several identities or goals in conflict, keeps receiving contradictory advice, or wants more than a generic trade-off list."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - decision-making
+    - strategy
+    - reflection
 ---
 
 # Personal Boardroom
@@ -12,9 +19,9 @@ Multiple perspectives are useful only if they expose different objectives, infor
 Adapt the seats to the decision. Typical lenses:
 
 - **Operator:** What can actually be executed with current time and resources?
-- **Builder/Engineer:** What compounds capability and creates hard-to-fake skill?
-- **User/Customer:** What creates external value?
-- **Investor/Resource allocator:** Where is upside relative to opportunity cost?
+- **Builder or engineer:** What compounds capability and creates hard-to-fake skill?
+- **User or customer:** What creates external value?
+- **Investor or resource allocator:** Where is upside relative to opportunity cost?
 - **Future self:** What option preserves or expands later choices?
 - **Risk officer:** What can create irreversible downside?
 

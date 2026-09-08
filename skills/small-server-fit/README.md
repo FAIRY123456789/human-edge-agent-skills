@@ -12,9 +12,6 @@ Compare an application's measured build/runtime budget with a low-cost VPS or Al
 ```bash
 gh skill preview FAIRY123456789/human-edge-agent-skills small-server-fit
 gh skill install FAIRY123456789/human-edge-agent-skills small-server-fit
-
-# Or via the Skills CLI ecosystem
-npx skills add https://github.com/FAIRY123456789/human-edge-agent-skills --skill small-server-fit
 ```
 
 ## First prompt

@@ -18,8 +18,8 @@ SECRET_PATTERNS = [
     re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     re.compile(rb"(?:api[_-]?key|secret|token)\s*[=:]\s*['\"]?[A-Za-z0-9_-]{24,}", re.I),
 ]
-FORBIDDEN_PARTS = {".git", ".venv", "node_modules", "__pycache__", ".pytest_cache"}
-DEPLOY_SUFFIXES = {".sh", ".service", ".conf", ".env", ".example"}
+FORBIDDEN_PARTS = {"node_modules", "__pycache__"}
+DEPLOY_SUFFIXES = {".sh", ".service", ".conf", ".example"}
 
 
 def sha256(path: Path) -> str:
@@ -35,8 +35,6 @@ def inspect(root: Path, zip_names: list[str], required_files: list[str] | None =
     for path, label in ((manifest_path, "manifest"), (checksum_path, "checksums")):
         if not path.is_file():
             failures.append(f"missing:{label}")
-    if (package / ".env").exists():
-        failures.append("forbidden:.env")
     if any("\\" in name for name in zip_names):
         failures.append("zip-backslash-path")
 
@@ -47,7 +45,11 @@ def inspect(root: Path, zip_names: list[str], required_files: list[str] | None =
         if not path.is_file():
             continue
         relative = path.relative_to(package)
-        if set(relative.parts) & FORBIDDEN_PARTS or relative.parts[0] == "storage":
+        if (
+            any(part.startswith(".") for part in relative.parts)
+            or set(relative.parts) & FORBIDDEN_PARTS
+            or relative.parts[0] == "storage"
+        ):
             forbidden_files.append(relative.as_posix())
         payload = path.read_bytes()
         if any(pattern.search(payload) for pattern in SECRET_PATTERNS):

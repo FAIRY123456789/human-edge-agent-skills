@@ -9,7 +9,6 @@ HEALTH_URL="${HEALTH_URL:-}"
 STATE_ROOT="$APP_ROOT/deployment-state"
 PREVIOUS_FILE="$STATE_ROOT/previous-release"
 
-[[ "${EUID}" -eq 0 ]] || { printf 'run as root\n' >&2; exit 1; }
 [[ -f "$PREVIOUS_FILE" ]] || { printf 'previous release metadata missing\n' >&2; exit 1; }
 previous="$(<"$PREVIOUS_FILE")"
 [[ -n "$previous" && -d "$previous" ]] || { printf 'previous release unavailable: %s\n' "$previous" >&2; exit 1; }

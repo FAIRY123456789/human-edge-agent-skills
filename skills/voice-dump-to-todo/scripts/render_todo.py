@@ -1,18 +1,15 @@
+#!/usr/bin/env python3
+"""Render a local JSON task list as a standalone interactive HTML file."""
+
+from __future__ import annotations
+
+import argparse
+import html
+import json
 from pathlib import Path
-import json, html, sys
 
-src = Path(sys.argv[1])
-out = Path(sys.argv[2] if len(sys.argv) > 2 else "todo.html")
-data = json.loads(src.read_text(encoding="utf-8"))
-if isinstance(data, dict):
-    tasks = data.get("tasks", [])
-    title = data.get("title", "Todo")
-else:
-    tasks = data
-    title = "Todo"
 
-payload = json.dumps(tasks, ensure_ascii=False).replace("</", "<\\/")
-page = """<!doctype html>
+PAGE_TEMPLATE = """<!doctype html>
 <html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>__TITLE__</title>
 <style>
@@ -29,6 +26,38 @@ function resetAll(){if(confirm('Reset all task states?')){state=JSON.parse(JSON.
 function exportState(){const b=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='todo-state.json';a.click();URL.revokeObjectURL(a.href)}
 render();
 </script></body></html>"""
-page = page.replace("__TITLE__", html.escape(title)).replace("__PAYLOAD__", payload)
-out.write_text(page, encoding="utf-8")
-print(out)
+
+
+def render(source: Path, output: Path) -> None:
+    if not source.is_file():
+        raise FileNotFoundError(f"task file not found: {source}")
+    data = json.loads(source.read_text(encoding="utf-8"))
+    if isinstance(data, dict):
+        tasks = data.get("tasks", [])
+        title = data.get("title", "Todo")
+    elif isinstance(data, list):
+        tasks = data
+        title = "Todo"
+    else:
+        raise ValueError("task file must contain a JSON object or array")
+    if not isinstance(tasks, list) or not isinstance(title, str):
+        raise ValueError("tasks must be an array and title must be a string")
+
+    payload = json.dumps(tasks, ensure_ascii=False).replace("</", "<\\/")
+    page = PAGE_TEMPLATE.replace("__TITLE__", html.escape(title)).replace("__PAYLOAD__", payload)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(page, encoding="utf-8")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("source", type=Path)
+    parser.add_argument("output", type=Path, nargs="?", default=Path("todo.html"))
+    args = parser.parse_args()
+    render(args.source, args.output)
+    print(args.output)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

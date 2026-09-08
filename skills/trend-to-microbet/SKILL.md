@@ -1,6 +1,13 @@
 ---
 name: trend-to-microbet
-description: "Turn a fast-moving AI, product, creator, career, or technology trend into a small evidence-producing bet instead of a vague FOMO reaction. Use when the user says something is suddenly hot, wonders whether to chase a new model/platform/agent/skill/plugin, or wants a 48-hour to 7-day experiment with a clear upside, effort cap, proof metric, and stop rule."
+description: "Turn a fast-moving AI, product, creator, career, or technology trend into a small evidence-producing bet instead of a vague FOMO reaction. Use when the user says something is suddenly hot, wonders whether to chase a new model, platform, agent, Skill, or plugin, or wants a 48-hour to 7-day experiment with a clear upside, effort cap, proof metric, and stop rule."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - experiments
+    - trends
+    - validation
 ---
 
 # Trend to Microbet

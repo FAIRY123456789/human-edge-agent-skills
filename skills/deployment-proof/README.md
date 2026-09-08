@@ -12,9 +12,6 @@ Convert redacted deployment reports, validation output, Git history, and before/
 ```bash
 gh skill preview FAIRY123456789/human-edge-agent-skills deployment-proof
 gh skill install FAIRY123456789/human-edge-agent-skills deployment-proof
-
-# Or via the Skills CLI ecosystem
-npx skills add https://github.com/FAIRY123456789/human-edge-agent-skills --skill deployment-proof
 ```
 
 ## First prompt

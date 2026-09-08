@@ -17,6 +17,17 @@ RELEASES_ROOT="$APP_ROOT/releases"
 TARGET="$RELEASES_ROOT/$VERSION"
 STATE_ROOT="$APP_ROOT/deployment-state"
 
+remove_managed_symlink() {
+    local link_path="$1"
+    if [[ -e "$link_path" && ! -L "$link_path" ]]; then
+        printf 'refusing to remove non-symlink: %s\n' "$link_path" >&2
+        return 1
+    fi
+    if [[ -L "$link_path" ]]; then
+        unlink -- "$link_path"
+    fi
+}
+
 restore_previous() {
     if [[ -n "$previous" && -d "$previous" ]]; then
         ln -s "$previous" "$APP_ROOT/current.rollback"
@@ -26,15 +37,14 @@ restore_previous() {
             mv -Tf "${WWW_LINK}.rollback" "$WWW_LINK"
         fi
     else
-        rm -f -- "$APP_ROOT/current"
+        remove_managed_symlink "$APP_ROOT/current"
         if [[ -n "$WWW_LINK" ]]; then
-            rm -f -- "$WWW_LINK"
+            remove_managed_symlink "$WWW_LINK"
         fi
     fi
     systemctl restart "$SERVICE_NAME" || true
 }
 
-[[ "${EUID}" -eq 0 ]] || { printf 'run as root\n' >&2; exit 1; }
 [[ -d "$RELEASE_DIR" ]] || { printf 'release missing: %s\n' "$RELEASE_DIR" >&2; exit 1; }
 systemctl cat "$SERVICE_NAME" | grep -Fq "$APP_ROOT/current" || { printf 'service is not current-symlink aware; install a validated unit first\n' >&2; exit 1; }
 install -d -m 0755 "$RELEASES_ROOT" "$STATE_ROOT"

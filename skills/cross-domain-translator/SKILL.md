@@ -1,6 +1,13 @@
 ---
 name: cross-domain-translator
 description: "Translate a problem, workflow, or project from one professional domain into another while preserving the real structure. Use when someone needs to connect domain expertise with software, AI, product, research, data, policy, operations, or another field. Rebuild actors, objects, states, events, constraints, evidence, metrics, and failure modes instead of merely replacing vocabulary."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - systems-thinking
+    - domain-modeling
+    - translation
 ---
 
 # Cross-Domain Translator
@@ -12,9 +19,9 @@ Translate the structure of the problem, not the nouns.
 1. Describe the source-domain problem in ordinary language.
 2. Extract its structural model using `references/domain-map.md`:
    - actors;
-   - objects/data;
+   - objects and data;
    - states;
-   - events/actions;
+   - events and actions;
    - decisions;
    - constraints;
    - evidence;
@@ -25,7 +32,7 @@ Translate the structure of the problem, not the nouns.
 5. Mark every analogy that could break because of regulation, physical constraints, human incentives, data quality, or different causal mechanisms.
 6. Propose the smallest useful bridge: data model, API, workflow, Agent, experiment, prototype, taxonomy, or research question.
 7. State what new domain knowledge must be learned before implementation.
-8. If the translation is for a resume/interview, explain the transferable structure without pretending the domains are identical.
+8. If the translation is for a resume or interview, explain the transferable structure without pretending the domains are identical.
 
 ## Output
 

@@ -1,6 +1,13 @@
 ---
 name: voice-with-temperature
 description: "Rewrite, edit, or draft prose so it becomes clearer while retaining the writer's lived detail, emotional temperature, uncertainty, rhythm, specificity, and intellectual character. Use for reflections, personal essays, technical writing, speeches, bios, posts, or formal prose when normal AI polishing makes the text generic, over-smoothed, slogan-like, or emotionally fake."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - writing
+    - editing
+    - voice
 ---
 
 # Voice With Temperature
@@ -13,7 +20,7 @@ Clarity should not erase the person who wrote the sentence.
 2. Mark four kinds of anchors:
    - lived details;
    - concrete judgments;
-   - uncertainty/hesitation that carries meaning;
+   - uncertainty and hesitation that carry meaning;
    - characteristic sentence rhythm or phrasing.
 3. Protect those anchors unless they harm accuracy, privacy, or readability.
 4. Compress repetition by preserving the strongest instance rather than replacing it with an abstract summary.

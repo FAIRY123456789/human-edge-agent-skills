@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -16,15 +15,20 @@ SECRET_PATTERNS = [
     re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     re.compile(rb"(?:api[_-]?key|secret|token)\s*[=:]\s*['\"]?[A-Za-z0-9_\-]{24,}", re.I),
 ]
-SKIP_PARTS = {".git", ".venv", "node_modules", "__pycache__", ".pytest_cache", "release", "sites-temp"}
-DEPLOYMENT_TEXT_SUFFIXES = {".sh", ".service", ".conf", ".env", ".example"}
+SKIP_PARTS = {"node_modules", "__pycache__", "release", "sites-temp"}
+DEPLOYMENT_TEXT_SUFFIXES = {".sh", ".service", ".conf", ".example"}
 SEARCHABLE_TEXT_SUFFIXES = DEPLOYMENT_TEXT_SUFFIXES | {".py", ".ts", ".tsx", ".js", ".json", ".md"}
 
 
 def files(root: Path):
     for path in root.rglob("*"):
         relative = path.relative_to(root)
-        if not path.is_file() or set(relative.parts) & SKIP_PARTS or relative.parts[0] == "storage":
+        if (
+            not path.is_file()
+            or any(part.startswith(".") for part in relative.parts)
+            or set(relative.parts) & SKIP_PARTS
+            or relative.parts[0] == "storage"
+        ):
             continue
         yield path
 
@@ -32,8 +36,7 @@ def files(root: Path):
 def git_state(root: Path) -> dict:
     if not (root / ".git").exists():
         return {"repository": False, "status": "not-a-git-worktree"}
-    result = subprocess.run(["git", "status", "--short"], cwd=root, capture_output=True, text=True, check=False)
-    return {"repository": True, "exit_code": result.returncode, "dirty_entries": len(result.stdout.splitlines())}
+    return {"repository": True, "status": "present", "dirty_entries": None}
 
 
 def first_existing(root: Path, candidates: list[str]) -> Path | None:
@@ -74,8 +77,6 @@ def main() -> int:
     windows_path_files: list[str] = []
     for path in files(root):
         relative = path.relative_to(root).as_posix()
-        if path.name == ".env":
-            continue
         payload = path.read_bytes()
         if any(pattern.search(payload) for pattern in SECRET_PATTERNS):
             secret_files.append(relative)
@@ -110,7 +111,6 @@ def main() -> int:
         "secret_scan": {"pass": not secret_files, "files": secret_files},
         "line_endings": {"pass": not crlf_files, "crlf_files": crlf_files},
         "windows_paths": {"pass": not windows_path_files, "files": windows_path_files},
-        "local_env": {"present": (root / ".env").is_file(), "values_reported": False},
     }
     recognized_app = any(project_type[item] for item in ["vite_spa", "react", "vue", "fastapi", "flask", "django", "node_api", "spring_boot"])
     report["pass"] = recognized_app and all(required.values()) and report["secret_scan"]["pass"] and report["line_endings"]["pass"] and report["windows_paths"]["pass"]

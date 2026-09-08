@@ -38,9 +38,12 @@ else
     curl_get "${base}/api/health" >"$TMP_DIR/public-health.json"
 fi
 
+protected_index=0
 for protected in $PROTECTED_URLS; do
-    curl_get "$protected" >"$TMP_DIR/protected-$(printf '%s' "$protected" | sha256sum | cut -c1-12).body"
-    [[ -s "$TMP_DIR/protected-$(printf '%s' "$protected" | sha256sum | cut -c1-12).body" ]]
+    protected_index=$((protected_index + 1))
+    protected_body="$TMP_DIR/protected-$protected_index.body"
+    curl_get "$protected" >"$protected_body"
+    [[ -s "$protected_body" ]]
 done
 
 if [[ -n "${VERIFY_HOOK:-}" ]]; then

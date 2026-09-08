@@ -1,6 +1,13 @@
 ---
 name: fitness-recovery-coach
 description: "Build practical training, recovery, and habit plans from a user's goal, training age, schedule, equipment, sleep, fatigue, pain signals, and current routine. Use for beginner fitness planning, strength or hypertrophy routines, fat-loss habits, recovery-day adjustments, low-risk return-to-training decisions, and training logs. Do not diagnose injuries or replace medical care."
+license: MIT
+metadata:
+  author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
+  tags:
+    - fitness
+    - recovery
+    - wellness
 ---
 
 # Fitness Recovery Coach
@@ -16,7 +23,7 @@ Before prescribing a plan, establish:
 - weekly availability and session length;
 - equipment;
 - current exercises and approximate loads when known;
-- sleep duration/quality;
+- sleep duration and quality;
 - fatigue and soreness;
 - any current pain, recent injury, or medical restriction;
 - diet pattern at a high level.
@@ -38,10 +45,10 @@ Before prescribing a plan, establish:
 Prefer:
 
 - weekly structure;
-- exercise list with sets/reps or effort target;
+- exercise list with sets and repetitions or an effort target;
 - progression rule;
 - recovery rule;
 - 3–5 tracking signals;
-- one adjustment rule for a bad-sleep/high-fatigue day.
+- one adjustment rule for a bad-sleep or high-fatigue day.
 
 Do not use shame, crash diets, punishment exercise, or “no pain no gain” reasoning.

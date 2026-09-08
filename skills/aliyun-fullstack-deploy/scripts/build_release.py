@@ -15,8 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-DEFAULT_EXCLUDES = {".git", ".venv", "node_modules", "__pycache__", ".pytest_cache", ".env"}
-TEXT_SUFFIXES = {".sh", ".service", ".conf", ".env", ".example", ".py", ".js", ".ts", ".tsx", ".json", ".md"}
+DEFAULT_EXCLUDES = {"node_modules", "__pycache__"}
+TEXT_SUFFIXES = {".sh", ".service", ".conf", ".example", ".py", ".js", ".ts", ".tsx", ".json", ".md"}
 SAFE_LABEL = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}$")
 
 
@@ -30,7 +30,11 @@ def sha256(path: Path) -> str:
 
 def ignored(excludes: set[str]):
     def callback(_directory: str, names: list[str]) -> set[str]:
-        return {name for name in names if name in excludes or name.endswith((".pyc", ".pyo"))}
+        return {
+            name
+            for name in names
+            if name.startswith(".") or name in excludes or name.endswith((".pyc", ".pyo"))
+        }
     return callback
 
 
