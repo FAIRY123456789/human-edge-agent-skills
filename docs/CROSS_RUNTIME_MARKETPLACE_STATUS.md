@@ -30,7 +30,7 @@ Snapshot: 2026-09-09 11:23:43 +08:00. Public main at the start of this stage: `5
 
 The historical [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) release remains immutable at `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`.
 
-`v0.5.0` was **not created**. Cursor plugin and Skill discovery passed, but Cursor behavior remains **USER VISUAL CHECK REQUIRED** and the required Claude Code CLI validation/discovery is **BLOCKED** because only Claude Desktop is installed. The release gate therefore does not pass.
+For `v0.5.0`, the user explicitly changed the release gate to require Cursor validation only and chose not to wait for Claude Code CLI access. That scoped release gate is satisfied by Cursor 3.19.13 local import and machine-readable discovery of 4/4 plugins and 5/5 Skills with zero load failures. Cursor behavior remains **USER VISUAL CHECK REQUIRED** and Claude Code remains **NOT TESTED**; neither is represented otherwise in the release notes. The release target is [v0.5.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.5.0).
 
 All repository regressions passed: canonical validator 18/18, Agent Plugins schema 4/4, Claude manifest metadata 4/4, Cursor marketplace manifest, package drift 5/5, Gitleaks 8.30.1 on `plugins/`, tracked Python syntax 18/18, Bash syntax 6/6, operational JSON parse 21/21, 110 relative-link targets across 108 Markdown files, deterministic OpenAI ZIP rebuild, and functional smoke tests. The retained NVIDIA raw JSON has a known local ACL mismatch and was not re-parsed. NVIDIA Tier 1 was not re-run because canonical Skill content did not change.
 

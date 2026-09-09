@@ -145,7 +145,7 @@ The five representative prompts remain **USER VISUAL CHECK REQUIRED**. This does
 
 ## Release and state boundary
 
-Cursor is **STATIC VALIDATED** and its local plugin/Skill discovery is **RUNTIME VALIDATED**. Representative behavior is **USER VISUAL CHECK REQUIRED**, so Cursor is not yet **READY FOR SUBMISSION**. [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) remains the current release; `v0.5.0` was not created because the Claude gate is also blocked. Nothing was submitted to Cursor, and nothing is under review or accepted there.
+Cursor is **STATIC VALIDATED** and its local plugin/Skill discovery is **RUNTIME VALIDATED**. Representative behavior is **USER VISUAL CHECK REQUIRED**, so Cursor is not yet **READY FOR SUBMISSION** under the stricter submission gate. The user separately authorized [v0.5.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.5.0) using Cursor discovery as the release gate without waiting for Claude Code. Nothing was submitted to Cursor, and nothing is under review or accepted there.
 
 ## Claude route deferred
 
