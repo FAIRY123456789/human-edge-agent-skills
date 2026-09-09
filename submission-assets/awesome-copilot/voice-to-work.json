@@ -1,0 +1,24 @@
+{
+  "name": "voice-to-work",
+  "description": "Turn noisy spoken task and product dumps into executable todos or implementation-ready specifications.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Joy T",
+    "url": "https://github.com/FAIRY123456789"
+  },
+  "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/v0.4.0/plugins/voice-to-work",
+  "keywords": [
+    "productivity",
+    "specifications",
+    "voice-input"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
+  "source": {
+    "source": "github",
+    "repo": "FAIRY123456789/human-edge-agent-skills",
+    "path": "plugins/voice-to-work",
+    "ref": "v0.4.0",
+    "sha": "5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d"
+  }
+}

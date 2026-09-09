@@ -9,7 +9,7 @@ Snapshot: 2026-09-09 (Asia/Shanghai). Public main at the start of this stage: `0
 | Cursor, four plugins | STATIC VALIDATED | NOT TESTED: Cursor absent | BLOCKED by runtime | NOT SUBMITTED |
 | Claude Code, four plugins | STATIC VALIDATED | NOT TESTED: CLI absent; model test BLOCKED_BY_AUTH | BLOCKED by runtime/auth | NOT SUBMITTED |
 | OpenAI Universal Plugins Directory | Two deterministic Skills-only uploads validated | Codex runtime evidence available | `OPENAI_READY_FOR_USER_SUBMISSION` | NOT SUBMITTED |
-| GitHub Awesome Copilot | Two candidate field sets prepared | Copilot CLI / vally NOT TESTED | BLOCKED by future immutable v0.4.0 ref/SHA | ISSUE NOT CREATED |
+| GitHub Awesome Copilot | Two candidate field sets pinned to `v0.4.0` | Copilot CLI / vally NOT TESTED | Ready for separately authorized issue submission | ISSUE NOT CREATED |
 | skills.sh | CLI 1.5.25 discovers 18 | Directory indexes 1 Skill | Organic indexing only | 1 real total install |
 | Gemini CLI Gallery | Five-Skill extension design feasible | NOT TESTED: CLI absent | Current monorepo gallery route rejected | NOT LISTED |
 
@@ -25,7 +25,7 @@ Snapshot: 2026-09-09 (Asia/Shanghai). Public main at the start of this stage: `0
 
 ## Release decision
 
-`v0.4.0` was not created. The release gate requires both Codex and Cursor runtime validation; only Codex is currently validated. Consequently no new immutable review SHA is available for Awesome Copilot or other release-based submissions.
+The user explicitly lifted the earlier cross-runtime release gate and approved publishing without waiting for Cursor or Claude runtime. [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) is public and resolves to `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`. The release truthfully records NVIDIA Tier 1 18/18 and Codex runtime 4/4 plugins plus 5/5 Skills PASS; Cursor and Claude runtime remain **NOT TESTED**. No Marketplace or Awesome Copilot issue was submitted.
 
 Detailed skills.sh evidence, including the directory URL and per-provider audit availability, is in `SKILLS_SH_STATUS.md`.
 

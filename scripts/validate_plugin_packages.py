@@ -45,6 +45,12 @@ CODEX_CATEGORIES = {
     "build-in-public-launcher": "Productivity",
     "voice-with-temperature": "Writing",
 }
+AWESOME_CANDIDATES = {
+    "skill-from-scars": "plugins/skill-from-scars",
+    "voice-to-work": "plugins/voice-to-work",
+}
+AWESOME_RELEASE_REF = "v0.4.0"
+AWESOME_RELEASE_SHA = "5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d"
 
 
 def load_json(path: Path) -> dict:
@@ -299,6 +305,47 @@ def validate_openai_archives() -> None:
         print(f"PASS OpenAI upload archive: {archive_path.relative_to(REPO_ROOT)}")
 
 
+def validate_awesome_copilot_drafts() -> None:
+    draft_dir = REPO_ROOT / "submission-assets" / "awesome-copilot"
+    allowed_fields = {
+        "name", "description", "version", "author", "homepage",
+        "keywords", "license", "repository", "source",
+    }
+    for name, plugin_path in AWESOME_CANDIDATES.items():
+        path = draft_dir / f"{name}.json"
+        data = load_json(path)
+        if set(data) != allowed_fields:
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: unexpected or missing top-level fields")
+        if data.get("name") != name:
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: wrong plugin name")
+        if data.get("version") != "1.0.0" or data.get("license") != "MIT":
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: wrong version or license")
+        if data.get("repository") != REQUIRED_METADATA["repository"]:
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: wrong repository")
+        if data.get("homepage") != f"{REQUIRED_METADATA['repository']}/tree/{AWESOME_RELEASE_REF}/{plugin_path}":
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: homepage is not release-pinned")
+        author = data.get("author")
+        if author != {"name": "Joy T", "url": "https://github.com/FAIRY123456789"}:
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: wrong author metadata")
+        keywords = data.get("keywords")
+        if not isinstance(keywords, list) or keywords != sorted(keywords) or any(
+            not isinstance(keyword, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", keyword)
+            for keyword in keywords
+        ):
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: keywords must be sorted lowercase tags")
+        source = data.get("source")
+        expected_source = {
+            "source": "github",
+            "repo": "FAIRY123456789/human-edge-agent-skills",
+            "path": plugin_path,
+            "ref": AWESOME_RELEASE_REF,
+            "sha": AWESOME_RELEASE_SHA,
+        }
+        if source != expected_source:
+            raise ValueError(f"{path.relative_to(REPO_ROOT)}: wrong immutable source locator")
+        print(f"PASS Awesome Copilot intake draft: {path.relative_to(REPO_ROOT)}")
+
+
 def validate_self_containment(config: dict) -> None:
     for name, skills in config["plugins"].items():
         plugin_dir = REPO_ROOT / "plugins" / name
@@ -359,6 +406,7 @@ def main() -> int:
         validate_marketplace(REPO_ROOT / ".cursor-plugin" / "marketplace.json", claude=False)
         validate_marketplace_evals()
         validate_openai_archives()
+        validate_awesome_copilot_drafts()
         if args.claude_schema_dir:
             schema_dir = args.claude_schema_dir.resolve()
             manifest_schema = schema_dir / "claude-code-plugin-manifest.json"

@@ -1,6 +1,6 @@
 # GitHub Awesome Copilot Submission Final
 
-**AWESOME_COPILOT_PREFLIGHT = STATIC PREPARED; NOT READY FOR ISSUE SUBMISSION**
+**AWESOME_COPILOT_PREFLIGHT = READY FOR USER-AUTHORIZED ISSUE SUBMISSION**
 
 **ISSUE STATE = NOT CREATED**
 
@@ -10,15 +10,15 @@ The current official contribution guide now supports public third-party external
 
 Automated intake later runs metadata validation, `vally lint`, and an ephemeral Copilot CLI install smoke test. Neither `vally` nor GitHub Copilot CLI is installed on this host, and no unpinned remote package was executed to imitate those checks.
 
-## Immutable artifact blocker
+## Immutable review artifact
 
-The project explicitly retired `v0.3.0` as a future marketplace review artifact. A new `v0.4.0` may be created only after both Codex and Cursor runtime validation pass. Codex passed, but Cursor is not installed; therefore:
+The user explicitly approved releasing the Codex-validated package without waiting for Cursor or Claude runtime tests. The public release is [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0), and its annotated tag resolves to commit `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`.
 
-- immutable ref: **BLOCKED — future `v0.4.0`, not created**;
-- full commit SHA: **BLOCKED — must be the final 40-character SHA tagged by that release**;
-- Awesome Copilot issue creation: **BLOCKED and not authorized**.
+- immutable ref: `v0.4.0`;
+- full commit SHA: `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`;
+- Awesome Copilot issue creation: **NOT AUTHORIZED IN THIS STAGE; ISSUE NOT CREATED**.
 
-The fields below are final except for those two deliberately blocked immutable identifiers.
+The machine-readable entry drafts in `submission-assets/awesome-copilot/` pin both locators. Cursor and Claude runtime remain **NOT TESTED** and are not claimed as compatibility evidence. GitHub's automated `vally lint` and Copilot CLI install smoke test will run only after a future, separately authorized issue submission.
 
 ## Candidate 1 — skill-from-scars
 
@@ -28,13 +28,13 @@ The fields below are final except for those two deliberately blocked immutable i
 | Short description | Decide whether repeated pain deserves a reusable Agent Skill, then shape it into a testable package. |
 | Owner/repo | `FAIRY123456789/human-edge-agent-skills` |
 | Plugin path | `plugins/skill-from-scars` |
-| Immutable ref | **BLOCKED: use `v0.4.0` only after release gate passes** |
-| Full commit SHA | **BLOCKED: insert the exact SHA pointed to by `v0.4.0`** |
+| Immutable ref | `v0.4.0` |
+| Full commit SHA | `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d` |
 | Plugin version | `1.0.0` |
 | License | `MIT` |
 | Author | Joy T |
 | Author URL | https://github.com/FAIRY123456789 |
-| Homepage | https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/skill-from-scars |
+| Homepage | https://github.com/FAIRY123456789/human-edge-agent-skills/tree/v0.4.0/plugins/skill-from-scars |
 | Keywords | `agent-skills`, `knowledge-capture`, `retrospectives` |
 
 Reviewer notes:
@@ -51,13 +51,13 @@ Why first: it directly improves Agent Skill authoring and evaluation, exposes a 
 | Short description | Turn noisy spoken task and product dumps into executable todos or implementation-ready specifications. |
 | Owner/repo | `FAIRY123456789/human-edge-agent-skills` |
 | Plugin path | `plugins/voice-to-work` |
-| Immutable ref | **BLOCKED: use `v0.4.0` only after release gate passes** |
-| Full commit SHA | **BLOCKED: insert the exact SHA pointed to by `v0.4.0`** |
+| Immutable ref | `v0.4.0` |
+| Full commit SHA | `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d` |
 | Plugin version | `1.0.0` |
 | License | `MIT` |
 | Author | Joy T |
 | Author URL | https://github.com/FAIRY123456789 |
-| Homepage | https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-to-work |
+| Homepage | https://github.com/FAIRY123456789/human-edge-agent-skills/tree/v0.4.0/plugins/voice-to-work |
 | Keywords | `productivity`, `specifications`, `voice-input` |
 
 Reviewer notes:
@@ -73,11 +73,10 @@ Why second: the specification workflow is relevant to Copilot users, but the per
 
 ## Future user-controlled sequence
 
-1. Complete Cursor runtime validation.
-2. Create final commit and immutable `v0.4.0`; verify the public tag and full SHA.
-3. Run `vally lint` and Copilot CLI smoke locally only if official, pinned tooling is available.
-4. Open one external-plugin issue for `skill-from-scars` with the fields above.
-5. Only after reviewing the first intake result, decide whether to open the `voice-to-work` issue.
+1. Review the pinned `skill-from-scars` intake fields and machine-readable draft.
+2. Optionally run `vally lint` and a Copilot CLI smoke test if official, pinned tooling becomes available; record any result without converting `NOT TESTED` into a claim.
+3. Only with a new explicit user instruction, open one external-plugin issue for `skill-from-scars`.
+4. After reviewing the first intake result, decide whether to authorize a separate `voice-to-work` issue.
 
 No issue, PR, comment, label change, or submission was created.
 

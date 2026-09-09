@@ -140,7 +140,7 @@ Current final status: **BLOCKED ONLY BY CURSOR RUNTIME TEST**.
 
 ## Release and state boundary
 
-Cursor is **STATIC VALIDATED** but not **RUNTIME VALIDATED** or **READY FOR SUBMISSION**. The project requires both Codex and Cursor runtime PASS before creating `v0.4.0`; therefore no new release or immutable marketplace review SHA was created. Nothing is submitted, under review, or accepted.
+Cursor is **STATIC VALIDATED** but not **RUNTIME VALIDATED** or **READY FOR SUBMISSION**. The user explicitly approved publishing [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) without waiting for Cursor or Claude runtime; this does not change the Cursor status or create a compatibility claim. The release resolves to `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`. Nothing was submitted to Cursor, and nothing is under review or accepted there.
 
 ## Claude route deferred
 
