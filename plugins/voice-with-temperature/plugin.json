@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "voice-with-temperature",
   "version": "1.0.0",
-  "description": "Edit prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.",
+  "description": "Edit written prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.",
   "author": {
     "name": "Joy T",
     "url": "https://github.com/FAIRY123456789"
@@ -10,5 +10,26 @@
   "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-with-temperature",
   "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
   "license": "MIT",
-  "keywords": ["writing", "editing", "voice"]
+  "keywords": ["writing", "editing", "writing-voice"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Voice With Temperature — Preserve Human Writing Voice",
+        "shortDescription": "Edit prose without flattening the writer's voice.",
+        "longDescription": "Improve written prose while preserving lived detail, uncertainty, sentence rhythm, and emotional register. This plugin edits text; it does not process speech or audio. Part of the Human Edge Agent Skills project.",
+        "developerName": "Joy T",
+        "category": "Writing",
+        "websiteURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-with-temperature",
+        "privacyPolicyURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/voice-with-temperature/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/voice-with-temperature/LICENSE",
+        "defaultPrompt": [
+          "Edit this prose for clarity without flattening my writing voice.",
+          "Remove AI-sounding polish while keeping concrete lived detail.",
+          "Give me a light edit and explain the consequential changes."
+        ],
+        "brandColor": "#BE185D",
+        "logo": "./assets/human-edge.svg"
+      }
+    }
+  }
 }

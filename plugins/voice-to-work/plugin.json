@@ -10,5 +10,26 @@
   "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-to-work",
   "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
   "license": "MIT",
-  "keywords": ["voice-input", "productivity", "specifications"]
+  "keywords": ["voice-input", "productivity", "specifications"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Voice to Work",
+        "shortDescription": "Turn messy speech into tasks or build-ready specs.",
+        "longDescription": "Convert imperfect voice transcripts into prioritized actions or implementation contracts while preserving corrections, dependencies, and uncertain names. Part of the Human Edge Agent Skills project.",
+        "developerName": "Joy T",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/voice-to-work",
+        "privacyPolicyURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/voice-to-work/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/voice-to-work/LICENSE",
+        "defaultPrompt": [
+          "Turn this voice transcript into a prioritized to-do list.",
+          "Turn this product idea dump into an implementation-ready spec.",
+          "Reconcile later corrections in this transcript without guessing names."
+        ],
+        "brandColor": "#6B4EFF",
+        "logo": "./assets/human-edge.svg"
+      }
+    }
+  }
 }

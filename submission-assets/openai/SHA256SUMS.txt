@@ -1,0 +1,2 @@
+50cb63bfad2dc892f79c24ed2faff2054f25db90e16a683265f9a5d10c1826ad  voice-to-work-1.0.0.zip
+76d02d810375befbf3f0f533d8bebf330a37b3d00302242f6fb382563ee470ef  skill-from-scars-1.0.0.zip

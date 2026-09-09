@@ -1,4 +1,4 @@
-# Voice With Temperature
+# Voice With Temperature — Preserve Human Writing Voice
 
 ![Human Edge icon](assets/human-edge.svg)
 

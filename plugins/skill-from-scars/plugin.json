@@ -10,5 +10,26 @@
   "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/skill-from-scars",
   "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
   "license": "MIT",
-  "keywords": ["agent-skills", "retrospectives", "knowledge-capture"]
+  "keywords": ["agent-skills", "retrospectives", "knowledge-capture"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Skill from Scars",
+        "shortDescription": "Turn repeated failures into testable Agent Skills.",
+        "longDescription": "Apply a worthiness gate to recurring operational pain, then define a focused Skill with boundaries, progressive disclosure, and behavior evaluations. Part of the Human Edge Agent Skills project.",
+        "developerName": "Joy T",
+        "category": "Developer Tools",
+        "websiteURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/skill-from-scars",
+        "privacyPolicyURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/skill-from-scars/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/skill-from-scars/LICENSE",
+        "defaultPrompt": [
+          "Decide whether these repeated failures deserve a reusable Skill.",
+          "Turn this retrospective pattern into a testable Skill design.",
+          "Apply a worthiness gate before scaffolding this Skill."
+        ],
+        "brandColor": "#C2410C",
+        "logo": "./assets/human-edge.svg"
+      }
+    }
+  }
 }

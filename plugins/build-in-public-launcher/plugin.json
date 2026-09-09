@@ -10,5 +10,26 @@
   "homepage": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/build-in-public-launcher",
   "repository": "https://github.com/FAIRY123456789/human-edge-agent-skills",
   "license": "MIT",
-  "keywords": ["product-launch", "open-source", "validation"]
+  "keywords": ["product-launch", "open-source", "validation"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Build in Public Launcher",
+        "shortDescription": "Build an evidence-first launch without fake traction.",
+        "longDescription": "Turn a finished project into an honest launch pack, proof plan, distribution experiment, and learning loop without inventing users, installs, or benchmarks. Part of the Human Edge Agent Skills project.",
+        "developerName": "Joy T",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/tree/main/plugins/build-in-public-launcher",
+        "privacyPolicyURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/build-in-public-launcher/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/FAIRY123456789/human-edge-agent-skills/blob/main/plugins/build-in-public-launcher/LICENSE",
+        "defaultPrompt": [
+          "Build an evidence-first launch pack for this finished project.",
+          "Separate verified proof from claims that still need evidence.",
+          "Design a small launch experiment without vanity metrics."
+        ],
+        "brandColor": "#047857",
+        "logo": "./assets/human-edge.svg"
+      }
+    }
+  }
 }

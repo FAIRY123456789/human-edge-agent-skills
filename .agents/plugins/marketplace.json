@@ -1,0 +1,56 @@
+{
+  "name": "human-edge-skills",
+  "interface": {
+    "displayName": "Human Edge Skills"
+  },
+  "plugins": [
+    {
+      "name": "voice-to-work",
+      "source": {
+        "source": "local",
+        "path": "./plugins/voice-to-work"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "skill-from-scars",
+      "source": {
+        "source": "local",
+        "path": "./plugins/skill-from-scars"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "build-in-public-launcher",
+      "source": {
+        "source": "local",
+        "path": "./plugins/build-in-public-launcher"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "voice-with-temperature",
+      "source": {
+        "source": "local",
+        "path": "./plugins/voice-with-temperature"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Writing"
+    }
+  ]
+}

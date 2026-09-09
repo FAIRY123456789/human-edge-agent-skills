@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "candidate_order": [
+    "voice-to-work",
+    "skill-from-scars"
+  ],
+  "archives": [
+    {
+      "plugin": "voice-to-work",
+      "version": "1.0.0",
+      "archive": "submission-assets/openai/voice-to-work-1.0.0.zip",
+      "sha256": "50cb63bfad2dc892f79c24ed2faff2054f25db90e16a683265f9a5d10c1826ad",
+      "files": 14,
+      "bytes": 15150,
+      "format": "skills-only plugin archive",
+      "submission_status": "READY FOR USER REVIEW; NOT SUBMITTED"
+    },
+    {
+      "plugin": "skill-from-scars",
+      "version": "1.0.0",
+      "archive": "submission-assets/openai/skill-from-scars-1.0.0.zip",
+      "sha256": "76d02d810375befbf3f0f533d8bebf330a37b3d00302242f6fb382563ee470ef",
+      "files": 10,
+      "bytes": 8763,
+      "format": "skills-only plugin archive",
+      "submission_status": "READY FOR USER REVIEW; NOT SUBMITTED"
+    }
+  ]
+}
