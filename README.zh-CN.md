@@ -21,26 +21,26 @@
 
 | Skill | 类别 | 解决的问题 |
 |---|---|---|
-| [`social-signal-and-tact`](skills/social-signal-and-tact/) | Social & Communication | Human tact for upward communication |
-| [`csdn-technical-writing`](skills/csdn-technical-writing/) | Creator & Writing | Long-form Chinese technical writing without AI micro-paragraphs |
-| [`student-money-four-buckets`](skills/student-money-four-buckets/) | Young Life | A four-layer student budget that still leaves room for fun |
-| [`voice-dump-to-todo`](skills/voice-dump-to-todo/) | Voice Native | Messy speech in, executable to-do out |
-| [`fitness-recovery-coach`](skills/fitness-recovery-coach/) | Young Life | Training plans that respect recovery instead of forcing the calendar |
-| [`cross-domain-translator`](skills/cross-domain-translator/) | Judgment & Translation | Translate problem structure across domains, not just terminology |
-| [`voice-with-temperature`](skills/voice-with-temperature/) | Creator & Writing | Make writing clearer without washing the human out of it |
-| [`aliyun-fullstack-deploy`](skills/aliyun-fullstack-deploy/) | Engineering | 先金丝雀验证，再原子发布与回滚 |
-| [`small-server-fit`](skills/small-server-fit/) | Engineering | 购买或部署前判断项目是否真正适配小服务器 |
-| [`deployment-proof`](skills/deployment-proof/) | Build in Public | 把看不见的部署工作变成可信的公开证据 |
-| [`trend-to-microbet`](skills/trend-to-microbet/) | AI Native Bets | See a trend. Place a small bet. Demand evidence. |
-| [`vibe-to-spec`](skills/vibe-to-spec/) | Voice Native | Voice chaos to coding-agent contract |
-| [`skill-from-scars`](skills/skill-from-scars/) | AI Native Bets | Turn repeated pain into reusable Agent Skills |
-| [`build-in-public-launcher`](skills/build-in-public-launcher/) | AI Native Bets | Launch for evidence, not applause |
-| [`personal-boardroom`](skills/personal-boardroom/) | Judgment & Translation | One decision, several explicit lenses, one ranked answer |
-| [`anti-slop-personal-brand`](skills/anti-slop-personal-brand/) | AI Native Bets | Make the first screen current, real and earned |
-| [`deep-talk-to-podcast`](skills/deep-talk-to-podcast/) | Creator & Writing | Turn a meaningful deep talk into a privacy-aware AI podcast |
-| [`one-week-founder-mode`](skills/one-week-founder-mode/) | AI Native Bets | One main bet, two microbets, a kill list |
+| [`social-signal-and-tact`](skills/social-signal-and-tact/) | 社交与沟通 | 为向上沟通补足人情分寸 |
+| [`csdn-technical-writing`](skills/csdn-technical-writing/) | 创作与写作 | 写出连贯的中文技术长文，避免 AI 式碎片短段 |
+| [`student-money-four-buckets`](skills/student-money-four-buckets/) | 青年生活 | 用四层预算兼顾学生生活的必要开支、成长和乐趣 |
+| [`voice-dump-to-todo`](skills/voice-dump-to-todo/) | 语音原生 | 把混乱口述整理成可执行的待办事项 |
+| [`fitness-recovery-coach`](skills/fitness-recovery-coach/) | 青年生活 | 制定尊重恢复状态、而不是强行服从日历的训练计划 |
+| [`cross-domain-translator`](skills/cross-domain-translator/) | 判断与转译 | 跨领域迁移问题结构，而不只是替换术语 |
+| [`voice-with-temperature`](skills/voice-with-temperature/) | 创作与写作 | 让文字更清楚，同时保留真实的人味和情绪温度 |
+| [`aliyun-fullstack-deploy`](skills/aliyun-fullstack-deploy/) | 工程 | 先金丝雀验证，再原子发布与回滚 |
+| [`small-server-fit`](skills/small-server-fit/) | 工程 | 购买或部署前判断项目是否真正适配小服务器 |
+| [`deployment-proof`](skills/deployment-proof/) | 公开构建 | 把看不见的部署工作变成可信的公开证据 |
+| [`trend-to-microbet`](skills/trend-to-microbet/) | AI 原生实验 | 发现趋势，小步下注，用证据决定是否继续 |
+| [`vibe-to-spec`](skills/vibe-to-spec/) | 语音原生 | 把混乱口述转成 Coding Agent 可执行的实现合同 |
+| [`skill-from-scars`](skills/skill-from-scars/) | AI 原生实验 | 把反复踩过的坑沉淀成可复用的 Agent Skill |
+| [`build-in-public-launcher`](skills/build-in-public-launcher/) | AI 原生实验 | 为获得真实证据而发布，而不是只追求掌声 |
+| [`personal-boardroom`](skills/personal-boardroom/) | 判断与转译 | 用多个明确视角审视同一决策，给出排序后的答案 |
+| [`anti-slop-personal-brand`](skills/anti-slop-personal-brand/) | AI 原生实验 | 让个人品牌首屏呈现当下、真实且有依据的价值 |
+| [`deep-talk-to-podcast`](skills/deep-talk-to-podcast/) | 创作与写作 | 把有意义的深度对话转成重视隐私的 AI 播客 |
+| [`one-week-founder-mode`](skills/one-week-founder-mode/) | AI 原生实验 | 一项主实验、两项微实验，再配一份停止事项清单 |
 
-## Voice Native：两个 Skill 联动但职责不同
+## 语音原生：两个 Skill 联动但职责不同
 
 `voice-dump-to-todo` 负责把混乱语音变成“我要做什么”；`vibe-to-spec` 负责把混乱语音变成“这个软件应该怎么做”。
 
@@ -67,7 +67,7 @@
 3. `social-signal-and-tact`
 4. `skill-from-scars`
 
-第一批不要用“18 个 Skill”作为主要宣传语。更好的传播方式是选择一个真实痛点，用 before/after 证明某一个 Skill 确实改变了结果。
+第一批不要用“18 个 Skill”作为主要宣传语。更好的传播方式是选择一个真实痛点，用前后对比证明某一个 Skill 确实改变了结果。
 
 ## 校验
 
@@ -76,6 +76,6 @@ pip install pyyaml
 python scripts/validate_skills.py
 ```
 
-## License
+## 许可证
 
 MIT.
