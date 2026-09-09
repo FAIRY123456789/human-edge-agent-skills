@@ -106,7 +106,7 @@ Schema snapshots downloaded for validation remain under ignored `.tmp/` and are 
 |---|---|---|
 | One portable plugin manifest may be enough | Agent Plugins defines root `plugin.json`; Claude documents `.claude-plugin/plugin.json` | Both metadata files coexist over one shared plugin root |
 | Cursor might need a per-plugin proprietary manifest | [Cursor plugins](https://prod.cursor.com/docs/plugins) natively support Agent Plugins and discover root skills | Root Agent Plugins manifest only; no invented Cursor-only component |
-| A repository can call its Claude marketplace `claude-community` | [Claude marketplace docs](https://code.claude.com/docs/en/plugin-marketplaces) reserve marketplace names; the [community repository](https://github.com/anthropics/claude-plugins-community) is read-only and directs submissions to an official form | Repository marketplace is honestly named `human-edge-skills`; community submission exists only as a draft |
+| A repository can call its Claude marketplace `claude-community` | Current [Claude marketplace docs](https://code.claude.com/docs/en/plugin-marketplaces) name `claude-plugins-official` and direct authors to Claude.ai or Console forms; independent marketplaces use their own names | Repository marketplace remains honestly named `human-edge-skills`; official submission is only prepared, not performed |
 | Local runtime testing is always available | Claude and Cursor require their installed hosts for install/discovery verification | Static/package validation passed; runtime rows are explicitly `NOT TESTED` |
 
 ## Remaining gates

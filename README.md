@@ -1,5 +1,7 @@
 # Human Edge Agent Skills
 
+[![skills.sh installs](https://skills.sh/b/fairy123456789/human-edge-agent-skills)](https://skills.sh/fairy123456789/human-edge-agent-skills)
+
 > **Human judgment where generic AI is weakest: messy voice, social tact, ambiguous decisions, real-world experiments, and safe shipping.**
 
 English · [简体中文](README.zh-CN.md)
@@ -64,6 +66,16 @@ Five of the 18 canonical Skills are also packaged into four focused, self-contai
 
 Each directory has a root Agent Plugins 1.0 manifest for portable clients such as Cursor and a Claude Code manifest under `.claude-plugin/`. No plugin adds hooks, agents, commands, MCP servers, or platform-specific behavior.
 
+Current Codex can discover all four from the checked-in repository marketplace:
+
+```bash
+codex plugin marketplace add FAIRY123456789/human-edge-agent-skills --ref main
+codex plugin list --marketplace human-edge-skills --available --json
+codex plugin add voice-to-work@human-edge-skills
+```
+
+For a local clone, replace the GitHub source in the first command with `.`. The 2026-09-09 Codex runtime record covers discovery, installation, all five packaged Skills, uninstall, and clean reinstall. A marketplace listing is not implied.
+
 Claude Code can add this repository as a marketplace and install one plugin:
 
 ```bash
@@ -117,7 +129,7 @@ Seed behavior evals live in [`evals/cases.json`](evals/cases.json).
 
 The NVIDIA SkillEvaluator Tier 1 audit is recorded in [`docs/NVIDIA_TIER1_REPORT.md`](docs/NVIDIA_TIER1_REPORT.md), with the [candidate classification](docs/OFFICIAL_PLUGIN_CANDIDATES.md) and [fix log](docs/TIER1_FIX_LOG.md). Raw JSON is retained under `eval-results/`.
 
-Cursor packaging has completed static and marketplace-policy preflight. Runtime discovery remains untested because Cursor is not installed on the validation host; see the [runtime test guide](docs/CURSOR_RUNTIME_TEST_GUIDE.md) and [final submission worksheet](docs/CURSOR_MARKETPLACE_SUBMISSION_FINAL.md). No Marketplace submission has been made.
+Codex packaging and runtime validation are recorded in the [Codex runtime report](docs/CODEX_RUNTIME_VALIDATION.md). Cross-platform state is summarized in [Cross-Runtime Marketplace Status](docs/CROSS_RUNTIME_MARKETPLACE_STATUS.md), with final materials for [OpenAI](docs/OPENAI_PLUGIN_SUBMISSION_FINAL.md), [Cursor](docs/CURSOR_MARKETPLACE_SUBMISSION_FINAL.md), [Claude](docs/CLAUDE_COMMUNITY_SUBMISSION_FINAL.md), [GitHub Awesome Copilot](docs/GITHUB_AWESOME_COPILOT_SUBMISSION_FINAL.md), [skills.sh](docs/SKILLS_SH_STATUS.md), and the [Gemini CLI feasibility decision](docs/GEMINI_CLI_GALLERY_FEASIBILITY.md). Cursor and Claude runtime remain untested because their CLIs are absent. No Marketplace submission has been made.
 
 ## Privacy and honesty
 

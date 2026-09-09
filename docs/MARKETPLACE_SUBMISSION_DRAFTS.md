@@ -54,20 +54,20 @@ Author: Joy T
 - Suggested prompt: “Turn this finished project into a launch pack using only evidence I can verify. Mark missing proof explicitly and do not publish anything.”
 - Safety note: Rejects fabricated users, installs, testimonials and metrics; publishing always remains a separate explicit action.
 
-### Voice With Temperature
+### Voice With Temperature — Preserve Human Writing Voice
 
 - Package name: `voice-with-temperature`
 - Path: `plugins/voice-with-temperature`
 - Category: Productivity / Writing
 - Skills: `voice-with-temperature`
-- Short description: Edit prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.
-- Keywords: `writing`, `editing`, `voice`, `prose`, `human-voice`
+- Short description: Edit written prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature.
+- Keywords: `writing`, `editing`, `writing-voice`, `prose`, `human-voice`
 - Suggested prompt: “Edit this draft for clarity, but preserve its awkward honesty, concrete details, uncertainty, and sentence rhythm. Explain any change that alters emotional temperature.”
 - Safety note: “Voice” means writing voice, not speech synthesis, cloning, transcription, or audio generation.
 
-## Claude Community Plugins draft
+## Claude official marketplace draft
 
-Official route verified on 2026-09-08: the public [Claude community plugins repository](https://github.com/anthropics/claude-plugins-community) is a read-only mirror and points publishers to the [official submission form](https://clau.de/plugin-directory-submission). Do not open a pull request against the mirror.
+Official route refreshed on 2026-09-09: current Claude Code docs name `claude-plugins-official` and direct publishers to the in-app [Claude.ai submission form](https://claude.ai/settings/plugins/submit) or [Console submission form](https://platform.claude.com/plugins/submit). Independently hosted marketplaces remain supported. Do not open a repository pull request as a substitute for the documented form.
 
 Suggested first batch: `voice-to-work`, `skill-from-scars`, `build-in-public-launcher`, `voice-with-temperature`.
 
@@ -81,7 +81,7 @@ Before sending the form:
 - test local-scope install, discovery, representative prompts, update, and uninstall;
 - choose one plugin per form entry if the form requires individual listings;
 - attach only the real repository, plugin path, MIT license and included human-created SVG;
-- do not claim inclusion in `claude-community` until Anthropic confirms it.
+- do not claim submission, review, or inclusion in `claude-plugins-official` until the corresponding state is actually observed.
 
 ## Cursor Marketplace draft
 

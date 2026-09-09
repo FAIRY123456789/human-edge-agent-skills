@@ -2,9 +2,13 @@
 
 **CURSOR_PREFLIGHT = BLOCKED ONLY BY CURSOR RUNTIME TEST**
 
+**CURSOR_RUNTIME = NOT TESTED — CURSOR NOT INSTALLED**
+
+**CURSOR_READY_FOR_SUBMISSION = NO**
+
 **MARKETPLACE = NOT SUBMITTED**
 
-Snapshot date: 2026-09-08 (Asia/Shanghai)
+Snapshot date: 2026-09-09 (Asia/Shanghai)
 
 This document contains factual, copyable submission material for the four plugins. It is preparation only. No Cursor Marketplace Submit action was taken.
 
@@ -52,7 +56,7 @@ The repository marketplace manifest contains category and keywords metadata supp
 
 Long description:
 
-Voice to Work packages two focused Agent Skills. voice-dump-to-todo turns messy spoken notes into actions, decisions, dependencies, and optional local HTML. vibe-to-spec turns a spoken product idea into an implementation contract with scope, flows, state, constraints, acceptance criteria, and build order. Both preserve uncertainty instead of silently guessing ambiguous entities.
+Voice to Work packages two focused Agent Skills. voice-dump-to-todo turns messy spoken notes into actions, decisions, dependencies, and optional local HTML. vibe-to-spec turns a spoken product idea into an implementation contract with scope, flows, state, constraints, acceptance criteria, and build order. Both preserve uncertainty instead of silently guessing ambiguous entities. It is part of the Human Edge Agent Skills project.
 
 ## Submission 2: skill-from-scars
 
@@ -74,7 +78,7 @@ Voice to Work packages two focused Agent Skills. voice-dump-to-todo turns messy 
 
 Long description:
 
-Skill from Scars helps turn repeated operational pain into a narrowly scoped, testable Agent Skill. It first checks whether the pattern is recurring and reusable, then defines triggers, boundaries, workflow, progressive disclosure, and behavior evals. It can optionally create a local starter folder from explicit structured input.
+Skill from Scars helps turn repeated operational pain into a narrowly scoped, testable Agent Skill. It first checks whether the pattern is recurring and reusable, then defines triggers, boundaries, workflow, progressive disclosure, and behavior evals. It can optionally create a local starter folder from explicit structured input. It is part of the Human Edge Agent Skills project.
 
 ## Submission 3: build-in-public-launcher
 
@@ -96,16 +100,16 @@ Skill from Scars helps turn repeated operational pain into a narrowly scoped, te
 
 Long description:
 
-Build in Public Launcher converts verified project evidence into honest launch assets and a measured distribution plan. It separates facts from claims, blocks fabricated traction, and keeps publishing and account actions outside the plugin as explicit user decisions.
+Build in Public Launcher converts verified project evidence into honest launch assets and a measured distribution plan. It separates facts from claims, blocks fabricated traction, and keeps publishing and account actions outside the plugin as explicit user decisions. It is part of the Human Edge Agent Skills project.
 
 ## Submission 4: voice-with-temperature
 
 | Field | Copyable value |
 |---|---|
 | Package name | voice-with-temperature |
-| Display name | Voice with Temperature |
+| Display name | Voice With Temperature — Preserve Human Writing Voice |
 | Version | 1.0.0 |
-| One-line description | Edit prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature. |
+| One-line description | Edit written prose for clarity while preserving the writer's lived detail, uncertainty, rhythm, and emotional temperature. |
 | Repository | https://github.com/FAIRY123456789/human-edge-agent-skills |
 | Plugin source path | plugins/voice-with-temperature |
 | Included Skills | voice-with-temperature |
@@ -118,25 +122,29 @@ Build in Public Launcher converts verified project evidence into honest launch a
 
 Long description:
 
-Voice with Temperature edits text without sanding away the writer's uncertainty, rhythm, lived details, or emotional register. It improves clarity while preventing invented memories, expertise, citations, and confidence. It is a writing tool, not a speech or audio tool.
+Voice With Temperature edits text without sanding away the writer's uncertainty, rhythm, lived details, or emotional register. It improves clarity while preventing invented memories, expertise, citations, and confidence. It is a writing tool, not a speech or audio tool, and is part of the Human Edge Agent Skills project.
 
 ## Cursor runtime blocker
 
-No Cursor installation was found on the current Windows host and none was installed. Complete [CURSOR_RUNTIME_TEST_GUIDE.md](CURSOR_RUNTIME_TEST_GUIDE.md) on a current Cursor release, record all four discovery and prompt checks, and only then change the preflight status.
+No Cursor executable was found in PATH, common user installation paths, installed-app records, or running processes on the current Windows host, and none was installed. Complete [CURSOR_RUNTIME_TEST_GUIDE.md](CURSOR_RUNTIME_TEST_GUIDE.md) on a current Cursor release, record all four discovery and prompt checks, and only then change the preflight status.
 
 Current final status: **BLOCKED ONLY BY CURSOR RUNTIME TEST**.
 
 ## skills.sh live status
 
-- The current skills CLI recognized the public repository and listed 18 Skills.
-- A telemetry-disabled install of vibe-to-spec into an isolated temporary directory succeeded; no real Cursor configuration was modified.
-- The public repository page exists but is stale/partial: it currently presents one genuinely indexed Skill and one real total install. The other per-Skill URLs returned pages but did not expose the canonical content during verification.
+- The current pinned skills CLI 1.5.25 recognized the public repository and listed all 18 Skills with telemetry disabled; `--list` did not install any Skill.
+- The public repository page remains partial: it presents one indexed Skill (`vibe-to-spec`) and one real total install.
+- The public audit API exposes PASS reports for that indexed Skill from Gen Agent Trust Hub (SAFE with a minor indirect-prompt-injection note), Socket (no alerts), and Snyk (LOW, no issues). A sampled unindexed Skill audit URL returned 404.
 - No fake installations or telemetry-generating repetitions were performed.
 - **NO MANUAL INDEXING ROUTE FOUND**. The documented leaderboard is driven by anonymous CLI installation telemetry.
 
+## Release and state boundary
+
+Cursor is **STATIC VALIDATED** but not **RUNTIME VALIDATED** or **READY FOR SUBMISSION**. The project requires both Codex and Cursor runtime PASS before creating `v0.4.0`; therefore no new release or immutable marketplace review SHA was created. Nothing is submitted, under review, or accepted.
+
 ## Claude route deferred
 
-No Claude account, API, installation, runtime validation, submission, or marketplace action was used. Current Claude documentation distinguishes the separately curated claude-plugins-official marketplace from the reviewed claude-community marketplace. Individual authors outside Team or Enterprise are directed to the Console submission form; Team and Enterprise organization owners use the administrative route. Before any future submission, install a current Claude Code runtime, run the documented plugin validator, test each plugin through the local plugin directory route, and confirm invocation behavior. This work remains intentionally deferred.
+No Claude account, API, installation, runtime validation, submission, or marketplace action was used. Current Claude documentation names `claude-plugins-official` as the official marketplace and directs authors to the Claude.ai or Console in-app submission forms; independent repositories can also distribute their own marketplaces. Before any future submission, install a current Claude Code runtime, run the documented plugin validator, test each plugin through the local plugin directory route, and confirm invocation behavior. This work remains intentionally deferred.
 
 ## Official references
 
