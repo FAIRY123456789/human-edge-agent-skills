@@ -1,18 +1,20 @@
 # Cursor Runtime Test Guide
 
-**CURSOR_RUNTIME = NOT TESTED**
+**CURSOR_DISCOVERY = RUNTIME VALIDATED — 4/4 PLUGINS, 5/5 SKILLS**
 
-Date: 2026-09-08 (Asia/Shanghai)
+**CURSOR_BEHAVIOR = USER VISUAL CHECK REQUIRED**
 
-The preflight host is Windows x64, build 26200.9168 (registry product label: Windows 10 Home; DisplayVersion: 25H2). No Cursor executable, command, running process, common installation directory, or uninstall registration was found. Cursor was not installed as part of this work.
+Updated: 2026-09-09 (Asia/Shanghai)
 
-This guide is the remaining 10-15 minute human gate before a Cursor Marketplace submission. It follows Cursor's documented local-plugin directory route.
+The validation host is Windows 11 Home x64, version `10.0.26200`, build `26200`. Cursor `3.19.13` is installed. Complete local plugin copies were hash-checked and Cursor's own extension log recorded four plugins loaded with zero failures; its workspace Skill snapshot contained all five packaged Skill names. See [`CURSOR_RUNTIME_VALIDATION.md`](CURSOR_RUNTIME_VALIDATION.md) for the machine-readable evidence and retained warning.
+
+This guide now covers only the remaining human behavior gate before a Cursor Marketplace submission. It follows Cursor's documented local-plugin directory route.
 
 ## 1. Prepare the host
 
-1. Install a current Cursor release from Cursor's official site and sign in using the intended publisher account.
-2. Clone or update this repository and confirm the checkout is clean.
-3. Confirm the four complete source directories exist under plugins/.
+1. Open the installed Cursor release and sign in using the intended publisher account.
+2. Update this repository and confirm the checkout is at the intended revision.
+3. Confirm the four complete source directories exist under `plugins/`.
 
 ## 2. Copy the plugins locally
 
@@ -27,7 +29,7 @@ Run these commands from the repository root in PowerShell. They replace only the
 
 If the destination already exists, remove that exact named test directory first or verify no stale files remain. Do not delete the parent local directory.
 
-Restart Cursor or run Developer: Reload Window. Open Customize and confirm each plugin and its Skills are discoverable. Team and Enterprise policies may disable local plugin imports; ask the organization administrator if the local entries do not appear.
+Cursor already detected these four copies without a manual reload in the recorded run. If repeating the test after a change, restart Cursor or run Developer: Reload Window. Open Customize and confirm each plugin and its Skills are discoverable. Team and Enterprise policies may disable local plugin imports; ask the organization administrator if the local entries do not appear.
 
 ## 3. Record discovery and prompt checks
 
@@ -65,9 +67,9 @@ Restart or reload Cursor again. If an installed Marketplace plugin has the same 
 
 ## 5. Completion rule
 
-Change the status in this guide and in CURSOR_MARKETPLACE_SUBMISSION_FINAL.md only after all four plugins pass discovery and prompt-level checks on a current Cursor runtime. Until then the repository status remains:
+Discovery is complete. Change the behavior and submission-readiness status in this guide and in `CURSOR_MARKETPLACE_SUBMISSION_FINAL.md` only after all five prompt-level checks pass on the current Cursor runtime. Until then the repository status remains:
 
-**BLOCKED ONLY BY CURSOR RUNTIME TEST**
+**USER VISUAL CHECK REQUIRED**
 
 ## Official references
 

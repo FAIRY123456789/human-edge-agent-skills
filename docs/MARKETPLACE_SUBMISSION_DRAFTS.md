@@ -16,7 +16,7 @@ Author: Joy T
 - NVIDIA SkillEvaluator 完整 Tier 1：18/18 PASS，0 incomplete、0 CRITICAL、0 HIGH。
 - 四个插件均通过 Agent Plugins 1.0 schema、自包含、真实路径和 canonical/package 哈希一致性检查。
 - Claude manifest 与 repository marketplace 已通过当前 schema 快照。
-- Claude Code 与 Cursor 未安装在本机；实际安装、发现与交互测试为 `NOT TESTED`。
+- Cursor `3.19.13` 已完成本地导入与机器可读发现验证：4/4 插件、5/5 Skills；五个代表性行为提示仍为 `USER VISUAL CHECK REQUIRED`。本机只有 Claude Desktop，没有 Claude Code CLI，因此 Claude Code validate、发现与行为均为 `NOT TESTED`。
 - 插件不包含 MCP servers、hooks、agents、commands、rules 或自动外部写入。
 
 ## Plugin listing drafts
@@ -89,7 +89,7 @@ Official route verified on 2026-09-08: review the current [Cursor plugins docume
 
 Draft publisher statement:
 
-> These four MIT-licensed plugins follow the Agent Plugins 1.0 structure and package five self-contained Agent Skills. They include no MCP servers, rules, hooks, commands, agents, platform logos, or automatic external mutations. All canonical Skills passed NVIDIA SkillEvaluator Tier 1. Static schema, path and drift validation passed; Cursor runtime discovery is not yet tested because Cursor is not installed on the validation host.
+> These four MIT-licensed plugins follow the Agent Plugins 1.0 structure and package five self-contained Agent Skills. They include no MCP servers, rules, hooks, commands, agents, platform logos, or automatic external mutations. All canonical Skills passed NVIDIA SkillEvaluator Tier 1. Static schema, path and drift validation passed. Cursor 3.19.13 discovered all four local plugins and five Skills with zero load failures; representative behavior prompts still require a user visual check.
 
 Before publishing:
 

@@ -1,17 +1,20 @@
 # Cross-Runtime Marketplace Status
 
-Snapshot: 2026-09-09 (Asia/Shanghai). Public main at the start of this stage: `0d04b00707308378e78921f3d86c2a26d431d9eb`.
+Snapshot: 2026-09-09 11:23:43 +08:00. Public main at the start of this stage: `50193b967c8edbf9a3e74255dfcfff2cf31eb5c8`.
 
-| Target | Static | Runtime | Submission readiness | External state |
+| Validator / host | Static validated | Manifest validated | Runtime discovered | Behavior tested |
 |---|---|---|---|---|
-| NVIDIA Tier 1, 18 canonical Skills | STATIC VALIDATED: 18/18 | Not a runtime test | Complete evidence retained | Not applicable |
-| Codex, four plugins / five Skills | STATIC VALIDATED | RUNTIME VALIDATED on Codex CLI 0.153.4 | First two OpenAI uploads ready for user action | NOT SUBMITTED |
-| Cursor, four plugins | STATIC VALIDATED | NOT TESTED: Cursor absent | BLOCKED by runtime | NOT SUBMITTED |
-| Claude Code, four plugins | STATIC VALIDATED | NOT TESTED: CLI absent; model test BLOCKED_BY_AUTH | BLOCKED by runtime/auth | NOT SUBMITTED |
-| OpenAI Universal Plugins Directory | Two deterministic Skills-only uploads validated | Codex runtime evidence available | `OPENAI_READY_FOR_USER_SUBMISSION` | NOT SUBMITTED |
-| GitHub Awesome Copilot | Two candidate field sets pinned to `v0.4.0` | Copilot CLI / vally NOT TESTED | Ready for separately authorized issue submission | ISSUE NOT CREATED |
-| skills.sh | CLI 1.5.25 discovers 18 | Directory indexes 1 Skill | Organic indexing only | 1 real total install |
-| Gemini CLI Gallery | Five-Skill extension design feasible | NOT TESTED: CLI absent | Current monorepo gallery route rejected | NOT LISTED |
+| NVIDIA SkillEvaluator, 18 canonical Skills | STATIC VALIDATED: 18/18 | Not applicable | Not applicable | Not applicable |
+| Codex CLI 0.153.4, 4 plugins / 5 Skills | STATIC VALIDATED | PASS 4/4 | RUNTIME VALIDATED: 4/4 plugins, 5/5 Skills | RUNTIME VALIDATED: 5/5 |
+| Claude Code | STATIC VALIDATED | NOT TESTED: Claude Code CLI absent | NOT TESTED | NOT TESTED |
+| Cursor 3.19.13, 4 plugins / 5 Skills | STATIC VALIDATED | PASS 4/4 repository schema checks | RUNTIME VALIDATED: 4/4 plugins, 5/5 Skills | USER VISUAL CHECK REQUIRED |
+
+| Submission target | Readiness | External state |
+|---|---|---|
+| OpenAI Universal Plugins Directory | READY FOR SUBMISSION: two deterministic Skills-only uploads | NOT SUBMITTED |
+| Claude | BLOCKED: official CLI validate and runtime not completed | NOT SUBMITTED |
+| Cursor Marketplace | BLOCKED: representative behavior test requires user visual check | NOT SUBMITTED |
+| GitHub Awesome Copilot | READY FOR SUBMISSION: two field sets pinned to `v0.4.0` | ISSUE NOT CREATED |
 
 ## Official-spec differences found
 
@@ -25,7 +28,11 @@ Snapshot: 2026-09-09 (Asia/Shanghai). Public main at the start of this stage: `0
 
 ## Release decision
 
-The user explicitly lifted the earlier cross-runtime release gate and approved publishing without waiting for Cursor or Claude runtime. [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) is public and resolves to `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`. The release truthfully records NVIDIA Tier 1 18/18 and Codex runtime 4/4 plugins plus 5/5 Skills PASS; Cursor and Claude runtime remain **NOT TESTED**. No Marketplace or Awesome Copilot issue was submitted.
+The historical [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) release remains immutable at `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`.
+
+`v0.5.0` was **not created**. Cursor plugin and Skill discovery passed, but Cursor behavior remains **USER VISUAL CHECK REQUIRED** and the required Claude Code CLI validation/discovery is **BLOCKED** because only Claude Desktop is installed. The release gate therefore does not pass.
+
+All repository regressions passed: canonical validator 18/18, Agent Plugins schema 4/4, Claude manifest metadata 4/4, Cursor marketplace manifest, package drift 5/5, Gitleaks 8.30.1 on `plugins/`, tracked Python syntax 18/18, Bash syntax 6/6, operational JSON parse 21/21, 110 relative-link targets across 108 Markdown files, deterministic OpenAI ZIP rebuild, and functional smoke tests. The retained NVIDIA raw JSON has a known local ACL mismatch and was not re-parsed. NVIDIA Tier 1 was not re-run because canonical Skill content did not change.
 
 Detailed skills.sh evidence, including the directory URL and per-provider audit availability, is in `SKILLS_SH_STATUS.md`.
 

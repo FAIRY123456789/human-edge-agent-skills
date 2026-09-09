@@ -18,7 +18,7 @@ The user explicitly approved releasing the Codex-validated package without waiti
 - full commit SHA: `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`;
 - Awesome Copilot issue creation: **NOT AUTHORIZED IN THIS STAGE; ISSUE NOT CREATED**.
 
-The machine-readable entry drafts in `submission-assets/awesome-copilot/` pin both locators. Cursor and Claude runtime remain **NOT TESTED** and are not claimed as compatibility evidence. GitHub's automated `vally lint` and Copilot CLI install smoke test will run only after a future, separately authorized issue submission.
+The machine-readable entry drafts in `submission-assets/awesome-copilot/` pin both locators. Cursor local discovery is **RUNTIME VALIDATED** for four plugins and five Skills, but its behavior remains **USER VISUAL CHECK REQUIRED**; Claude Code remains **NOT TESTED** because its CLI is absent. Neither is claimed as GitHub Copilot compatibility evidence. GitHub's automated `vally lint` and Copilot CLI install smoke test will run only after a future, separately authorized issue submission.
 
 ## Candidate 1 — skill-from-scars
 

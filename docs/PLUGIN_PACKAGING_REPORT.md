@@ -1,8 +1,8 @@
 # Plugin Packaging Report
 
-日期：2026-09-08（Asia/Shanghai）
+更新：2026-09-09（Asia/Shanghai）
 
-状态：**静态封装与发布政策预检完成；Cursor 运行时尚未测试；未向任何 Marketplace 发布或提交。**
+状态：**静态封装与发布政策预检完成；Cursor 发现验证通过、行为仍需用户可视检查；Claude Code CLI 未找到；未向任何 Marketplace 发布或提交。**
 
 ## 结论
 
@@ -90,13 +90,14 @@
 | Self-contained package check | 4 plugin directories | PASS 4/4 |
 | Canonical/package drift check | 5 copied Skills | PASS 5/5 |
 | Gitleaks secrets scan | complete `plugins/` tree | PASS; no leaks found |
-| Python AST syntax | repository Python files, excluding ignored temporary tools | PASS 17/17 |
+| Python AST syntax | tracked repository Python files | PASS 18/18 |
 | Bash syntax | canonical and packaged shell files | PASS 6/6 |
-| JSON parsing | tracked/worktree JSON, excluding ignored temporary tools | PASS 139/139 |
+| JSON parsing | tracked operational JSON, excluding retained `eval-results/` evidence with the known local ACL mismatch | PASS 21/21 |
 | Deterministic helper smoke tests | voice HTML, writing lint, scaffold, server fit, public audit, release inspection and AI contract | PASS; hidden environment file rejection covered |
 | Git whitespace checks | working and committed diffs | PASS |
-| Claude Code runtime install/discovery | CLI/app not installed on this host | **NOT TESTED** |
-| Cursor runtime install/discovery | CLI/app not installed on this host | **NOT TESTED** |
+| Claude Code validate/discovery | Claude Desktop present, but Claude Code CLI not found | **NOT TESTED** |
+| Cursor local import/discovery | Cursor 3.19.13; extension log and workspace Skill snapshot | **PASS: 4/4 plugins, 5/5 Skills** |
+| Cursor representative behavior | Native UI/model invocation unavailable to this automation surface | **USER VISUAL CHECK REQUIRED** |
 
 Schema snapshots downloaded for validation remain under ignored `.tmp/` and are not shipped. The checked-in Agent Plugins schema is an exact local validation dependency; official URLs remain the authority.
 
@@ -107,16 +108,16 @@ Schema snapshots downloaded for validation remain under ignored `.tmp/` and are 
 | One portable plugin manifest may be enough | Agent Plugins defines root `plugin.json`; Claude documents `.claude-plugin/plugin.json` | Both metadata files coexist over one shared plugin root |
 | Cursor might need a per-plugin proprietary manifest | [Cursor plugins](https://prod.cursor.com/docs/plugins) natively support Agent Plugins and discover root skills | Root Agent Plugins manifest only; no invented Cursor-only component |
 | A repository can call its Claude marketplace `claude-community` | Current [Claude marketplace docs](https://code.claude.com/docs/en/plugin-marketplaces) name `claude-plugins-official` and direct authors to Claude.ai or Console forms; independent marketplaces use their own names | Repository marketplace remains honestly named `human-edge-skills`; official submission is only prepared, not performed |
-| Local runtime testing is always available | Claude and Cursor require their installed hosts for install/discovery verification | Static/package validation passed; runtime rows are explicitly `NOT TESTED` |
+| Local runtime testing is always available | Claude and Cursor require their installed hosts for install/discovery verification | Cursor discovery is runtime validated; Cursor behavior needs a user visual check; Claude Code remains `NOT TESTED` because its CLI is absent |
 
 ## Remaining gates
 
-- Install a current Claude Code host and verify repository marketplace add, local-scope install, Skill discovery, and uninstall.
-- Install a current Cursor host, copy each complete plugin to its documented local plugin directory, reload, and confirm Skill discovery under Customize.
+- Install or expose the official Claude Code CLI and verify normal/strict validation, local plugin discovery, and representative behavior.
+- In the installed Cursor host, visually confirm the already-discovered local plugins under Customize and run the five representative behavior prompts.
 - Re-run official validators immediately before submission because schemas and directory policies can change.
 - Perform human prompt-level checks for trigger clarity and output usefulness. Tier 1 static passing is not a claim of marketplace acceptance or real-world adoption.
 
-The repository is at the **official Plugin packaging stage**, but not yet at the **submission-ready runtime verification gate**. Cursor 的精确状态为 **BLOCKED ONLY BY CURSOR RUNTIME TEST**。No Marketplace action was taken.
+The repository is at the **official Plugin packaging stage**, but not yet at the **submission-ready runtime verification gate**. Cursor discovery is **RUNTIME VALIDATED** and its behavior is **USER VISUAL CHECK REQUIRED**; Claude Code runtime verification is **BLOCKED** by the absent CLI. No Marketplace action was taken.
 
 Cursor 的人工测试步骤与最终可复制字段分别记录在 [`CURSOR_RUNTIME_TEST_GUIDE.md`](CURSOR_RUNTIME_TEST_GUIDE.md) 和 [`CURSOR_MARKETPLACE_SUBMISSION_FINAL.md`](CURSOR_MARKETPLACE_SUBMISSION_FINAL.md)。
 

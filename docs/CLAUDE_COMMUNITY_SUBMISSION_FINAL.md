@@ -2,15 +2,15 @@
 
 **CLAUDE_STATIC = STATIC VALIDATED**
 
-**CLAUDE_RUNTIME = NOT TESTED — CLAUDE CODE NOT INSTALLED**
+**CLAUDE_CODE_CLI = NOT TESTED — EXECUTABLE NOT FOUND**
 
-**CLAUDE_RUNTIME_MODEL_TEST = BLOCKED_BY_AUTH**
+**CLAUDE_RUNTIME = BLOCKED**
 
-**CLAUDE_SUBMISSION_READINESS = BLOCKED BY RUNTIME AND USER AUTHENTICATION**
+**CLAUDE_SUBMISSION_READINESS = BLOCKED**
 
 Snapshot: 2026-09-09 (Asia/Shanghai).
 
-The current host has no `claude` executable in PATH, common user installation paths, or installed-app records. No Claude-compatible gateway, API key, paid API, or substitute runtime was used. Therefore this document does not claim Claude discovery, install, model behavior, submission, review, or acceptance.
+Claude Desktop 1.49585.0 is installed and running, but the current host has no Claude Code CLI executable in PATH, the official Windows native path, the legacy local path, or the user npm global directory. Desktop is not substituted for the command-line plugin validator. No Claude-compatible gateway, API key, paid API, or substitute runtime was used. Therefore this document does not claim Claude Code validation, discovery, model behavior, submission, review, or acceptance. Full evidence is in [CLAUDE_RUNTIME_VALIDATION.md](CLAUDE_RUNTIME_VALIDATION.md).
 
 ## Static package state
 
@@ -52,7 +52,7 @@ claude plugin marketplace add . --scope local
 claude plugin install voice-to-work@human-edge-skills --scope local
 ```
 
-Then repeat install/discovery and the representative cases in `evals/marketplace-plugin-cases.json` for all four plugins. Record version, OS, prompt, observed result, PASS/FAIL, uninstall, and clean reinstall. Do not change `CLAUDE_RUNTIME_MODEL_TEST = BLOCKED_BY_AUTH` until the user's official Claude account is already authenticated and the model run actually succeeds.
+Then repeat install/discovery and the five representative cases in `evals/marketplace-plugin-cases.json` for all four plugins. Record version, OS, prompt, observed result, PASS/FAIL, uninstall, and clean reinstall. Do not change the runtime status until the official CLI validator, discovery, and model runs actually succeed.
 
 ## Submission boundary
 

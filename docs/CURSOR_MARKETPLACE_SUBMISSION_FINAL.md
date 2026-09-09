@@ -1,10 +1,12 @@
 # Cursor Marketplace Submission Final
 
-**CURSOR_PREFLIGHT = BLOCKED ONLY BY CURSOR RUNTIME TEST**
+**CURSOR_PREFLIGHT = USER VISUAL CHECK REQUIRED**
 
-**CURSOR_RUNTIME = NOT TESTED — CURSOR NOT INSTALLED**
+**CURSOR_RUNTIME_DISCOVERY = RUNTIME VALIDATED — 4/4 PLUGINS, 5/5 SKILLS**
 
-**CURSOR_READY_FOR_SUBMISSION = NO**
+**CURSOR_BEHAVIOR = USER VISUAL CHECK REQUIRED**
+
+**CURSOR_READY_FOR_SUBMISSION = BLOCKED**
 
 **MARKETPLACE = NOT SUBMITTED**
 
@@ -30,7 +32,10 @@ Publisher Terms require accurate, non-misleading descriptions; appropriate priva
 | Privacy and data handling | PASS 4/4 | Standalone PRIVACY.md linked from every plugin README |
 | Unrequested capabilities | NONE | No MCP servers, hooks, commands, agents, rules, automatic permissions, or secret declarations |
 | Static/security regression | PASS | Canonical, plugin schema, drift, secret, syntax, JSON, link, and smoke checks |
-| Cursor runtime discovery and behavior | NOT TESTED | Cursor is absent from the preflight host |
+| Cursor local import | PASS 4/4 | Complete copies under `%USERPROFILE%\.cursor\plugins\local`; repository/local file hashes match |
+| Cursor plugin discovery | PASS 4/4 | Cursor Plugins log: total 4 plugins, 0 failures |
+| Cursor Skill discovery | PASS 5/5 | Cursor Customize skills snapshot contains all five identifiers |
+| Cursor behavior prompts | USER VISUAL CHECK REQUIRED | Native Cursor Agent window is not controllable by the available automation surface |
 
 The authenticated publish form was not submitted. If its live fields differ from the manifest fields below, preserve the same factual wording and do not add unverified compatibility, usage, customer, benchmark, or adoption claims.
 
@@ -124,11 +129,11 @@ Long description:
 
 Voice With Temperature edits text without sanding away the writer's uncertainty, rhythm, lived details, or emotional register. It improves clarity while preventing invented memories, expertise, citations, and confidence. It is a writing tool, not a speech or audio tool, and is part of the Human Edge Agent Skills project.
 
-## Cursor runtime blocker
+## Cursor runtime result
 
-No Cursor executable was found in PATH, common user installation paths, installed-app records, or running processes on the current Windows host, and none was installed. Complete [CURSOR_RUNTIME_TEST_GUIDE.md](CURSOR_RUNTIME_TEST_GUIDE.md) on a current Cursor release, record all four discovery and prompt checks, and only then change the preflight status.
+Cursor 3.19.13 loaded all four local plugins with zero failures, and its machine-readable Customize state contains all five packaged Skills. The unsuppressed warning for every package is: `.claude-plugin/plugin.json declares an unrecognized $schema, loading anyway: https://json.schemastore.org/claude-code-plugin-manifest.json`. See [CURSOR_RUNTIME_VALIDATION.md](CURSOR_RUNTIME_VALIDATION.md) for evidence and hash checks.
 
-Current final status: **BLOCKED ONLY BY CURSOR RUNTIME TEST**.
+The five representative prompts remain **USER VISUAL CHECK REQUIRED**. This does not change the verified discovery result, but this project's Cursor submission readiness remains **BLOCKED** until the visual behavior check is recorded.
 
 ## skills.sh live status
 
@@ -140,11 +145,11 @@ Current final status: **BLOCKED ONLY BY CURSOR RUNTIME TEST**.
 
 ## Release and state boundary
 
-Cursor is **STATIC VALIDATED** but not **RUNTIME VALIDATED** or **READY FOR SUBMISSION**. The user explicitly approved publishing [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) without waiting for Cursor or Claude runtime; this does not change the Cursor status or create a compatibility claim. The release resolves to `5930dcf59988aaa7a9a2358e6ec37dcd9ec7ee6d`. Nothing was submitted to Cursor, and nothing is under review or accepted there.
+Cursor is **STATIC VALIDATED** and its local plugin/Skill discovery is **RUNTIME VALIDATED**. Representative behavior is **USER VISUAL CHECK REQUIRED**, so Cursor is not yet **READY FOR SUBMISSION**. [v0.4.0](https://github.com/FAIRY123456789/human-edge-agent-skills/releases/tag/v0.4.0) remains the current release; `v0.5.0` was not created because the Claude gate is also blocked. Nothing was submitted to Cursor, and nothing is under review or accepted there.
 
 ## Claude route deferred
 
-No Claude account, API, installation, runtime validation, submission, or marketplace action was used. Current Claude documentation names `claude-plugins-official` as the official marketplace and directs authors to the Claude.ai or Console in-app submission forms; independent repositories can also distribute their own marketplaces. Before any future submission, install a current Claude Code runtime, run the documented plugin validator, test each plugin through the local plugin directory route, and confirm invocation behavior. This work remains intentionally deferred.
+Claude Desktop 1.49585.0 is installed, but no Claude Code CLI executable was found. No Claude API, substitute gateway, runtime validation, submission, or marketplace action was used. Before any future submission, install or expose the official Claude Code CLI, run the documented plugin validator, test each plugin through `--plugin-dir`, and confirm namespaced invocation behavior.
 
 ## Official references
 
