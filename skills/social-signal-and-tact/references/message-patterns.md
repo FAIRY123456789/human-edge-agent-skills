@@ -80,6 +80,22 @@ Key edits learned from a real case:
 - Keep accurate provenance. If a gift came through a friend in a place, say `托那边的朋友买的当地特产`; do not imply the giver personally lives or traveled there.
 - Specific timing can improve sincerity when it matters, e.g. `最近一直在外地准备毕业答辩` or an upcoming date, but include only details that the recipient needs.
 
+## 9. Holiday gratitude with one small memory
+
+Use for Teachers' Day, graduation, year-end thanks, or another occasion where the goal is sincere gratitude rather than a request.
+
+Structure:
+
+`节日问候 → 一件很小但真实的记忆 → 这件事对自己的影响 → 简短感谢/祝福`
+
+Example:
+
+`柴老师，教师节快乐！之前有一次活动结束后坐您的车回来，路上您跟我说过一句“以后不能只做一个码农”，还提醒我要多培养真正解决问题的能力。那句话我后来一直记着，在我考虑实习和就业方向的时候也经常会想起来。很感谢您一直以来给我的关心和指导，也祝您教师节快乐，工作顺利，身体健康！`
+
+Why it works: one concrete memory makes the gratitude believable. The memory should be short; the emotional center remains `我记得、它影响了我、谢谢您`.
+
+Do not decorate the ending with formulaic parallelism. If `我也会继续努力把事情做好` already closes the message, stop there. Avoid generated-sounding endings such as `把事情做好，把路走稳`, `做好当下，走好未来`, or repeated `把A，把B` structures that add symmetry without adding meaning.
+
 ## Anti-patterns
 
 Avoid:
@@ -91,4 +107,5 @@ Avoid:
 - calling someone a close friend when the relationship is not close;
 - `您回来记得拿一下` in a gift message to a senior person;
 - explaining how expensive, premium, rare, or medically powerful a gift is;
-- putting delivery, apology, family background, product benefits, and closing wishes into one overloaded WeChat paragraph.
+- putting delivery, apology, family background, product benefits, and closing wishes into one overloaded WeChat paragraph;
+- slogan-like paired endings such as `把A做好，把B走稳`, especially when the second half exists only to make the sentence sound complete.
