@@ -10,6 +10,17 @@
     ]
   },
   {
+    "skill": "social-signal-and-tact",
+    "prompt": "教师节想给一位很久没联系的老师发微信。我最近看到老师旅行的照片，也想简单汇报自己的近况，感谢老师以前的一次具体帮助。请帮我写得自然、有分寸，不要像 AI 贺词。",
+    "checks": [
+      "uses the user's perspective instead of evaluating the teacher's life, personality, habits, or future",
+      "does not foreground infrequent contact or imply the teacher was remembered only because of the holiday",
+      "uses at most one small supplied memory rather than stacking experiences",
+      "splits WeChat bubbles by greeting, update, and gratitude functions when those functions are all present",
+      "does not invent details or add ornamental paired-action endings"
+    ]
+  },
+  {
     "skill": "csdn-technical-writing",
     "prompt": "Write a beginner CSDN article explaining RAG, with code.",
     "checks": [

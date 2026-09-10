@@ -57,7 +57,35 @@ For strong relationships, one short phrase is enough:
 
 The compliment works because it names the value.
 
-## 8. Gift delivery → relational follow-up
+## 8. Teacher or mentor holiday gratitude
+
+Use when a holiday creates a natural moment to thank a teacher, mentor, senior person, or benefactor. Do not foreground how rarely the user has been in touch. The recipient should feel remembered for their real influence, not contacted only because the calendar supplied an occasion.
+
+When the message contains all three functions, a useful WeChat rhythm is:
+
+1. **Holiday wish + light present-day touchpoint + remembered help**
+2. **Brief update on the user's current situation or growth**
+3. **Relationship reflection + gratitude + holiday wish**
+
+For example, using only details the user actually supplied:
+
+`老师，教师节快乐！最近在做 X 时，我又想起您当时提醒我的 Y。`
+
+`我现在在 Z，也慢慢学会了 A。`
+
+`遇到问题时，我还是会想到来请教您。一直很感谢您的帮助，祝您教师节快乐！`
+
+The bubbles represent conversational functions and pacing, not decorative line breaks. Use fewer bubbles when the content has fewer functions; do not stretch a short greeting to fill the pattern.
+
+Perspective and memory rules:
+
+- Write from `我看到什么 / 我想起什么 / 我现在怎么样 / 我感谢什么`.
+- Do not turn an observation into an evaluation of the recipient. Avoid `感觉您暑假过得很充实`, `您一直喜欢旅行`, or `希望您以后多出去看看` unless the user explicitly provided and deliberately chose that meaning.
+- Do not lower the recipient's sense of importance with `很久没联系了`, `正好借教师节问个好`, or `顺便问候一下`.
+- Let one small true memory carry the emotion: one action, one sentence, or one concrete act of help. Do not stack experiences merely to appear specific.
+- End when the gratitude is complete. Delete ornamental pairs such as `把 A，把 B` and `做好 A，走稳 B` when the second half exists only for cadence.
+
+## 9. Gift delivery → relational follow-up
 
 Use when sending a modest gift, local specialty, fruit, health product, or courtesy item to a teacher/leader/senior person.
 
@@ -80,22 +108,6 @@ Key edits learned from a real case:
 - Keep accurate provenance. If a gift came through a friend in a place, say `托那边的朋友买的当地特产`; do not imply the giver personally lives or traveled there.
 - Specific timing can improve sincerity when it matters, e.g. `最近一直在外地准备毕业答辩` or an upcoming date, but include only details that the recipient needs.
 
-## 9. Holiday gratitude with one small memory
-
-Use for Teachers' Day, graduation, year-end thanks, or another occasion where the goal is sincere gratitude rather than a request.
-
-Structure:
-
-`节日问候 → 一件很小但真实的记忆 → 这件事对自己的影响 → 简短感谢/祝福`
-
-Example:
-
-`柴老师，教师节快乐！之前有一次活动结束后坐您的车回来，路上您跟我说过一句“以后不能只做一个码农”，还提醒我要多培养真正解决问题的能力。那句话我后来一直记着，在我考虑实习和就业方向的时候也经常会想起来。很感谢您一直以来给我的关心和指导，也祝您教师节快乐，工作顺利，身体健康！`
-
-Why it works: one concrete memory makes the gratitude believable. The memory should be short; the emotional center remains `我记得、它影响了我、谢谢您`.
-
-Do not decorate the ending with formulaic parallelism. If `我也会继续努力把事情做好` already closes the message, stop there. Avoid generated-sounding endings such as `把事情做好，把路走稳`, `做好当下，走好未来`, or repeated `把A，把B` structures that add symmetry without adding meaning.
-
 ## Anti-patterns
 
 Avoid:
@@ -108,4 +120,7 @@ Avoid:
 - `您回来记得拿一下` in a gift message to a senior person;
 - explaining how expensive, premium, rare, or medically powerful a gift is;
 - putting delivery, apology, family background, product benefits, and closing wishes into one overloaded WeChat paragraph;
-- slogan-like paired endings such as `把A做好，把B走稳`, especially when the second half exists only to make the sentence sound complete.
+- evaluating a teacher's life, personality, habits, or future from the user's point of view;
+- announcing relational distance with `很久没联系了`, `正好借教师节问个好`, or `顺便问候一下`;
+- stacking several memories to manufacture specificity;
+- adding a mechanical paired-action ending such as `把A做好，把B走稳` after the natural meaning is already complete.
