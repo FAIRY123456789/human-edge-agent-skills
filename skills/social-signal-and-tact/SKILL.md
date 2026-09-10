@@ -1,6 +1,6 @@
 ---
 name: social-signal-and-tact
-description: "Turn awkward, overly formal, blunt, or AI-sounding messages to teachers, leaders, mentors, senior colleagues, partners, or acquaintances into short, natural, relationship-aware communication. Use for tactful praise, upward communication, progress updates, favors, reminders, apologies, disagreement, gift and courtesy messages, proxy greetings, or warm friend-like chat. The skill can use sandwich framing, specific credit, ask-for-advice, face-saving language, staged chat turns, and subtle emotional value while avoiding fake familiarity, fabricated shared history, pressure, gift-value signaling, or empty flattery."
+description: "Turn awkward, overly formal, blunt, or AI-sounding messages to teachers, leaders, mentors, senior colleagues, partners, or acquaintances into short, natural, relationship-aware communication. Use for tactful praise, upward communication, progress updates, favors, reminders, apologies, disagreement, gift and courtesy messages, proxy greetings, holiday wishes, or warm friend-like chat. The skill can use sandwich framing, specific credit, ask-for-advice, face-saving language, staged chat turns, and subtle emotional value while avoiding fake familiarity, fabricated shared history, pressure, gift-value signaling, formulaic parallelism, or empty flattery."
 license: MIT
 metadata:
   author: Joy T <101039451+FAIRY123456789@users.noreply.github.com>
@@ -23,7 +23,7 @@ For chat, read the interaction as a sequence of turns, not only as one finished 
 ## Workflow
 
 1. Identify the relationship: teacher, leader, mentor, senior colleague, partner, acquaintance, or real friend.
-2. Infer the immediate social goal: report progress, ask for help, praise, thank, remind, repair awkwardness, disagree, give a gift, pass on greetings, or make a request.
+2. Infer the immediate social goal: report progress, ask for help, praise, thank, remind, repair awkwardness, disagree, give a gift, pass on greetings, send a holiday wish, or make a request.
 3. Separate **observable facts** from interpretation. Praise should attach to something real: a decision, useful feedback, a result, a way of thinking, a resource, or a concrete effect on the user.
 4. Estimate relational distance and channel. A WeChat message to a familiar teacher should not read like an official email.
 5. Identify the other person's likely priority: progress, respect, control, efficiency, recognition, low-risk execution, being understood, or receiving a gesture without social pressure.
@@ -32,10 +32,12 @@ For chat, read the interaction as a sequence of turns, not only as one finished 
 8. For gifts or courtesy visits, describe enough to make the gesture understandable, then stop. State the source, timing, local or seasonal quality, or caring intention when relevant. Do not sell the gift through price, brand prestige, rankings, exaggerated scarcity, or medical claims.
 9. Match the weight of the apology to the actual situation. For a minor absence or missed visit, phrases such as `有些过意不去` and `让我代他向您问好` are often proportionate. Reserve `请您见谅` or stronger apology language for situations that genuinely require repair.
 10. Make senior-facing closing language invitational rather than directive. Prefer `您回办公室后可以尝尝呀，希望您吃着喜欢` over commands such as `记得拿一下` when the context is a gift.
-11. Keep each send short by default. In chat, one compact paragraph often works better than a structured memo, and two well-timed messages can work better than one overloaded paragraph.
-12. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, and three-stage mini-essays for a simple request.
-13. Make the other person easy to respond to. Requests should be clear and low-friction, with room for timing or refusal when appropriate.
-14. Run the final “would a real person send this?” test. Also ask: “Would a real person send all of this at once?”
+11. For gratitude or holiday wishes, use one or two small real memories when available. A remembered sentence, a ride after an event, a piece of advice, a moment of encouragement, or a specific act of support can carry more emotional weight than broad praise. Keep the memory brief and subordinate to the current feeling; do not turn the message into a biography or chronology.
+12. Keep each send short by default. In chat, one compact paragraph often works better than a structured memo, and two well-timed messages can work better than one overloaded paragraph.
+13. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, three-stage mini-essays, slogan-like endings, and mechanical parallel structures such as repeated `把A，把B`, `做好A，走稳B`, or other balanced two-part closures that sound generated rather than spoken.
+14. Prefer one natural action or intention over ornamental parallelism. If `我也会继续努力把事情做好` already completes the meaning, stop there. Do not add a second abstract phrase only for rhythm.
+15. Make the other person easy to respond to. Requests should be clear and low-friction, with room for timing or refusal when appropriate.
+16. Run the final “would a real person send this?” test. Also ask: “Would a real person say this exact ending?” and “Would a real person send all of this at once?”
 
 ## Tone controls
 
@@ -49,6 +51,7 @@ The user may ask for one of these:
 - `轻松朋友感`
 - `有分寸地反对`
 - `送礼/代问候`
+- `节日感谢`
 
 Friend-like naturalness is allowed when the wording fits the real relationship. Fabricated intimacy is not.
 
