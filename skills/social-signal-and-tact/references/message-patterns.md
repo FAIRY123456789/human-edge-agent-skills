@@ -108,6 +108,46 @@ Key edits learned from a real case:
 - Keep accurate provenance. If a gift came through a friend in a place, say `托那边的朋友买的当地特产`; do not imply the giver personally lives or traveled there.
 - Specific timing can improve sincerity when it matters, e.g. `最近一直在外地准备毕业答辩` or an upcoming date, but include only details that the recipient needs.
 
+## 10. Trust escalation → mutuality → concrete hospitality → no immediate ask
+
+Use when a senior or older acquaintance moves beyond routine politeness through repeated praise, asks the user to help or influence a peer, then opens a more private relationship layer such as a family or home-town invitation.
+
+First read the sequence rather than replying to each sentence in isolation:
+
+`specific praise → trust / role entrustment → private-circle invitation`
+
+This sequence usually means the relationship has warmed and the user is being treated as a trusted junior. It still does not prove that a professional resource, internship, introduction, or offer exists.
+
+When the senior assigns the user a quasi-supervisory role over a peer, soften it into mutuality:
+
+`您太客气了，我还有很多需要学习的地方。后面我们会互相督促、一起进步，能帮上的我一定尽力。`
+
+Why it works: it accepts the elder's trust without positioning the user above the peer or accepting responsibility the user does not formally hold.
+
+If the senior then opens a private or family layer, a warmer response can contain three elements:
+
+`谦逊接住评价 → 点出一个真实而具体的受益/共鸣 → 对私人邀请做具体、自然的回邀`
+
+Generic form:
+
+`您过奖了，我还有很多地方需要向您学习。昨天聊到 X，我确实很受启发，也能感受到您对 Y 的关心。以后有机会也欢迎您和 Y 来 Z 走走，到时候如果方便，我请您尝尝当地的 A，再一起去 B 看看。`
+
+The specific food, place, activity, or local detail matters. It makes the invitation believable and reciprocal instead of ceremonial. Use only real details supplied by the user.
+
+Resource-restraint rule:
+
+Do not append `另外我最近正想找实习 / 您看能不能帮我介绍 / 有机会麻烦您带我去公司看看` merely because the relationship became warmer. Wait for a separate professional context or a concrete resource trigger such as a named introduction, scheduled meeting, work task, résumé request, or explicit offer to help.
+
+Evidence rule:
+
+- one private compliment = weak evidence of future resources;
+- repeated specific praise = stronger evidence of genuine personal recognition;
+- public praise in front of relevant third parties = stronger endorsement because the speaker spends some reputation;
+- a home/family invitation = stronger evidence of personal warmth;
+- a concrete introduction, arrangement, task, or offer = evidence that professional optionality is activating.
+
+Keep these dimensions separate. The safest strong response receives the relationship signal fully while claiming only what the evidence supports.
+
 ## Anti-patterns
 
 Avoid:
@@ -123,4 +163,7 @@ Avoid:
 - evaluating a teacher's life, personality, habits, or future from the user's point of view;
 - announcing relational distance with `很久没联系了`, `正好借教师节问个好`, or `顺便问候一下`;
 - stacking several memories to manufacture specificity;
-- adding a mechanical paired-action ending such as `把A做好，把B走稳` after the natural meaning is already complete.
+- adding a mechanical paired-action ending such as `把A做好，把B走稳` after the natural meaning is already complete;
+- accepting a senior's request to “管一管 / 带一带 / 帮他自律” in a way that publicly places the user above a peer without a real role basis;
+- treating praise, hospitality, or family warmth as proof of a job, internship, introduction, or resource commitment;
+- converting a fresh trust signal into an immediate favor request when no concrete professional trigger exists.
