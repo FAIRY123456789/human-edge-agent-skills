@@ -47,6 +47,24 @@ A useful internal scale is:
 
 Treat the scale as evidence discipline, not a rigid social ranking. The next message usually matches the observed level or stays slightly below it. Move higher only when the other person has opened that layer first or when a concrete reciprocal gesture is natural.
 
+## Chinese-native drafting rules
+
+When the message is Chinese, draft from Chinese conversational logic rather than building an English outline and translating it sentence by sentence. This matters most in WeChat messages to teachers, mentors, leaders, founders, elders, and other senior people.
+
+Prefer **person → event → action → feeling** over **abstract concepts → grouped points → summary judgment**. A Chinese message should usually move through what the person said, what happened, and what the user genuinely felt. Do not force several ideas into an English-style list and then close with a generic evaluation such as `这几个点给我很大启发`.
+
+Treat connective words such as `也 / 还 / 还是 / 又` as a review trigger when they function like automatic translations of *also / too / still / again*. Keep them only when they carry real meaning. Do not use them merely to manufacture progression, for example `今天又想了想，还是想专门跟您说声感谢` when a direct `非常感谢您昨晚愿意和我聊这么久` is more natural.
+
+Do not manufacture reflection time. If the conversation happened the previous night, avoid phrases such as `今天静下来以后重新想了一遍`, `到今天还一直记着`, or other wording that makes one night's interval sound like long-term沉淀. Start from the actual interaction and gratitude unless the user explicitly describes a later reflection process.
+
+Keep the speaker's causal order exact. If a senior's business advice was `先确定自己的预期 → 再看客户需求 → 以预期为尺度调整产品和定价 → 找到平衡`, preserve that order. Do not rewrite it into a more familiar framework such as `先看客户需求，再结合自己的预期` merely because it sounds smoother.
+
+Show humility through position and experience, not ceremonial self-deprecation. Natural forms include `您愿意跟我这样一个晚辈聊这么久` and `以我现在的经历，很多话可能还理解不到您真正想表达的深度`. Avoid turning humility into a polished speech about how shallow, immature, or ignorant the user used to be unless the user genuinely wants to say that.
+
+Use the user's own syntax as the first reference. Preserve natural repetition, emphasis, and slightly uneven human rhythm when it sounds like the user. Polish only enough to improve clarity, respect, and tact. Do not replace the user's Chinese with generic AI gratitude language.
+
+One idea should normally appear once. If `想通 / 认知提升 / 运动让人静下来` express one connected insight, merge them into one compact passage instead of explaining the same realization across several paragraphs.
+
 ## Relationship pacing rules
 
 When a senior person gives the user a higher-status role over a peer, protect both relationships. For example, if a parent says “please help him become more disciplined,” do not accept a supervisory posture too literally. Reframe it as `互相督促 / 一起进步 / 能帮上的尽力` unless the user truly has formal responsibility. This receives the elder's trust while preserving the peer's dignity.
@@ -76,7 +94,7 @@ When the other person's message reveals two identity anchors, respond to the one
 13. Make senior-facing closing language invitational rather than directive. Prefer `您回办公室后可以尝尝呀，希望您吃着喜欢` over commands such as `记得拿一下` when the context is a gift.
 14. Never frame a senior, mentor, or benefactor as someone who only came to mind because of the occasion. Avoid phrases such as `很久没联系了`, `正好借教师节向您问个好`, `顺便跟您问候一下`, or `刚好想到您`. Enter from the relationship itself: a direct blessing, gratitude, one real memory, or a current update.
 15. Keep each send short by default. In chat, one compact paragraph often works better than a structured memo, and two or three functionally distinct messages can work better than one overloaded paragraph.
-16. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, three-stage mini-essays, and ornamental parallel endings such as `把 A，把 B` or `做好 A，走稳 B`. Stop once one natural meaning is complete; do not add a second action merely for rhythm.
+16. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, three-stage mini-essays, English-style grouped abstractions such as `A、B、C，这几个点给我很大启发`, mechanical `也 / 还 / 还是 / 又` progression, and ornamental parallel endings such as `把 A，把 B` or `做好 A，走稳 B`. Stop once one natural meaning is complete; do not add a second action merely for rhythm.
 17. Make the other person easy to respond to. Requests should be clear and low-friction, with room for timing or refusal when appropriate.
 18. If professional optionality exists, check whether the current turn truly contains an L4 trigger. If it does not, do not force a résumé, internship, job, collaboration, or introduction request into a relationship-building exchange.
 19. Run the final check below.
@@ -92,6 +110,9 @@ When the other person's message reveals two identity anchors, respond to the one
 - Does it contain an inference the user did not explicitly provide?
 - Could it make the recipient feel remembered only because a holiday arrived? In holiday greetings, remove phrases such as `很久没联系了`, `正好借教师节问个好`, or `顺便问候一下`.
 - Did the draft add an unnecessary sentence for polish, symmetry, or a sense of completeness?
+- Does the Chinese read as if it was first organized in English and then translated? Remove grouped-concept summaries, unnecessary `也 / 还 / 还是 / 又`, and artificial reflection-time phrases.
+- Does the draft preserve the speaker's original causal order, especially when restating advice, business logic, or decision rules?
+- Is one insight being explained twice under different words such as `想通`, `认知`, and `静下来`?
 - Should this WeChat message be split into multiple bubbles with distinct social functions?
 - If the relationship just became warmer, does the response receive that warmth without immediately turning it into a favor or professional ask?
 
