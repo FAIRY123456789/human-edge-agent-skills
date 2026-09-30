@@ -148,6 +148,44 @@ Evidence rule:
 
 Keep these dimensions separate. The safest strong response receives the relationship signal fully while claiming only what the evidence supports.
 
+## 11. Senior conversation follow-up → direct gratitude → faithful lesson → humble close
+
+Use after a long one-to-one conversation with a senior person when the user wants to send a short follow-up the next day. The message should feel like a real WeChat note from a junior, not a translated reflection essay.
+
+Preferred rhythm:
+
+`direct thanks for the time → one concrete lesson in the speaker's original order → one compact personal takeaway → humble close`
+
+A real refined case:
+
+`方总您好，昨晚占用了您很多时间，非常感谢您愿意跟我这样一个晚辈聊这么久，把自己的经历和思考讲给我听，我很珍惜。`
+
+`您昨天讲到做事情要有逆向思维。做产品的时候，先把自己的预期想清楚，再去看客户真正需要什么，在这个基础上调整产品和定价，找到一个合适的平衡。这对我很有启发。`
+
+`您后面讲到“不进则退”和认知提升，我感触很深。人需要不断往前走，往前走，很多事情才能想明白，对事情的判断自然会更清楚。昨晚从运动聊到产品、创业和健康本质，这对我来说非常难得、无价。`
+
+`昨晚能够坐在您旁边，听您愿意这样耐心地跟我讲，我确实很珍惜。以我现在的经历，很多话可能还理解不到您真正想表达的深度，只能先记下来，今后在自己做事、碰到问题的时候再慢慢体会。再次感谢方总昨晚的指点。`
+
+What this case teaches:
+
+- Start directly from the actual interaction. Do not insert `今天静下来以后` merely to make the message sound reflective.
+- Preserve advice in its true causal order. Here the business logic is `自己的预期 → 客户需求 → 调整产品/定价 → 平衡`.
+- Avoid English-style concept packaging such as `您讲到逆向思维、认知和“不进则退”，这几个点给我的启发很大`. Let each idea enter through a natural sentence.
+- Avoid fake temporal emphasis such as `这句话我到今天还一直记着` when the conversation happened only the previous night.
+- Avoid automatic connective progression such as `我也…… / 还有…… / 还是…… / 又……` unless the word is semantically necessary.
+- Do not repeat the same insight across several paragraphs. In this case, `认知提升 / 想明白 / 运动静心` should be compressed rather than separately re-explained.
+- Humility works best through relational position and limits of experience: `一个晚辈`, `以我现在的经历`, `今后再慢慢体会`. It should not sound like ritual self-belittling.
+- Keep some human rhythm when it belongs to the user's voice. Do not over-normalize every repetition into polished corporate Chinese.
+
+Bad cases learned during refinement:
+
+- `您讲到 A、B、C，这几个点给我很大启发。` — abstract grouped summary; reads like translated AI prose.
+- `我也越来越能体会到这一点。` — often a filler transition when no real additional meaning is present.
+- `今天静下来以后，我把昨晚聊到的内容重新想了一遍。` — can imply artificial contrast with the previous night and unnecessary reflection staging.
+- `这句话我到今天还一直记着。` — implausible temporal dramatization after only one night.
+- `这个道理听起来简单，但我过去其实想得很浅。` — polished self-evaluation that normal WeChat speech usually does not need.
+- Restating the advice as `先理解客户需求，再结合自己的预期` when the speaker actually said to establish one's own expectation first — factual smoothing that changes the lesson.
+
 ## Anti-patterns
 
 Avoid:
@@ -166,4 +204,9 @@ Avoid:
 - adding a mechanical paired-action ending such as `把A做好，把B走稳` after the natural meaning is already complete;
 - accepting a senior's request to “管一管 / 带一带 / 帮他自律” in a way that publicly places the user above a peer without a real role basis;
 - treating praise, hospitality, or family warmth as proof of a job, internship, introduction, or resource commitment;
-- converting a fresh trust signal into an immediate favor request when no concrete professional trigger exists.
+- converting a fresh trust signal into an immediate favor request when no concrete professional trigger exists;
+- writing Chinese as an English outline translated sentence by sentence, especially `A、B、C，这几个点……` summaries;
+- using `也 / 还 / 还是 / 又` as automatic progression words when direct Chinese would be cleaner;
+- manufacturing a reflective time gap after a conversation that happened only the previous night;
+- changing the original causal order of a senior person's advice in order to make the prose smoother;
+- explaining the same realization repeatedly under adjacent labels such as `认知提升`, `想通`, and `运动静心`.
