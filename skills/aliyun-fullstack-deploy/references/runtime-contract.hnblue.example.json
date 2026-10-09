@@ -1,0 +1,20 @@
+{
+  "_description": "Example only: verify actual project and ECS before use; no credentials or server addresses.",
+  "java": {
+    "major": 17,
+    "pom": "backend/pom.xml"
+  },
+  "python": {
+    "version": "3.11",
+    "requirements": "flask_model/carbon_model_api/requirements-production.txt"
+  },
+  "frontend": {
+    "build": "local"
+  },
+  "mysql": {
+    "major": 8
+  },
+  "model_artifacts": [
+    "**/catboost_pipeline.pkl"
+  ]
+}

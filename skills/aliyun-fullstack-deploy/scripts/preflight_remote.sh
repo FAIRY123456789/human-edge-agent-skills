@@ -37,6 +37,8 @@ run_optional python3 --version
 run_optional node --version
 run_optional npm --version
 run_optional java -version
+run_optional mysqld --version
+run_optional redis-server --version
 run_optional nginx -v
 run_optional systemctl --version
 run_optional ssh -V
@@ -72,3 +74,6 @@ run_optional nginx -T
 section backups-and-logs
 run_optional ls -ld "/opt/${APP_NAME}-backups" /var/backups
 run_optional journalctl -u "$SERVICE_NAME" -n 100 --no-pager
+
+# For structured, redacted version matching run probe_runtime.py separately;
+# a binary's version does not establish which MySQL/Redis service is live.

@@ -45,7 +45,7 @@ def first_existing(root: Path, candidates: list[str]) -> Path | None:
 
 def detect(root: Path) -> dict:
     package = first_existing(root, ["frontend/package.json", "package.json"])
-    requirements = first_existing(root, ["backend/requirements.txt", "requirements.txt", "pyproject.toml"])
+    requirements = first_existing(root, ["flask_model/carbon_model_api/requirements-production.txt", "flask_model/carbon_model_api/requirements.txt", "backend/requirements-production.txt", "backend/requirements.txt", "requirements-production.txt", "requirements.txt", "pyproject.toml"])
     package_text = package.read_text(encoding="utf-8", errors="ignore") if package else ""
     req_text = requirements.read_text(encoding="utf-8", errors="ignore") if requirements else ""
     return {
@@ -56,10 +56,10 @@ def detect(root: Path) -> dict:
         "flask": "flask" in req_text.lower(),
         "django": "django" in req_text.lower(),
         "node_api": (root / "package.json").exists() and not (root / "frontend/package.json").exists(),
-        "spring_boot": (root / "pom.xml").exists() or (root / "build.gradle").exists(),
+        "spring_boot": any((root / item).exists() for item in ["backend/pom.xml", "pom.xml", "backend/build.gradle", "build.gradle"]),
         "file_persistence": (root / "storage").exists(),
         "ai_enabled": any((root / item).is_dir() for item in ["backend/app/assistant", "backend/app/ai", "src/ai"]),
-        "model_artifacts": (root / "artifacts").is_dir(),
+        "model_artifacts": (root / "artifacts").is_dir() or any(root.glob("flask_model/**/*.pkl")),
     }
 
 
@@ -88,7 +88,7 @@ def main() -> int:
                 windows_path_files.append(relative)
 
     project_type = detect(root)
-    requirements = first_existing(root, ["backend/requirements.txt", "requirements.txt", "pyproject.toml"])
+    requirements = first_existing(root, ["flask_model/carbon_model_api/requirements-production.txt", "flask_model/carbon_model_api/requirements.txt", "backend/requirements-production.txt", "backend/requirements.txt", "requirements-production.txt", "requirements.txt", "pyproject.toml"])
     node_lock = first_existing(root, [
         "frontend/package-lock.json", "frontend/pnpm-lock.yaml", "frontend/yarn.lock",
         "package-lock.json", "pnpm-lock.yaml", "yarn.lock",
@@ -99,12 +99,13 @@ def main() -> int:
         required["python_dependency_manifest"] = bool(requirements)
     if project_type["vite_spa"] or project_type["react"] or project_type["vue"] or project_type["node_api"]:
         required["node_lockfile"] = bool(node_lock)
-    if project_type["vite_spa"]:
+    if project_type["vite_spa"] or project_type["vue"]:
         required["frontend_production_build"] = bool(frontend_index)
     if project_type["spring_boot"]:
         required["java_build_descriptor"] = True
     report = {
         "project_root": str(root),
+        "detected_paths": {"python_requirements": str(requirements.relative_to(root)) if requirements else None, "javascript_lockfile": str(node_lock.relative_to(root)) if node_lock else None, "frontend_build": str(frontend_index.relative_to(root)) if frontend_index else None},
         "git": git_state(root),
         "project_type": project_type,
         "required": required,

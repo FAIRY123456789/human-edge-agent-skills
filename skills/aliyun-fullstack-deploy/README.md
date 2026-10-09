@@ -27,3 +27,20 @@ Use $aliyun-fullstack-deploy to inspect this app and my authorized ECS. Show the
 The bundled promotion/canary adapters are tested around a Python layout. Node.js and Java deployments use the same evidence contract but still require project-specific start commands and validation hooks.
 
 This repository claims no external adoption yet. Review every script before use and test on a disposable target before production.
+
+## Compatibility preflight (v0.6.0)
+
+For a Spring Boot + Flask + Vue deployment, first inspect the project's Maven target, Python dependency pins, trained model, frontend lockfile and static build. Then inspect the **authorized ECS** without changing services:
+
+```bash
+# On ECS, using the checked-in Skill scripts:
+python3 scripts/probe_runtime.py --python-bin /usr/bin/python3.11 \\
+  --packages flask,gunicorn,numpy,catboost --json-out ecs-runtime.json
+
+# Locally, after securely retrieving and redacting the snapshot:
+python scripts/runtime_matrix.py . \\
+  --contract deploy/runtime-contract.json \\
+  --server ecs-runtime.json --gate plan
+```
+
+Use [the HNBLUE-style contract example](references/runtime-contract.hnblue.example.json) and [runtime compatibility guide](references/runtime-compatibility.md) to define actual requirements. The checker reports PASS / ACTION_REQUIRED / REVIEW / BLOCK; it never installs dependencies or changes production. Recheck the selected Linux venv, test serialized model loading and validate the running MySQL/Redis service before switching a release. Generic canary/promotion shell adapters still target Python/Uvicorn and require project-specific replacements for Java and Flask/Gunicorn.

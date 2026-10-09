@@ -40,3 +40,5 @@ jobs:
         run: bash skills/aliyun-fullstack-deploy/scripts/preflight_remote.sh > /tmp/preflight.txt
       - name: Run functional smoke tests
         run: python scripts/smoke_test.py
+      - name: Test ECS runtime compatibility gates
+        run: python -m unittest discover -s skills/aliyun-fullstack-deploy/tests -p "test_*.py" -v

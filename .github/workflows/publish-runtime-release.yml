@@ -1,0 +1,58 @@
+name: Publish validated runtime-compatibility release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - skills/aliyun-fullstack-deploy/VERSION
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validated-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install repository validation dependency
+        run: python -m pip install --disable-pip-version-check pyyaml
+      - name: Validate canonical Skills
+        run: python scripts/validate_skills.py
+      - name: Functional smoke tests
+        run: python scripts/smoke_test.py
+      - name: Compatibility regression tests
+        run: python -m unittest discover -s skills/aliyun-fullstack-deploy/tests -p "test_*.py" -v
+      - name: Check Python and shell syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for path in Path('skills/aliyun-fullstack-deploy').rglob('*.py'):
+              compile(path.read_text(encoding='utf-8'), str(path), 'exec')
+          print('Python syntax PASS')
+          PY
+          find skills/aliyun-fullstack-deploy -name '*.sh' -print0 | xargs -0 bash -n
+      - name: Create versioned GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="v$(tr -d '\r\n' < skills/aliyun-fullstack-deploy/VERSION)"
+          [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo 'Invalid SemVer tag'; exit 1; }
+          notes="docs/RELEASE_NOTES_${tag}.md"
+          [[ -s "$notes" ]] || { echo "Missing $notes"; exit 1; }
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Existing release: $tag"
+            exit 0
+          fi
+          if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$tag" >/dev/null 2>&1; then
+            echo "Existing tag without Release; inspect manually: $tag"
+            exit 1
+          fi
+          gh release create "$tag" --target "$GITHUB_SHA" \
+            --title "Human Edge Agent Skills $tag — ECS Runtime Compatibility" \
+            --notes-file "$notes"

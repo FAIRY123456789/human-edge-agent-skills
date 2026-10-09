@@ -44,6 +44,17 @@ Run `scripts/preflight_remote.sh` over SSH with environment variables that descr
 
 Create a rollback point before every remote mutation. Do not create a second wildcard Nginx server block. Modify only the server block proven to own the route, then require `nginx -t` before reload.
 
+## Runtime compatibility matrix (required before packaging)
+
+Read [references/runtime-compatibility.md](references/runtime-compatibility.md). For Java/Python/Vue hybrids, use an explicit non-secret runtime contract; a sample for HNBLUE-style layouts is [references/runtime-contract.hnblue.example.json](references/runtime-contract.hnblue.example.json).
+
+1. Run `preflight_local.py` and identify nested Maven/Flask paths. On the authorized ECS, run `probe_runtime.py` with the intended Python interpreter and an explicit allowlist of critical pip packages; keep the snapshot private and redact it before sharing.
+2. Run `runtime_matrix.py <project> --contract <contract.json> --server <snapshot.json> --gate plan`. Examine every PASS / ACTION_REQUIRED / REVIEW / BLOCK result, including library pins, Java bytecode target, browser artifacts, DB server provenance, native ABI, and model files.
+3. Prefer installing an app-specific JRE or Linux venv and repeat the probe. Never auto-upgrade a live database, replace a system-owned runtime, change Nginx for another project, or mutate ECS solely because a comparison indicates drift.
+4. `--gate ready` must pass before production promotion; real model load, database connectivity, Java/Flask routes and existing-site checks still require explicit project hooks. The general canary/promotion scripts remain Python/Uvicorn-specific and **must be adapted** for Spring Boot + Flask/Gunicorn.
+
+If any required version remains unknown, report REVIEW or ACTION_REQUIRED; do not treat the absence of detected errors as compatibility proof.
+
 ## Choose a runtime deliberately
 
 - Python: pin an available interpreter by full path and build a new virtual environment when it differs from the artifact runtime. Install through that virtual-environment interpreter, never bare `pip`. Never ship Windows wheels to Linux.
