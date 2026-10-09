@@ -82,6 +82,18 @@ class RuntimeMatrixTests(unittest.TestCase):
         self.assertEqual(checks["mysql"]["status"], "REVIEW")
         self.assertEqual(checks["redis"]["status"], "REVIEW")
 
+    def test_model_serializer_drift_requires_review(self):
+        self.contract["model_serializer"] = {
+            "python": "3.10", "packages": {"catboost": "1.2.7"}}
+        self.assertEqual(self.checks()["model_serializer"]["status"], "REVIEW")
+        self.contract["model_serializer"] = {
+            "python": "3.11", "packages": {"catboost": "1.2.10"}}
+        self.assertEqual(self.checks()["model_serializer"]["status"], "PASS")
+
+    def test_non_linux_probe_is_blocked(self):
+        self.server["platform"] = {"system": "Windows", "machine": "AMD64"}
+        self.assertEqual(self.checks()["ecs_platform"]["status"], "BLOCK")
+
     def test_missing_or_unverified_model_never_passes_silently(self):
         self.server["validation"]["model_smoke_passed"] = False
         self.assertEqual(self.checks()["model_artifacts"]["status"], "REVIEW")

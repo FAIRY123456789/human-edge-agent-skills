@@ -61,7 +61,9 @@ other than PASS. In both modes the script is read-only.
    **Never auto-upgrade a live database**.
 5. For native wheels (NumPy/CatBoost), verify target Linux architecture,
    interpreter ABI, and availability of compatible distributions. Model pickle
-   compatibility requires a real load plus representative inference.
+   compatibility requires a real load plus representative inference. If serialization
+   versions are known, add a model_serializer section specifying Python and
+   critical package versions; the checker reports any runtime drift.
 
 When the OS is obsolete, evaluate a side-by-side runtime first, then an
 isolated container only if kernel/architecture permit it, then a tested OS

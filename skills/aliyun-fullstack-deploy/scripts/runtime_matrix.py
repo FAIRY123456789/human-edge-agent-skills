@@ -113,6 +113,9 @@ def observed(server, name):
 
 def generate(root, contract, server):
     checks = []
+    platform = server.get("platform", {})
+    if platform.get("system") and platform["system"].lower() != "linux":
+        checks.append(dict(component="ecs_platform", status="BLOCK", detail="Target probe was not collected from Linux ECS.", remedy="Run the read-only probe on the intended Linux ECS."))
     def add(component, status, detail, remedy=""):
         checks.append(dict(component=component, status=status, detail=detail, remedy=remedy))
 
@@ -230,6 +233,25 @@ def generate(root, contract, server):
         else:
             add(service, "PASS", "%s running service version %s matches major %s." % (service, version, desired))
 
+    serializer = contract.get("model_serializer", {})
+    if serializer:
+        model_python = serializer.get("python")
+        ecs_python = observed(server, "python").get("version")
+        needed = serializer.get("packages", {})
+        installed = {k.lower().replace("_", "-"): str(v)
+                     for k, v in server.get("packages", {}).items()}
+        drift = []
+        if model_python and numbers(model_python)[:2] != numbers(ecs_python)[:2]:
+            drift.append("Python training/runtime interpreter")
+        for name, version in needed.items():
+            key = name.lower().replace("_", "-")
+            if installed.get(key) != str(version):
+                drift.append(key)
+        if drift:
+            add("model_serializer", "REVIEW", "Recorded model serialization environment differs or is unknown.",
+                "Check/re-export the artifact under an approved environment; mismatches: " + ", ".join(drift[:8]))
+        else:
+            add("model_serializer", "PASS", "Recorded serialization Python and critical library versions match.")
     artifacts = contract.get("model_artifacts", [])
     if artifacts:
         absent = [pattern for pattern in artifacts if not list(root.glob(pattern))]
