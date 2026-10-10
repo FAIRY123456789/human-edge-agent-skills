@@ -22,10 +22,26 @@ Write for a motivated beginner who wants to understand the mechanism, not just c
 4. Prefer roughly **4–7 first-level sections** for a normal article.
 5. Use full natural paragraphs. Do not split every sentence into a separate paragraph.
 6. Code goes in fenced code blocks.
-7. When total content would exceed roughly **5,000 Chinese characters**, split it into a series rather than compressing explanation.
-8. Code-heavy subarticles should generally stay within about **5,000 Chinese characters**. A deliberately concise version can target about **2,000 characters**.
+7. Default to approximately **1,500–2,000 Chinese characters per article**, with a **3,000-character maximum** unless the user explicitly requests a longer article. Split broader topics into independently useful articles.
+8. Preserve enough details, working mechanisms, and short commands for a reader to reproduce the core technique. Cut repetition and generic transitions before cutting actionable substance.
 
 Run `scripts/lint_csdn_article.py` when the draft is available as Markdown.
+
+## Private-project anonymization (default, before drafting)
+
+Assume projects, client engagements, school/lab systems, deployments, and source material are **private or publication-restricted unless the user explicitly authorizes identifiable publication**. A publicly accessible repository, screenshot, or URL does not by itself authorize exposing additional project details in a blog.
+
+Before writing public-facing CSDN text, replace or omit identifying details including:
+- Real project/system names and unique aliases, organizations, schools, clients, team members, people, and internal project context.
+- Public/private IP addresses, domains, host aliases, SSH usernames, ports used uniquely by the real deployment, instance IDs, and real environment paths, directory names, database/schema/table names.
+- Credentials, tokens, passwords, private keys, private API endpoints, internal URLs, unpublished release versions, exact incidents/timestamps, data volumes, performance figures, unpublished architecture specifics, and proprietary model/dataset assets.
+- Screenshots, code excerpts, log messages, and comments containing identifying details, including indirect combinations of details that make a project recognizable.
+
+Use **generic runnable examples** instead: `example-app`, `app_db`, `app_user`, `<ECS_HOST>`, `/opt/example-app/`, illustrative ports, fictional filenames, sanitized code comments, and realistic placeholder values. State when a command or configuration is illustrative. Preserve generally reusable technology names and correct mechanisms (Spring Boot, Vue, Flask, Java, MySQL, Nginx, etc.). Never print real secret values even when a project is explicitly public.
+
+For a private project, write a reusable engineering tutorial with anonymized scenarios and no traceable case identifiers. Mention a real project name, exact results, public URLs, or uniquely identifying repository links **only with explicit user authorization for those details**. If in doubt, generalize without asking the user for private information. Verify titles, prose, tables, code blocks, file paths, captions, and link destinations before publication.
+
+Do not change the actual user's code, server configuration, or repository merely to anonymize a blog; anonymization applies to the published text and examples.
 
 ## Teaching sequence
 
