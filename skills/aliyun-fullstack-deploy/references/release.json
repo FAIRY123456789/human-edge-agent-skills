@@ -1,0 +1,40 @@
+{
+  "_description": "Copy to an HNBLUE repository as deploy/release.json; replace example paths/version and keep evidence redacted.",
+  "schema_version": 2,
+  "project_name": "hnblue",
+  "version": "0.0.0",
+  "source_revision": "replace-with-reviewed-commit-sha",
+  "includes": [
+    "frontend/dist",
+    "frontend/package-lock.json",
+    "backend/target/hnblue.jar",
+    "flask_model/carbon_model_api",
+    "deploy",
+    "evidence/release-preflight.json",
+    "evidence/runtime-matrix.json"
+  ],
+  "lockfiles": [
+    "frontend/package-lock.json",
+    "flask_model/carbon_model_api/requirements-production.txt"
+  ],
+  "required_files": [
+    "frontend/dist/index.html",
+    "backend/target/hnblue.jar",
+    "flask_model/carbon_model_api/requirements-production.txt"
+  ],
+  "runtime_contract": "deploy/runtime-contract.json",
+  "runtime_report": "evidence/runtime-matrix.json",
+  "preflight_report": "evidence/release-preflight.json",
+  "excludes": ["node_modules", ".venv", "__pycache__", "storage", ".env", ".env.*"],
+  "artifact_layout": {
+    "release_root": "/opt/hnblue/releases/<version>",
+    "current_link": "/opt/hnblue/current",
+    "shared_root": "/opt/hnblue/shared",
+    "rollback_target": "previous current link"
+  },
+  "protected_paths": ["/opt/hnblue/shared/hnblue.env", "/var/lib/mysql", "/var/lib/redis", "other sites and Nginx blocks"],
+  "evidence": {
+    "required": ["evidence/release-preflight.json", "evidence/runtime-matrix.json"],
+    "redaction": "Remove host addresses, usernames, credentials, tokens, private paths and customer data."
+  }
+}

@@ -30,6 +30,25 @@ This Skill subsumes the earlier `safe-shared-vps-deploy` workflow: preserve exis
 
 Stop before mutation if the contract lacks a rollback target, persistence plan, protected-site inventory, or success checks.
 
+## Make `release.json` the version-alignment contract
+
+Copy [references/release.json](references/release.json) into the application as
+`deploy/release.json`. Replace its example paths and version with observed
+HNBLUE values. The contract records the reviewed source revision, immutable
+release inputs, lock files, required files, runtime/evidence paths, protected
+shared state and rollback layout. It is the input to the read-only gate:
+
+```bash
+python scripts/release_preflight.py . \
+  --config deploy/release.json --server evidence/ecs-runtime.json \
+  --gate plan --json-out evidence/release-preflight.json
+```
+
+`PASS`, `ACTION_REQUIRED`, `REVIEW` and `BLOCK` remain explicit. `plan` stops
+only on `BLOCK`; `ready` additionally requires SemVer, source provenance, all
+lock/required files and a PASS runtime matrix. This gate never installs,
+migrates, promotes, edits Nginx or changes an ECS.
+
 ## Detect and preflight
 
 Run:
@@ -49,7 +68,7 @@ Create a rollback point before every remote mutation. Do not create a second wil
 Read [references/runtime-compatibility.md](references/runtime-compatibility.md). For Java/Python/Vue hybrids, use an explicit non-secret runtime contract; a sample for HNBLUE-style layouts is [references/runtime-contract.hnblue.example.json](references/runtime-contract.hnblue.example.json).
 
 1. Run `preflight_local.py` and identify nested Maven/Flask paths. On the authorized ECS, run `probe_runtime.py` with the intended Python interpreter and an explicit allowlist of critical pip packages; keep the snapshot private and redact it before sharing.
-2. Run `runtime_matrix.py <project> --contract <contract.json> --server <snapshot.json> --gate plan`. Examine every PASS / ACTION_REQUIRED / REVIEW / BLOCK result, including library pins, Java bytecode target, browser artifacts, DB server provenance, native ABI, and model files.
+2. Run `runtime_matrix.py <project> --contract <contract.json> --server <snapshot.json> --gate plan`, or let `release_preflight.py` run it from `deploy/release.json`. Examine every PASS / ACTION_REQUIRED / REVIEW / BLOCK result, including library pins, Java bytecode target, browser artifacts, DB server provenance, native ABI, and model files.
 3. Prefer installing an app-specific JRE or Linux venv and repeat the probe. Never auto-upgrade a live database, replace a system-owned runtime, change Nginx for another project, or mutate ECS solely because a comparison indicates drift.
 4. `--gate ready` must pass before production promotion; real model load, database connectivity, Java/Flask routes and existing-site checks still require explicit project hooks. The general canary/promotion scripts remain Python/Uvicorn-specific and **must be adapted** for Spring Boot + Flask/Gunicorn.
 
@@ -66,14 +85,24 @@ Do not change the system runtime merely to satisfy one application when an isola
 
 ## Build a clean release
 
-Create a small JSON config with `project_name`, immutable `version`, `includes`, and optional `excludes`, then run:
+Create `deploy/release.json` from the checked-in template. Then run the ready
+gate and build:
 
 ```bash
-python scripts/build_release.py <project-root> --config <config.json>
+python scripts/release_preflight.py <project-root> --config deploy/release.json \
+  --server evidence/ecs-runtime.json --gate ready \
+  --json-out evidence/release-preflight.json
+python scripts/build_release.py <project-root> --config deploy/release.json \
+  --preflight-report evidence/release-preflight.json --gate ready
 python scripts/inspect_release.py <release.zip>
 ```
 
-Require portable ZIP entries, UTF-8 LF deployment text, a manifest, checksums, required static and model assets, and no local environment-secret file, private key, Git data, local state, dependency directory, cache, or absolute Windows path.
+The builder refuses a missing/non-PASS ready report, missing lock/required file,
+source drift or a path outside the project. Its schema-versioned manifest
+records source revision, lock files, contract/evidence digests and gate result.
+Require portable ZIP entries, UTF-8 LF deployment text, checksums, required
+static/model assets, and no environment-secret file, private key, Git data,
+local state, dependency directory, cache or absolute Windows path.
 
 For AI-enabled apps, copy [references/ai-contract.example.json](references/ai-contract.example.json), define an explicit JSON contract, and run `scripts/validate_ai_contract.py`. The contract must cover the backend client, route registration, frontend entry, environment-variable names, and offline and failure behavior without containing secret values.
 
@@ -100,6 +129,12 @@ Run bounded GET checks; do not treat a HEAD 405 as a GET failure. `scripts/verif
 Verify systemd state, one intended backend process, loopback binding, writable shared state, page HTML, actual hashed assets, deep-route refresh, browser console and network activity, mobile layout, core data and API flows, report or upload flows, AI fallback, protected existing sites, idempotent redeploy, rollback, and post-rollback data preservation.
 
 Automatically roll back for service or readiness failure, JavaScript-as-HTML, core API 500, Nginx validation failure, protected-site regression, missing model or AI import, unwritable persistence, failed export, or browser white screen. Do not restore shared state unless corruption is proven and data recovery is separately authorized.
+
+Capture rollback evidence before and after the switch: previous/candidate
+release names, ZIP/JAR/model SHA-256, `current` target, systemd status, Nginx
+`-t`, bounded core-flow responses and the exact rollback command. A symlink
+rollback is not a database backup; schema/data recovery needs a separate,
+tested and authorized backup plan.
 
 ## Report evidence, not confidence
 

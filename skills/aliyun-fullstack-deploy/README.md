@@ -28,7 +28,7 @@ The bundled promotion/canary adapters are tested around a Python layout. Node.js
 
 This repository claims no external adoption yet. Review every script before use and test on a disposable target before production.
 
-## Compatibility preflight (v0.6.0)
+## Compatibility and release preflight (v0.7.0)
 
 For a Spring Boot + Flask + Vue deployment, first inspect the project's Maven target, Python dependency pins, trained model, frontend lockfile and static build. Then inspect the **authorized ECS** without changing services:
 
@@ -43,4 +43,14 @@ python scripts/runtime_matrix.py . \\
   --server ecs-runtime.json --gate plan
 ```
 
-Use [the HNBLUE-style contract example](references/runtime-contract.hnblue.example.json) and [runtime compatibility guide](references/runtime-compatibility.md) to define actual requirements. The checker reports PASS / ACTION_REQUIRED / REVIEW / BLOCK; it never installs dependencies or changes production. Recheck the selected Linux venv, test serialized model loading and validate the running MySQL/Redis service before switching a release. Generic canary/promotion shell adapters still target Python/Uvicorn and require project-specific replacements for Java and Flask/Gunicorn.
+Use [the HNBLUE-style contract example](references/runtime-contract.hnblue.example.json) and [runtime compatibility guide](references/runtime-compatibility.md) to define actual requirements. Copy [the release contract template](references/release.json) to `deploy/release.json`; it pins source revision, lock files, required files, artifact layout and redacted evidence. Run the read-only gate before packaging:
+
+```bash
+python scripts/release_preflight.py . \
+  --config deploy/release.json --server evidence/ecs-runtime.json \
+  --gate ready --json-out evidence/release-preflight.json
+python scripts/build_release.py . --config deploy/release.json \
+  --preflight-report evidence/release-preflight.json --gate ready
+```
+
+The gate discovers versions and provenance, reporting PASS / ACTION_REQUIRED / REVIEW / BLOCK. `ready` refuses unknown versions, missing lock/required files, missing evidence or non-PASS matrix results. It never installs dependencies or changes production. Recheck the selected Linux venv, test serialized model loading and validate the running MySQL/Redis service before switching a release. Generic canary/promotion shell adapters still target Python/Uvicorn and require project-specific replacements for Java and Flask/Gunicorn.
