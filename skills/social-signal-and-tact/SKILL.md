@@ -65,6 +65,20 @@ Use the user's own syntax as the first reference. Preserve natural repetition, e
 
 One idea should normally appear once. If `想通 / 认知提升 / 运动让人静下来` express one connected insight, merge them into one compact passage instead of explaining the same realization across several paragraphs.
 
+## Leader rapport: distinguish the relationship before choosing a formula
+
+Online examples of "套近乎" with leaders are **conditional conversation patterns**, not lines to memorize. The recipient's actual relationship with the user, authority, degree of familiarity, recent shared work, occasion, and response burden determine whether any step belongs in the message. See `references/message-patterns.md`, pattern 12, for three cases and their failure modes.
+
+- **Former leader / 老领导:** A natural greeting may lead into a *real* development, an accurately attributed past suggestion, and sincere gratitude. Shared interests can be a conversation topic. A gift is optional and often unnecessary. Omit a growth report if there is no genuine progress to report. Do not invent longing, promotion, specific coaching, or the recipient's availability merely to fill `问候 → 成长汇报 → 饮水思源 → 爱好礼物`.
+- **New leader / 新领导:** On a real occasion such as New Year, start with a brief greeting, mention one verifiable project and how the leader actually contributed, then state one concrete action the user will take. The relationship is generally professional and comparatively unestablished; `全力跟随您的步伐` and broad loyalty pledges can sound performative. Prefer credible work commitments to elaborate allegiance.
+- **Elder-like leader / 长辈型领导:** Only when there is established familial warmth may holiday greetings move naturally into familiar everyday topics and respectful wishes for family. Use interests and family facts the user actually knows. Do not fabricate intimacy, comment on a spouse's looks or age, imply surveillance from social media, or ask about personal routines in ways that feel intrusive. Family praise is optional, never a compulsory step.
+
+**Substance before form:** Look for at least one authentic anchor when claiming familiarity: a completed task, actual improvement, past help with an observable effect, a known interest, or a personal exchange initiated by the other person. If no anchor exists, a plain short greeting is preferable to manufactured storytelling. These patterns can improve how genuine regard is expressed; they cannot substitute for actual work, competence, or trust, and no reply from a leader is guaranteed.
+
+**Gift and professional boundaries:** Confirm that any offer is genuine, appropriate in value and timing, welcome in the relationship, and permitted by workplace or institutional rules. Avoid gifts tied to personnel decisions, procurement, grades, approvals, introductions, or other discretionary benefits. For public-sector, regulated, or uncertain contexts, prefer words alone. Never assume that noticing an interest in a朋友圈 post creates permission to send something.
+
+**Chinese-native implementation:** Write from one concrete incident instead of naming the formula in the message. Choose only the steps supported by facts. Avoid stacked compliments, mechanical `也 / 还 / 还是 / 又` transitions, fake long-separated nostalgia, and a three-part scripted speech when one sentence would suffice.
+
 ## Relationship pacing rules
 
 When a senior person gives the user a higher-status role over a peer, protect both relationships. For example, if a parent says “please help him become more disciplined,” do not accept a supervisory posture too literally. Reframe it as `互相督促 / 一起进步 / 能帮上的尽力` unless the user truly has formal responsibility. This receives the elder's trust while preserving the peer's dignity.
@@ -87,7 +101,7 @@ When the other person's message reveals two identity anchors, respond to the one
 6. Estimate relational distance, signal level, evidence confidence, and channel. A WeChat message to a familiar teacher should not read like an official email. Do not infer L4 resource activation from L1–L3 warmth alone.
 7. Identify the other person's likely priority: progress, respect, control, efficiency, recognition, low-risk execution, being understood, family concern, trust, or receiving a gesture without social pressure.
 8. Decide whether the user should **receive**, **mirror**, **slightly under-match**, or **defer** the signal. For upward relationships, under-matching by a small amount is often safer than escalating faster than the other person.
-9. Choose one pattern from `references/message-patterns.md`. Use multiple techniques only when the message still feels natural. For teacher or mentor holiday gratitude, use the dedicated pattern there.
+9. Choose one pattern from `references/message-patterns.md`. Use multiple techniques only when the message still feels natural. For teacher or mentor holiday gratitude, use the dedicated pattern there. For former, new, or elder-like leaders, first pass the truth-and-familiarity check in pattern 12 before choosing any suggested formula.
 10. Decide whether the content belongs in one send or several chat turns. Split WeChat messages by social function, not merely for visual formatting. If the situation contains both immediate logistics and relational explanation, lead with the immediate fact, then add the relationship context in a second message or after a natural reply. Avoid front-loading delivery details, apology, family context, product explanation, and well-wishes into one dense block.
 11. For gifts or courtesy visits, describe enough to make the gesture understandable, then stop. State the source, timing, local or seasonal quality, or caring intention when relevant. Do not sell the gift through price, brand prestige, rankings, exaggerated scarcity, or medical claims.
 12. Match the weight of the apology to the actual situation. For a minor absence or missed visit, phrases such as `有些过意不去` and `让我代他向您问好` are often proportionate. Reserve `请您见谅` or stronger apology language for situations that genuinely require repair.
@@ -115,6 +129,8 @@ When the other person's message reveals two identity anchors, respond to the one
 - Is one insight being explained twice under different words such as `想通`, `认知`, and `静下来`?
 - Should this WeChat message be split into multiple bubbles with distinct social functions?
 - If the relationship just became warmer, does the response receive that warmth without immediately turning it into a favor or professional ask?
+- If this is a former/new/elder-like leader, are the claimed growth, attributed guidance, shared interests, and family facts all real? Could a simpler greeting work better?
+- Is any promise of a gift appropriate, permitted, and independent of an expected favor or professional decision?
 
 ## Tone controls
 
