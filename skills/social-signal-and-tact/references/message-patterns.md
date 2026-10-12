@@ -186,6 +186,61 @@ Bad cases learned during refinement:
 - `这个道理听起来简单，但我过去其实想得很浅。` — polished self-evaluation that normal WeChat speech usually does not need.
 - Restating the advice as `先理解客户需求，再结合自己的预期` when the speaker actually said to establish one's own expectation first — factual smoothing that changes the lesson.
 
+## 12. Three leader contexts → truthful rapport rather than rehearsed 套近乎
+
+These are examples collected from a video and its comment discussion, supplied by the user. Treat the claims of effectiveness as anecdotal. Choose by existing relationship and the current occasion. The three formulas are *optional planning aids*: they should never force an invented fact or unnecessary gift into the final WeChat message.
+
+### 12A. 老领导：问候 → 真实成长 → 具体归功 → 可选关怀
+
+Original suggested formula: `问候 + 成长汇报 + 饮水思源 + 爱好礼物`.
+
+- **When appropriate:** The person previously led or coached the user and there is genuine history to acknowledge. A recent role change, completed project, or measurable improvement provides a natural reason to contact them.
+- **What to keep:** A short, respectful greeting; one real development; how one specific old reminder helped; a sincere thanks.
+- **What to skip:** `都想您了` when closeness does not support it; `正好您不忙` without knowing their schedule; `马上升部门经理` if no such promotion exists; `用的就是您以前教我的那套` when the causal connection is uncertain. Do not force `很久没联系了` into the opening.
+- **Optional interest / gift:** A shared topic such as tea can be a warm closing when it is genuinely known. Offering to mail tea is neither required nor advisable when value, timing, company policy, or the leader's position make it sensitive.
+
+Conditional example, only when X/Y/Z are all true:
+
+`X总您好，最近工作上有个进展，想跟您汇报一下。之前您提醒我注意的Y，我在Z这件事上认真用上了，对推进工作很有帮助。一直很感谢您当时的指点。`
+
+### 12B. 新领导：节日祝福 → 真实项目反馈 → 可执行承诺
+
+Original suggested formula: `新年祝福 + 具体项目感谢 + 表态跟随`.
+
+- **When appropriate:** A genuine holiday or milestone and a leader with whom the user has worked on a concrete task or project.
+- **What to keep:** A concise blessing, one accurate example of a useful decision or intervention, and a near-term deliverable that the user controls.
+- **What to skip:** `在您手下学习` when it sounds servile; `多亏您的点拨才能顺利推进` if the outcome has multiple causes or has not succeeded; `全力跟随您的步伐` and `争取给公司带来更多利益` when no actual action is specified.
+
+Conditional example:
+
+`王总，新年快乐！去年做A项目时，您提醒我先把B处理好，后面推进C时确实帮了很大忙。今年我会先把D做好，及时向您汇报进展。祝您工作顺利！`
+
+### 12C. 长辈型领导：节日问候 → 熟悉话题 → 得体家人祝福
+
+Original suggested formula: `节日祝福 + 拉家常 + 夸赞家人`.
+
+- **When appropriate:** The senior already uses a familiar form of address and has voluntarily brought everyday interests or family matters into the relationship.
+- **What to keep:** Natural holiday greetings; one topic the user genuinely knows (chess, tea, music, a shared event); a restrained wish for the family when appropriate.
+- **What to skip:** `没去跟李大爷下棋呀` unless this is an established shared topic; `婶子面色红润、越活越年轻` because judging someone's appearance may feel intrusive; `我在朋友圈都刷到你跳广场舞了` when it suggests observation without a natural conversational reason. Never invent a spouse, family member, or their health and hobbies.
+
+Conditional example:
+
+`赵叔，中秋快乐！上次听您提起最近在忙X，不知道进展顺利吗？祝您和家人节日愉快！`
+
+### Bad-case and experience log
+
+The discussion reportedly included both people who found the scripts natural and people who received no reply after using them. The practical lesson is **真成长、真做事、真关系先于话术**. A message cannot compel warmth from someone whose priorities, timing, or actual level of trust do not support it. Do not turn no response into evidence of offense or prescribe repeated chasing.
+
+Recurring errors to detect:
+
+- Inventing promotions, successful projects, affection, the recipient's free time, or remembered advice solely to fit the formula.
+- Replacing concrete work with exaggerated loyalty, ritual gratitude, flattery, or "family compliments".
+- Treating a leader's family's hobbies, photos, or whereabouts as automatically safe small talk.
+- Making gift giving a default step, or implying that favors and evaluations should be reciprocated with gifts.
+- Copying the video's sentence order verbatim, producing a staged speech that clashes with the user's natural Chinese.
+
+The final output should normally be one short, contextualized message; retain only the steps actually warranted by the facts and the desired relationship distance.
+
 ## Anti-patterns
 
 Avoid:
