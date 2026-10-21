@@ -17,11 +17,10 @@ Write for a motivated beginner who wants to understand the mechanism, not just c
 ## Formatting contract
 
 1. The article's **overall title is plain text**, not a Markdown heading.
-2. First-level sections use `#`.
-3. Second-level sections use `##`.
-4. Prefer roughly **4–7 first-level sections** for a normal article.
+2. First-level sections use `#` with Chinese numbering. Second-level `##` and third-level `###` sections are both supported when they mark meaningful conceptual distinctions; do not ban either level.
+3. Prefer roughly **3–6 first-level sections** for a normal article, adjusting to content rather than enforcing a rigid template.
 5. Use full natural paragraphs. Do not split every sentence into a separate paragraph.
-6. Code goes in fenced code blocks.
+6. Use tables, fenced code, blockquotes and compact text blocks selectively when they make mechanisms or comparisons easier to understand. Explain them in surrounding substantive prose.
 7. Default to approximately **1,500–2,000 Chinese characters per article**, with a **3,000-character maximum** unless the user explicitly requests a longer article. Split broader topics into independently useful articles.
 8. Preserve enough details, working mechanisms, and short commands for a reader to reproduce the core technique. Cut repetition and generic transitions before cutting actionable substance.
 
@@ -50,19 +49,19 @@ For each important concept:
 1. Give a formal, accurate definition.
 2. Explain it again in natural language.
 3. Explain how it works step by step.
-4. Explain when it is useful.
-5. Explain one or two common mistakes or misunderstandings.
-6. Give a minimal but meaningful code example.
-7. Comment key lines or explain them immediately after the code.
+4. Explain when it is useful and its selection conditions, after the mechanism is clear.
+5. Clarify common limitations and misunderstandings in the same coherent explanation.
+6. Show short code, a table, a formal-definition block or a compact structured example when that materially improves understanding; none of these formats is mandatory in every section.
+7. Explain displayed code, parameters, and structures in surrounding prose.
 8. Connect the concept to the next concept before introducing new terminology.
 
 Do not stack several unexplained terms in one paragraph.
 
 ## Paragraph style
 
-- Prefer medium-to-long natural paragraphs when a concept needs continuous explanation.
-- Short paragraphs are allowed when they improve code reading or mark a genuine transition.
-- Avoid list-heavy article bodies when prose can explain the logic more naturally.
+- Prefer medium-to-long natural paragraphs when a concept needs continuous explanation. For interview review, open with the technology's full definition, then explain its representation, mechanism, and cause before applications or comparison.
+- Short paragraphs are allowed when they improve code reading or mark a genuine transition. Preserve helpful H2/H3 headings, tables, commented code, and text blocks; avoid both fragmented short paragraphs and unstructured walls of text.
+- Avoid list-heavy article bodies when prose can explain the logic more naturally. Do not lead a revision article with an invented business story or interrupt a mechanism with repeated unrelated examples.
 - Avoid repetitive heading formulas such as “为什么……是什么……应该怎样……”. Headings should name the actual technical issue.
 - Keep language professional, clear, and approachable. Avoid empty motivational sentences and generic AI conclusions.
 
