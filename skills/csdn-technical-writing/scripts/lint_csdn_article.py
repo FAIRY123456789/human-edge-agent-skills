@@ -8,8 +8,8 @@ import re
 from pathlib import Path
 
 
-MIN_H1 = 4
-MAX_H1 = 7
+MIN_H1 = 3
+MAX_H1 = 6
 MIN_PARAGRAPH_CHARS = 45
 MAX_SHORT_PARAGRAPH_RATIO = 0.45
 MAX_CJK_CHARS = 5000
@@ -27,11 +27,11 @@ def inspect_article(path: Path) -> list[str]:
         issues.append("Overall article title should be plain text, not a Markdown heading.")
 
     h1 = [line for line in lines if re.match(r"^# ", line)]
-    h3 = [line for line in lines if re.match(r"^#{3,} ", line)]
+    h4plus = [line for line in lines if re.match(r"^#{4,} ", line)]
     if not (MIN_H1 <= len(h1) <= MAX_H1):
-        issues.append(f"H1 count is {len(h1)}; normal target is roughly {MIN_H1}-{MAX_H1}.")
-    if h3:
-        issues.append("Found H3+ headings. This house style normally uses an overall title, H1, and H2.")
+        issues.append(f"H1 count is {len(h1)}; typical target is roughly {MIN_H1}-{MAX_H1}, depending on content.")
+    if h4plus:
+        issues.append("Found H4+ headings. Consider whether H1–H3 already provide enough structure.")
 
     clean: list[str] = []
     in_code = False
