@@ -19,10 +19,10 @@ Write for a motivated beginner who wants to understand the mechanism, not just c
 1. The article's **overall title is plain text**, not a Markdown heading.
 2. First-level sections use `#` with Chinese numbering. Second-level `##` and third-level `###` sections are both supported when they mark meaningful conceptual distinctions; do not ban either level.
 3. Prefer roughly **3–6 first-level sections** for a normal article, adjusting to content rather than enforcing a rigid template.
-5. Use full natural paragraphs. Do not split every sentence into a separate paragraph.
-6. Use tables, fenced code, blockquotes and compact text blocks selectively when they make mechanisms or comparisons easier to understand. Explain them in surrounding substantive prose.
-7. Default to approximately **1,500–2,000 Chinese characters per article**, with a **3,000-character maximum** unless the user explicitly requests a longer article. Split broader topics into independently useful articles.
-8. Preserve enough details, working mechanisms, and short commands for a reader to reproduce the core technique. Cut repetition and generic transitions before cutting actionable substance.
+4. Use full natural paragraphs. Do not split every sentence into a separate paragraph.
+5. Use tables, fenced code, blockquotes and compact text blocks selectively when they make mechanisms or comparisons easier to understand. Explain them in surrounding substantive prose.
+6. Default to approximately **1,800–2,200 Chinese characters per article**, with a **3,000-character maximum** unless the user explicitly requests a longer article. Split broader topics into independently useful articles.
+7. Preserve enough details, working mechanisms, and short commands for a reader to reproduce the core technique. Cut repetition and generic transitions before cutting actionable substance.
 
 Run `scripts/lint_csdn_article.py` when the draft is available as Markdown.
 
@@ -47,15 +47,15 @@ Do not change the actual user's code, server configuration, or repository merely
 For each important concept:
 
 1. Give a formal, accurate definition.
-2. Explain it again in natural language.
-3. Explain how it works step by step.
+2. Describe the concrete internal representation: inputs, outputs, statistics, matrices, vectors, runtime objects or state as appropriate. Explain each important term in full.
+3. Explain the mechanism in continuous, substantial paragraphs: how the components work and why the design yields its result. Avoid superficial definitions followed by unrelated anecdotes.
 4. Explain when it is useful and its selection conditions, after the mechanism is clear.
 5. Clarify common limitations and misunderstandings in the same coherent explanation.
 6. Show short code, a table, a formal-definition block or a compact structured example when that materially improves understanding; none of these formats is mandatory in every section.
 7. Explain displayed code, parameters, and structures in surrounding prose.
 8. Connect the concept to the next concept before introducing new terminology.
 
-Do not stack several unexplained terms in one paragraph.
+Do not stack several unexplained terms in one paragraph. When interviewing/revising, begin directly with the named technology, not an invented business scenario. A short numerical example may be used after the mechanism if truly helpful, but never interrupt the conceptual reasoning with repeated fictional stories. Keep comparisons after the core concepts.
 
 ## Paragraph style
 
