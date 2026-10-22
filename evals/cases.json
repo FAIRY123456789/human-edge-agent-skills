@@ -24,10 +24,11 @@
     "skill": "csdn-technical-writing",
     "prompt": "Write a beginner CSDN article explaining RAG, with code.",
     "checks": [
-      "overall title is plain text",
-      "uses H1/H2 section hierarchy",
-      "medium/long natural paragraphs",
-      "definition→plain explanation→mechanism→scenario→mistake→code"
+      "plain-text overall title; Chinese-numbered H1; H2/H3 only where meaningful",
+      "substantive natural paragraphs; explain code and parameters",
+      "definition, representation and mechanism before selection and limitations",
+      "approximately 1800–2200 Chinese characters; maximum 3000 unless explicitly overridden",
+      "anonymize private source details across prose, code and URLs; no invented results"
     ]
   },
   {
