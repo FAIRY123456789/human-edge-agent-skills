@@ -42,3 +42,5 @@ jobs:
         run: python scripts/smoke_test.py
       - name: Test ECS runtime compatibility gates
         run: python -m unittest discover -s skills/aliyun-fullstack-deploy/tests -p "test_*.py" -v
+      - name: Test CSDN evaluation infrastructure (no model calls)
+        run: python -m unittest discover -s tests -p "test_csdn*.py" -v
