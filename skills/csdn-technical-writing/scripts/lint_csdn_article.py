@@ -12,10 +12,10 @@ MIN_H1 = 3
 MAX_H1 = 6
 MIN_PARAGRAPH_CHARS = 45
 MAX_SHORT_PARAGRAPH_RATIO = 0.45
-MAX_CJK_CHARS = 5000
+MAX_CJK_CHARS = 3000
 
 
-def inspect_article(path: Path) -> list[str]:
+def inspect_article(path: Path, max_cjk_chars: int = MAX_CJK_CHARS) -> list[str]:
     if not path.is_file():
         raise FileNotFoundError(f"article not found: {path}")
     text = path.read_text(encoding="utf-8")
@@ -55,7 +55,7 @@ def inspect_article(path: Path) -> list[str]:
         )
 
     cjk_count = len(re.findall(r"[\u4e00-\u9fff]", text))
-    if cjk_count > MAX_CJK_CHARS:
+    if cjk_count > max_cjk_chars:
         issues.append(f"Article contains about {cjk_count} CJK characters; consider splitting into a series.")
     return issues
 
@@ -63,8 +63,12 @@ def inspect_article(path: Path) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("article", type=Path)
+    parser.add_argument("--max-cjk-chars", type=int, default=MAX_CJK_CHARS,
+                        help="Default 3000; override only for an explicit longer user request.")
     args = parser.parse_args()
-    issues = inspect_article(args.article)
+    if args.max_cjk_chars < 1:
+        parser.error("--max-cjk-chars must be positive")
+    issues = inspect_article(args.article, args.max_cjk_chars)
     if issues:
         print("Style review:")
         for issue in issues:
