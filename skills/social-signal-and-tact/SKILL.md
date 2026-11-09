@@ -53,7 +53,16 @@ When the message is Chinese, draft from Chinese conversational logic rather than
 
 Prefer **person → event → action → feeling** over **abstract concepts → grouped points → summary judgment**. A Chinese message should usually move through what the person said, what happened, and what the user genuinely felt. Do not force several ideas into an English-style list and then close with a generic evaluation such as `这几个点给我很大启发`.
 
-Treat connective words such as `也 / 还 / 还是 / 又` as a review trigger when they function like automatic translations of *also / too / still / again*. Keep them only when they carry real meaning. Do not use them merely to manufacture progression, for example `今天又想了想，还是想专门跟您说声感谢` when a direct `非常感谢您昨晚愿意和我聊这么久` is more natural.
+**Hard editing rule — remove automatic additive transitions.** In Chinese social messages, do not insert `也` to pad a sentence, soften a transition, or imitate English *also / too / as well*. Flag formulations such as `平时也会`, `我也会`, `我也希望`, `你也给我带来了`, `您的建议也让我`, `同时也`, `此外也`, `而且也`, and repeated `也……也……`. Default to deleting the filler and rebuilding the sentence naturally: use `和` or `、` for genuinely parallel facts, commas or full stops for separate facts, and direct cause-and-effect sentences for thanks or learning. Do not append a second sentence merely to create progression. Scan `还 / 还是 / 又` and English-translated transitions by the same standard.
+
+**Practical before/after check (illustrative wording only):**
+- Stilted: `最近在学 Java，平时也会整理技术笔记。` → Natural: `最近主要学习 Java，整理技术笔记。`
+- Stilted: `我也希望以后能和大家多交流。` → Natural: `希望以后和大家多交流。`
+- Stilted: `您的建议也让我学到了很多。` → Natural: `您提醒我的那个问题，我后来按您的思路检查了一遍，确实找到了原因。` (Use this only if the user really did so.)
+- Stilted: `你也给我带来了很多启发。` → Natural: `谢谢你把实际经历讲给我听，我从中学到了不少。` (Only claim learning when supported.)
+- Stilted: `平时也会健身，也会看书。` → Natural: `平时喜欢健身、阅读。`
+
+Treat `也` as an exception requiring a clear semantic reason, such as an explicit, user-intended correspondence or addition that would be lost if removed. Never ban the character mechanically inside quotations, proper names, or factual input. In generated social prose, use the smallest number of connectors that still preserve meaning.
 
 Do not manufacture reflection time. If the conversation happened the previous night, avoid phrases such as `今天静下来以后重新想了一遍`, `到今天还一直记着`, or other wording that makes one night's interval sound like long-term沉淀. Start from the actual interaction and gratitude unless the user explicitly describes a later reflection process.
 
@@ -108,7 +117,7 @@ When the other person's message reveals two identity anchors, respond to the one
 13. Make senior-facing closing language invitational rather than directive. Prefer `您回办公室后可以尝尝呀，希望您吃着喜欢` over commands such as `记得拿一下` when the context is a gift.
 14. Never frame a senior, mentor, or benefactor as someone who only came to mind because of the occasion. Avoid phrases such as `很久没联系了`, `正好借教师节向您问个好`, `顺便跟您问候一下`, or `刚好想到您`. Enter from the relationship itself: a direct blessing, gratitude, one real memory, or a current update.
 15. Keep each send short by default. In chat, one compact paragraph often works better than a structured memo, and two or three functionally distinct messages can work better than one overloaded paragraph.
-16. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, three-stage mini-essays, English-style grouped abstractions such as `A、B、C，这几个点给我很大启发`, mechanical `也 / 还 / 还是 / 又` progression, and ornamental parallel endings such as `把 A，把 B` or `做好 A，走稳 B`. Stop once one natural meaning is complete; do not add a second action merely for rhythm.
+16. Remove AI markers: generic praise, repeated thanks, over-explaining background, emotional overstatement, bureaucratic transitions, three-stage mini-essays, English-style grouped abstractions such as `A、B、C，这几个点给我很大启发`, and ornamental parallel endings such as `把 A，把 B` or `做好 A，走稳 B`. **Run a sentence-by-sentence connector audit:** search for `也`, especially `平时也会 / 我也会 / 我也希望 / 你也给我带来了 / 也让我 / 同时也 / 此外也`, then delete or rewrite filler occurrences with direct wording, `和`/`、`, a comma, or a full stop. Apply the same check to mechanical `还 / 还是 / 又` and English-style *also / too / as well* translations. Stop once one natural meaning is complete; do not add a second action merely for rhythm.
 17. Make the other person easy to respond to. Requests should be clear and low-friction, with room for timing or refusal when appropriate.
 18. If professional optionality exists, check whether the current turn truly contains an L4 trigger. If it does not, do not force a résumé, internship, job, collaboration, or introduction request into a relationship-building exchange.
 19. Run the final check below.
@@ -124,7 +133,7 @@ When the other person's message reveals two identity anchors, respond to the one
 - Does it contain an inference the user did not explicitly provide?
 - Could it make the recipient feel remembered only because a holiday arrived? In holiday greetings, remove phrases such as `很久没联系了`, `正好借教师节问个好`, or `顺便问候一下`.
 - Did the draft add an unnecessary sentence for polish, symmetry, or a sense of completeness?
-- Does the Chinese read as if it was first organized in English and then translated? Remove grouped-concept summaries, unnecessary `也 / 还 / 还是 / 又`, and artificial reflection-time phrases.
+- Does the Chinese read as if it was first organized in English and then translated? Remove grouped-concept summaries and artificial reflection-time phrases. Check every generated `也`, especially `平时也会`, `我也会`, `我也希望`, `也让我`, and `你也给我带来了`: if the relation survives without it, delete it; otherwise restate the exact relationship naturally.
 - Does the draft preserve the speaker's original causal order, especially when restating advice, business logic, or decision rules?
 - Is one insight being explained twice under different words such as `想通`, `认知`, and `静下来`?
 - Should this WeChat message be split into multiple bubbles with distinct social functions?
