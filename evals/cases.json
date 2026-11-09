@@ -21,6 +21,26 @@
     ]
   },
   {
+    "skill": "social-signal-and-tact",
+    "prompt": "我刚进入一个技术交流群，真实情况是最近学习 Java 后端，平时整理技术笔记，想和群里朋友交流。请写一段自然的微信自我介绍，不要扩写经历，不要套话。",
+    "checks": [
+      "avoids filler constructions such as 平时也会、我也会、我也希望、同时也 and unnecessary English-style also/too transitions",
+      "uses natural Chinese punctuation or 和、 for parallel activities instead of repeated 也",
+      "preserves only supplied facts and keeps one concise, readable message",
+      "does not add invented mutual interests, unearned familiarity, or filler closings"
+    ]
+  },
+  {
+    "skill": "social-signal-and-tact",
+    "prompt": "朋友帮我定位了一个 Redis 缓存问题。我想感谢他，具体帮助是提醒我检查旧缓存没有失效的原因。请写一条自然的微信消息，像普通朋友说话。",
+    "checks": [
+      "does not use 你也给我带来了、您的建议也让我、我也学到了等 formulaic additive phrases",
+      "mentions the real concrete help rather than vague praise",
+      "uses direct thanks and one coherent factual statement",
+      "does not invent new achievements, feelings, or promises"
+    ]
+  },
+  {
     "skill": "csdn-technical-writing",
     "prompt": "Write a beginner CSDN article explaining RAG, with code.",
     "checks": [
