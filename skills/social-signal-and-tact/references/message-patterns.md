@@ -241,6 +241,23 @@ Recurring errors to detect:
 
 The final output should normally be one short, contextualized message; retain only the steps actually warranted by the facts and the desired relationship distance.
 
+## 13. Natural Chinese without automatic "也会 / also" transitions
+
+Use this check for self-introductions, casual chat, thank-you notes, greetings, progress updates, and mentor messages. The user may mention several facts, but a fluent Chinese reply need not add an `也` to every fact. Prefer direct phrasing, punctuation, or `和`/`、` when the relationship is genuinely parallel.
+
+| Stilted filler (avoid in generated drafts) | Clearer alternative |
+|---|---|
+| `我最近在学后端，平时也会写技术博客。` | `最近在学后端，平时写技术博客。` |
+| `我也希望以后有机会多交流。` | `希望以后有机会多交流。` |
+| `您的这段话也让我收获很多。` | `谢谢您把这段经验讲给我听，很多问题我有了新的思路。` (only if true) |
+| `你也给我带来了很多帮助。` | `谢谢你这次帮我处理了这件事。` (only if true) |
+| `平时也会跑步，也会看书。` | `平时喜欢跑步、阅读。` |
+| `我们也可以找时间再聊。` | `有空再聊。` |
+
+**Rewrite sequence:** (1) identify factual claims; (2) remove automatic `也 / 还 / 还是 / 又` connectors and English *also / too / as well* calques; (3) join truly parallel items with `和`/`、`, or split independent thoughts using commas/full stops; (4) remove any invented second action or fake emotional escalation; (5) read the final message as natural native Chinese.
+
+**Semantic exception:** retain `也` only if an actual parallel/additional relationship is essential to the user's meaning and deletion would change it. Do not alter quoted words or user-provided facts. The goal is natural expression and factual fidelity, not blindly banning one character.
+
 ## Anti-patterns
 
 Avoid:
