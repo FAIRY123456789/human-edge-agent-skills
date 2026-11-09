@@ -1,8 +1,8 @@
 # social-signal-and-tact
 
-> **Human tact for upward communication**
+> **Natural Chinese social communication with context and tact**
 
-Turn awkward or AI-sounding messages into short, specific, relationship-aware communication.
+Improve introductions, everyday chat, appreciation, requests, and professional messages with context-aware, truthful Chinese. Avoid stiff praise, invented closeness, and mechanical additive transitions such as `平时也会` or `我也希望`.
 
 **Category:** Social & Communication
 **Keywords:** social-tact, wechat, leadership, communication, writing
